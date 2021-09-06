@@ -11,6 +11,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ``` {r include=FALSE}
+install.packages("MASS")       #For parcoord
+install.packages("dendextend") #For colours
+install.packages("installr")   #For colours
+install.packages("colorspace") #For colours
+install.packages("readr")      #For import dataset
+install.packages("magrittr")   #For use %>%
+install.packages("dplyr")      #For use %>%
+install.packages("modeest")    #For use mfv
+
 library(MASS)       #For parcoord
 library(dendextend) #For colours
 library(installr)   #For colours
