@@ -1,0 +1,428 @@
+---
+title: "TP000- Revisión Estadística"
+author: "Agustín normand"
+date: "6 Septiembre 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+``` {r include=FALSE}
+library(MASS)       #For parcoord
+library(dendextend) #For colours
+library(installr)   #For colours
+library(colorspace) #For colours
+library(readr)      #For import dataset
+library(magrittr)   #For use %>%
+library(dplyr)      #For use %>%
+library(modeest)    #For use mfv
+
+MPI_subnational <- read_csv("/home/rstudio/data/MPI_subnational.csv")
+```
+
+A partir del siguiente [dataset][0], se solicita trabajar sobre las siguientes consignas:
+
+[0]:https://www.kaggle.com/ophi/mpi/data
+
+### 1. Exploración de datos: 
+Explore y explique en que consiste el dataset utilizando herramientas de 
+exploración de datos.  
+
+#### a. Releve las características de los atributos.
+``` {r include=TRUE}
+str(MPI_subnational)
+```
+
+Se trata de un dataset que contiene 984 entradas o filas, y 8 atributos o columnas. Los datos corresponden a Medidas de pobreza publicado por "Oxford Poverty & Human Development Initiative". Resulta necesario para comprender algunos atributos, conocer del Índice de Pobreza Multidimensional, IPM o MPI. El cual es una medida internacional de pobreza multidimensional aguda que cubre más de 100 países en desarrollo.
+Dichos atributos son:
+
+- *ISO country code*
+  - *Descripción:* ID unívoco para los países. 
+  - *Tipo de dato:* chr. 
+- *Country*
+  - *Descripción:* Nombre del país.
+  - *Tipo de dato:* chr. 
+- *Sub-national region*
+  - *Descripción:* Región dentro del país.
+  - *Tipo de dato:* chr. 
+- *World region*
+  - *Descripción:* Región global.
+  - *Tipo de dato:* chr. 
+- *MPI National*
+  - *Descripción:* Puntuación global global del MPI nacional.
+  - *Tipo de dato:* num. 
+- *MPI Regional*
+  - *Descripción:* Índice de pobreza multidimensional.
+  - *Tipo de dato:* num.
+- *Headcount Ratio Regional*
+  - *Descripción:* Tasa de recuento de la pobreza (% de la población catalogada como pobre).
+  - *Tipo de dato:* num.
+- *Intensity of deprivation Regional*
+  - *Descripción:* Distancia promedio por debajo de la línea de
+pobreza de los que figuran como pobres.
+  - *Tipo de dato:* num.
+  
+#### b. Represente gráficamente la cantidad de ciudades agrupadas por región.
+
+``` {r include=FALSE}
+tibble<-MPI_subnational %>% group_by(MPI_subnational$`World region`) %>% summarise(sum = n())
+tibble<-rename(tibble, Region = `MPI_subnational$\`World region\``)
+tibble<-rename(tibble, Ciudades = sum)
+```
+
+``` {r echo=FALSE}
+par(mar=c(2,13,2,4))
+barplot(tibble$Ciudades, main = "Cantidad de ciudades agrupadas por Región", col = rainbow_hcl(6), names.arg=c(tibble$Region), horiz=T, las=1, xlim=c(0,500))
+```  
+
+### 2. Medidas de posición:
+Calcule las medidas de posición para los atributos numéricos y agrupe los
+cálculos de acuerdo a la región.  
+
+#### a. Ordene los resultados del MPI resultante y concluya al respecto.  
+
+``` {r include=FALSE}
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+tibble_mpi_national<-MPI_subnational %>% group_by(`World region`) %>% summarise(`Media Aritmetica` = mean(`MPI National`), `Mediana` = median(`MPI National`), `Moda` = getmode(`MPI National`))
+
+tibble_mpi_national<-rename(tibble_mpi_national, Region = `World region`)
+
+tibble_mpi_regional<-MPI_subnational %>% group_by(`World region`) %>% summarise(`Media Aritmetica` = mean(`MPI Regional`), `Mediana` = median(`MPI Regional`), `Moda` = getmode(`MPI Regional`))
+
+tibble_mpi_regional<-rename(tibble_mpi_regional, Region = `World region`)
+
+tibble_headcount_ratio_regional<-MPI_subnational %>% group_by(`World region`) %>% summarise(`Media Aritmetica` = mean(`Headcount Ratio Regional`), `Mediana` = median(`Headcount Ratio Regional`), `Moda` = getmode(`Headcount Ratio Regional`))
+
+tibble_headcount_ratio_regional<-rename(tibble_headcount_ratio_regional, Region = `World region`)
+
+intensity_of_deprivation_regional <- aggregate(MPI_subnational$`Intensity of deprivation Regional` ~ MPI_subnational$`World region`, FUN=mean)
+intensity_of_deprivation_regional<-rename(intensity_of_deprivation_regional, Region = `MPI_subnational$\`World region\``)
+intensity_of_deprivation_regional<-rename(intensity_of_deprivation_regional, `Media Aritmetica` = `MPI_subnational$\`Intensity of deprivation Regional\``)
+
+tmp_median <- aggregate(MPI_subnational$`Intensity of deprivation Regional` ~ MPI_subnational$`World region`, FUN=median)
+intensity_of_deprivation_regional<-cbind(intensity_of_deprivation_regional, Mediana=tmp_median$`MPI_subnational$\`Intensity of deprivation Regional\``)
+
+tmp_mode <- aggregate(MPI_subnational$`Intensity of deprivation Regional` ~ MPI_subnational$`World region`, FUN=mfv1)
+intensity_of_deprivation_regional<-cbind(intensity_of_deprivation_regional, Moda=tmp_mode$`MPI_subnational$\`Intensity of deprivation Regional\``)
+
+
+```  
+
+Media Aritmética, Mediana y Moda ordenada por región mundial, del MPI Nacional:
+``` {r echo=FALSE}
+tibble_mpi_national
+```
+
+Medidas poblacionales del MPI Nacional:
+``` {r echo=FALSE}
+data.frame(`Media Aritmetica`=mean(MPI_subnational$`MPI National`), 
+                                 Mediana=median(MPI_subnational$`MPI National`), 
+                                 Moda=mfv1(MPI_subnational$`MPI National`))
+```                              
+
+Media Aritmetica, Mediana y Moda ordenada por región mundial, del MPI Regional:
+``` {r echo=FALSE}
+tibble_mpi_regional
+```
+
+Medidas poblacionales del MPI Regional:
+``` {r echo=FALSE}
+data.frame(`Media Aritmetica`=mean(MPI_subnational$`MPI Regional`), 
+                                 Mediana=median(MPI_subnational$`MPI Regional`), 
+                                 Moda=mfv1(MPI_subnational$`MPI Regional`))
+```  
+
+Media Aritmetica, Mediana y Moda ordenada por región mundial, del Headcount Ratio Regional o porcentaje de gente pobre según el MPI Regional:
+``` {r echo=FALSE}
+tibble_headcount_ratio_regional
+```
+
+Medidas poblacionales del Headcount Ratio Regional:
+``` {r echo=FALSE}
+data.frame(`Media Aritmetica`=mean(MPI_subnational$`Headcount Ratio Regional`), 
+                                 Mediana=median(MPI_subnational$`Headcount Ratio Regional`), 
+                                 Moda=mfv1(MPI_subnational$`Headcount Ratio Regional`))
+```  
+
+Media Aritmetica, Mediana y Moda ordenada por región mundial, del Intensity of Deprivation Regional o distancia promedio a la que se encuentra la gente pobre respecto de la línea de pobreza:
+``` {r echo=FALSE}
+intensity_of_deprivation_regional
+```
+
+Medidas poblacionales del Intensity of Deprivation Regional:
+``` {r echo=FALSE}
+data.frame(`Media Aritmetica`=mean(MPI_subnational$`Intensity of deprivation Regional`, na.rm = TRUE), 
+                                 Mediana=median(MPI_subnational$`Intensity of deprivation Regional`, na.rm = TRUE), 
+                                 Moda=mfv1(MPI_subnational$`Intensity of deprivation Regional`, na_rm = TRUE))
+```  
+
+**CONCLUSIONES:**
+
++ En el MPI Nacional, las únicas 2 regiones que se encuentran por debajo de la media poblacional son Arab States y East Asia and the Pacific.
+
++ Cuando se trata del MPI Regional, South Asia y Sub-Saharan Africa se encuentran por encima de la media poblacional.
+
++ En el caso del atributo Headcount Ratio Regional, al igual que en el anterior, South Asia y Sub-Saharan Africa superan el valor de la media poblacional.
+
++ Evaluando la columna Intensity of Deprivation Regional, de igual manera que en los dos anteriores, South Asia y Sub-Saharan Africa, superan el valor de la media poblacional.
+
++ Resumiendo, South Asia y Sub-Saharan Africa, en ninguna medida de posición, están por debajo de la media poblacional. Aunque Sub-Saharan Africa supera siempre mucho más holgadamente el valor de la media poblacional que en South Asia.
+
+
+#### b. Grafique las variables y observe su comportamiento.  
+
+```{r echo=FALSE}
+hist(MPI_subnational$`MPI National`, nclass = 20, 
+      xlab="Valor", xlim = c(0, 0.7),
+      ylab="Frecuencia", ylim = c(0, 250), 
+      main = "MPI nacional", col=rainbow_hcl(13))
+```
+
+```{r echo=FALSE}
+hist(MPI_subnational$`MPI Regional`, nclass = 20, 
+     xlab = "Valor", xlim = c(0, 0.8), 
+     ylab = "Frecuencia", ylim = c(0, 250), 
+     main = "MPI Regional",
+     col=rainbow_hcl(13))
+```
+
+```{r echo=FALSE}
+hist(MPI_subnational$`Headcount Ratio Regional`, nclass = 20, 
+     xlab = "Valor", 
+     ylab = "Frecuencia", ylim = c(0, 130), 
+     main = "Headcount Ratio Regional",
+     col=rainbow_hcl(13))
+```
+
+```{r echo=FALSE}
+hist(MPI_subnational$`Intensity of deprivation Regional`, nclass = 20, 
+     xlab = "Valor", xlim = c(30, 80), 
+     ylab = "Frecuencia", ylim = c(0, 140), 
+     main = "Intensity of deprivation Regional", 
+     col=rainbow_hcl(13))
+```
+
+**OBSERVACIONES:**
+
++ El histograma de MPI Nacional y MPI Regional se asemejan a una distribución geométrica.
++ Por último, el histograma de Intensity of deprivation Regional, se parece a una distribución normal asimétrica hacia la derecha.
+
+### 3. Medidas de dispersión: 
+Calcular la desviación estándar, la varianza y el rango para cada una de las variables.
+
+- *MPI National*
+
+  - *Desviación estándar:*
+  ```{r echo=FALSE}
+  sd(MPI_subnational$`MPI National`)
+  ```
+
+  - *Rango:*
+  ```{r echo=FALSE}
+  mpi_national_range<-range(MPI_subnational$`MPI National`)
+  mpi_national_range[2]-mpi_national_range[1]
+  ```
+
+  - *Varianza:*
+  ```{r echo=FALSE}
+  var(MPI_subnational$`MPI National`)
+  ```
+
+- *MPI Regional*
+
+  - *Desviación estándar:*
+  ```{r echo=FALSE}
+  sd(MPI_subnational$`MPI Regional`)
+  ```
+
+  - *Rango:*
+  ```{r echo=FALSE}
+  mpi_regional_range<-range(MPI_subnational$`MPI Regional`)
+  mpi_regional_range[2]-mpi_regional_range[1]
+  ```
+
+  - *Varianza:*
+  ```{r echo=FALSE}
+  var(MPI_subnational$`MPI Regional`)
+  ```
+
+- *Headcount Ratio Regional*
+
+  - *Desviación estándar:*
+  ```{r echo=FALSE}
+  sd(MPI_subnational$`Headcount Ratio Regional`)
+  ```
+
+  - *Rango:*
+  ```{r echo=FALSE}
+  headcount_ratio_ragional_range<-range(MPI_subnational$`Headcount Ratio Regional`)
+  headcount_ratio_ragional_range[2]-headcount_ratio_ragional_range[1]
+  ```
+
+  - *Varianza:*
+  ```{r echo=FALSE}
+  var(MPI_subnational$`Headcount Ratio Regional`)
+  ```
+
+- *Intensity of deprivation Regional*
+
+  - *Desviación estándar:*
+  ```{r echo=FALSE}
+  sd(MPI_subnational$`Intensity of deprivation Regional`, na.rm = TRUE)
+  ```
+
+  - *Rango:*
+  ```{r echo=FALSE}
+  intensity_of_deprivation_regional<-range(MPI_subnational$`Intensity of deprivation Regional`, na.rm = TRUE)
+  intensity_of_deprivation_regional[2]-intensity_of_deprivation_regional[1]
+  ```
+
+  - *Varianza:*
+  ```{r echo=FALSE}
+  var(MPI_subnational$`Intensity of deprivation Regional`, na.rm = TRUE)
+  ```
+
+#### a. Realice diagramas de cajas y scatterplot's. Documente las conclusiones.  
+
+```{r echo=FALSE}
+boxplot(MPI_subnational$`MPI National` ~ MPI_subnational$`World region`, main = "MPI National por región", xlab="Región", ylab="MPI National", col=rainbow_hcl(6))
+```
+
+```{r echo=FALSE}
+boxplot(MPI_subnational$`MPI Regional` ~ MPI_subnational$`World region`, main = "MPI Regional por región", xlab="Región", ylab="MPI Regional", col=rainbow_hcl(6))
+```
+
+```{r echo=FALSE}
+boxplot(MPI_subnational$`Headcount Ratio Regional` ~ MPI_subnational$`World region`, main = "Headcount Ratio Regional por región", xlab="Región", ylab="Headcount Ratio Regional", col=rainbow_hcl(6))
+```
+
+```{r echo=FALSE}
+boxplot(MPI_subnational$`Intensity of deprivation Regional` ~ MPI_subnational$`World region`, main = "Intensity of deprivation Regional por región", xlab="Región", ylab="Intensity of deprivation Regional", col=rainbow_hcl(6))
+```
+
+```{r echo=FALSE}
+pairs(MPI_subnational[,5:8], labels = names(MPI_subnational)[5:8], col=rainbow(4), main="Scatterplot")
+```
+
+```{r echo=FALSE}
+plot(MPI_subnational$`MPI National`, MPI_subnational$`MPI Regional`,col=c("RED", "ORANGE"), main="MPI National vs MPI Regional", xlab ="MPI National", ylab = "MPI Regional")
+```
+
+```{r echo=FALSE}
+plot(MPI_subnational$`MPI National`, MPI_subnational$`Headcount Ratio Regional`,col=c("RED", "ORANGE"), main="MPI National vs Headcount Ratio Regional", xlab ="MPI National", ylab = "Headcount Ratio Regional")
+```
+
+```{r echo=FALSE}
+plot(MPI_subnational$`MPI National`, MPI_subnational$`Intensity of deprivation Regional`,col=c("RED", "ORANGE"), main="MPI National vs Intensity of deprivation Regional", xlab ="MPI National", ylab = "Intensity of deprivation Regional")
+```
+
+```{r echo=FALSE}
+plot(MPI_subnational$`MPI Regional`, MPI_subnational$`Headcount Ratio Regional`,col=c("RED", "ORANGE"), main="MPI Regional vs Headcount Ratio Regional", xlab ="MPI Regional", ylab = "Headcount Ratio Regional")
+```
+
+```{r echo=FALSE}
+plot(MPI_subnational$`MPI Regional`, MPI_subnational$`Intensity of deprivation Regional`,col=c("RED", "ORANGE"), main="MPI Regional vs Intensity of deprivation Regional", xlab ="MPI Regional", ylab = "Intensity of deprivation Regional")
+```
+
+```{r echo=FALSE}
+plot(MPI_subnational$`Headcount Ratio Regional`, MPI_subnational$`Intensity of deprivation Regional`,col=c("RED", "ORANGE"), main="Headcount Ratio Regional vs Intensity of deprivation Regional", xlab ="Headcount Ratio Regional", ylab = "Intensity of deprivation Regional")
+```
+
+**CONCLUSIONES:**
+
++ El MPI National posee la menor desviación estándar, y el atributo Headcount Ratio Regional la mayor desviación.
++ Asimismo, los atributos mencionados anteriormente, poseen la menor y la mayor varianza respectivamente.
++ Además, en cuanto al rango, el MPI National posee el rango más acotado de todos los atributos, y el Headcount Ratio Regional el mayor.
++ Dichas observaciones se ven reflejadas en los diagramas de cajas, se puede observar en el diagrama de MPI National, la reducida amplitud de los "bigotes", como también, la pequeña cantidad de valores atípicos o outliers. Pero sin embargo en el correspondiente al Headcount Ratio Regional, la amplitud de los bigotes, y la cantidad de outliers son las mayores de todos los gráficos. 
+* Se observa una correspondencia entre el MPI Regional y el Headcount Ratio Regional.
++ Además, se observan correspondencias no tan definidas como la comentada anteriormente, entre el MPI Regional y el Intensity of deprivation Regional, y entre el Headcount Ratio Regional y Intensity of deprivation Regional.
+
+
+#### b. ¿Qué variable es la que presenta mayor dispersión? Tenga en cuenta que cada variable puede estar expresada en diferentes unidades y magnitudes.  
+
+La variable que presenta mayor dispersión es Headcount Ratio Regional o Porcentaje de gente pobre. Tal como se comentó en conclusiones anteriores, dicha columna presenta el mayor Desvío Estándar, Rango y Varianza.
+
+
+### 4. Medidas de asociación:
+Calcular el coeficiente de correlación de todas las variables y explique el 
+resultado. ¿Qué tipo de gráficos describen mejor esta relación entre las variables?
+
+- *MPI National vs MPI Regional:*
+```{r echo=FALSE}
+cor(MPI_subnational$`MPI National`, MPI_subnational$`MPI Regional`)
+```
+
+- *MPI National vs Headcount Ratio Regional:*
+```{r echo=FALSE}
+cor(MPI_subnational$`MPI National`, MPI_subnational$`Headcount Ratio Regional`)
+```
+
+- *MPI National vs Intensity of deprivation Regional:*
+```{r echo=FALSE}
+cor(MPI_subnational$`MPI National`, MPI_subnational$`Intensity of deprivation Regional`, use = "complete.obs")
+```
+
+- *MPI Regional vs Headcount Ratio Regional:*
+```{r echo=FALSE}
+cor(MPI_subnational$`MPI Regional`, MPI_subnational$`Headcount Ratio Regional`)
+```
+
+- *MPI Regional vs Intensity of deprivation Regional:*
+```{r echo=FALSE}
+cor(MPI_subnational$`MPI Regional`, MPI_subnational$`Intensity of deprivation Regional`, use = "complete.obs")
+```
+
+- *Headcount Ratio Regional vs Intensity of deprivation Regional:*
+```{r echo=FALSE}
+cor(MPI_subnational$`Headcount Ratio Regional`, MPI_subnational$`Intensity of deprivation Regional`, use = "complete.obs")
+```
+
+```{r include=FALSE}
+is_sub_saharan_africa <- ifelse(MPI_subnational$`World region`=="Sub-Saharan Africa","red","grey")
+is_south_asia <- ifelse(MPI_subnational$`World region`=="South Asia","red","grey")
+is_latin_america_and_caribbean <- ifelse(MPI_subnational$`World region`=="Latin America and Caribbean","red","grey")
+is_europe_and_central_asia <- ifelse(MPI_subnational$`World region`=="Europe and Central Asia","red","grey")
+is_east_asia_and_the_pacific <- ifelse(MPI_subnational$`World region`=="East Asia and the Pacific","red","grey")
+is_arab_states <- ifelse(MPI_subnational$`World region`=="Arab States","red","grey")
+
+```
+
+```{r echo=FALSE}
+parcoord(MPI_subnational[5:8], col=is_sub_saharan_africa, main="Sub-Saharan Africa")
+```
+
+```{r echo=FALSE}
+parcoord(MPI_subnational[5:8], col=is_south_asia, main="South Asia")
+```
+
+```{r echo=FALSE}
+parcoord(MPI_subnational[5:8], col=is_latin_america_and_caribbean, main="Latin America and Caribbean")
+```
+
+```{r echo=FALSE}
+parcoord(MPI_subnational[5:8], col=is_europe_and_central_asia, main="Europe and Central Asia")
+```
+
+```{r echo=FALSE}
+parcoord(MPI_subnational[5:8], col=is_east_asia_and_the_pacific, main="East Asia and the Pacific")
+```
+
+```{r echo=FALSE}
+parcoord(MPI_subnational[5:8], col=is_arab_states, main="Arab States")
+```
+
+**CONCLUSIONES:**
+
++ Se confirma lo expresado en conclusiones anteriores, la mayor correlación es entre MPI Regional y Headcount Ratio Regional.
++ Otra correlación menor que la anterior es la del MPI Regional con Intensity of deprivation Regional.
++ Por último, una correlación incluso menor que la anterior es la del Headcount Ratio Regional con Intensity of deprivation Regional.
++ Los scatterplots son los más efectivos para graficar la relación entre dos variables.
++ El gráfico que mejor describe esta relación entre una variable con respecto a las demás es el "parcoord".
++ Se resaltó con color rojo la variable que se desaba graficar, y en gris todas las demás, para poder ver de forma clara, el comportamiento de dicha variable con respecto al resto. 
