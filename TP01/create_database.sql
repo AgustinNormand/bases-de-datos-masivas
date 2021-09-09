@@ -8,10 +8,9 @@ CREATE DATABASE medios
 /* Creo la tabla de Medios */
 CREATE TABLE IF NOT EXISTS public."medios"
 (
-    id bigint NOT NULL,
+    id SERIAL PRIMARY KEY,
     direccion character varying(50),
-    nombre character varying(20),
-    CONSTRAINT "medios_pkey" PRIMARY KEY (id)
+    nombre character varying(20)
 )
 
 TABLESPACE pg_default;
@@ -23,9 +22,8 @@ ALTER TABLE public."medios"
 /* Creo la tabla de Especialidades */
 CREATE TABLE IF NOT EXISTS public."especialidades"
 (
-    id bigint NOT NULL,
-    descripcion character varying(200),
-    CONSTRAINT "especialidades_pkey" PRIMARY KEY (id)
+    id SERIAL PRIMARY KEY,
+    descripcion character varying(200)
 )
 
 TABLESPACE pg_default;
@@ -37,9 +35,8 @@ ALTER TABLE public."especialidades"
 /* Creo la tabla de Tipos_Medios */
 CREATE TABLE IF NOT EXISTS public."tipos_medio"
 (
-    id bigint NOT NULL,
-    descripcion character varying(200),
-    CONSTRAINT "tipos_medio_pkey" PRIMARY KEY (id)
+    id SERIAL PRIMARY KEY,
+    descripcion character varying(200)
 )
 
 TABLESPACE pg_default;
@@ -51,9 +48,8 @@ ALTER TABLE public."tipos_medio"
 /* Creo la tabla de Ciudades */
 CREATE TABLE IF NOT EXISTS public."ciudades"
 (
-    id bigint NOT NULL,
-    nombre character varying(20),
-    CONSTRAINT "ciudades_pkey" PRIMARY KEY (id)
+    id SERIAL PRIMARY KEY,
+    nombre character varying(20)
 )
 
 TABLESPACE pg_default;
@@ -65,9 +61,8 @@ ALTER TABLE public."ciudades"
 /* Creo la tabla de Provincias */
 CREATE TABLE IF NOT EXISTS public."provincias"
 (
-    id bigint NOT NULL,
-    nombre character varying(20),
-    CONSTRAINT "provincias_pkey" PRIMARY KEY (id)
+    id SERIAL PRIMARY KEY,
+    nombre character varying(20)
 )
 
 TABLESPACE pg_default;
