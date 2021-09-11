@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Transformation_insert_provincias</name>
+    <name>Transformation_insert_tipos_medio</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,16 +427,16 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2021/09/10 10:12:00.750</created_date>
+    <created_date>2021/09/10 11:49:57.949</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/09/10 10:12:00.750</modified_date>
+    <modified_date>2021/09/10 11:49:57.949</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>Postgresql Database</name>
+    <name>Postgresql database</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
@@ -489,16 +489,16 @@
   <order>
     <hop>
       <from>Microsoft Excel input</from>
-      <to>Select Provincias</to>
+      <to>Select Tipos de Medio</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Fuzzy match</from>
-      <to>Select Match de Fuzzy Match</to>
+      <from>Sort rows</from>
+      <to>Unique rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select Provincias</from>
+      <from>CSV file input</from>
       <to>Fuzzy match</to>
       <enabled>Y</enabled>
     </hop>
@@ -508,33 +508,53 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows</from>
-      <to>Unique rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CSV de Provincias Argentinas</from>
-      <to>Renombrar Ciudad Autónoma de Buenos Aires</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Renombrar Ciudad Autónoma de Buenos Aires</from>
-      <to>Fuzzy match</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Unique rows</from>
+      <to>Text file output</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>Fuzzy match</from>
       <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Filter rows</from>
+      <to>Select Match de Fuzzy Match</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select Tipos de Medio</from>
+      <to>Replace in string</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Replace in string</from>
+      <to>Fuzzy match</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2</from>
       <to>Insert / update</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Unique rows</from>
+      <to>Filter rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Write to log</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 2</from>
+      <to>Write to log 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV de Provincias Argentinas</name>
+    <name>CSV file input</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -544,7 +564,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/provincias.csv</filename>
+    <filename>${Internal.Entry.Current.Directory}/tipos_medio.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -560,13 +580,13 @@
     <encoding/>
     <fields>
       <field>
-        <name>iso_nombre</name>
+        <name>Tipo de Medio</name>
         <type>String</type>
         <format/>
         <currency>$</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>31</length>
+        <length>17</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -580,8 +600,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>480</yloc>
+      <xloc>416</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -596,8 +616,8 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Insert / update</send_true_to>
-    <send_false_to/>
+    <send_true_to>Select Match de Fuzzy Match</send_true_to>
+    <send_false_to>Write to log</send_false_to>
     <compare>
       <condition>
         <negated>N</negated>
@@ -615,7 +635,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
+      <xloc>576</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -631,15 +651,15 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <from>Renombrar Ciudad Autónoma de Buenos Aires</from>
-    <lookupfield>iso_nombre</lookupfield>
-    <mainstreamfield>Provincia</mainstreamfield>
+    <from>CSV file input</from>
+    <lookupfield>Tipo de Medio</lookupfield>
+    <mainstreamfield>Tipo de medio</mainstreamfield>
     <outputmatchfield>match</outputmatchfield>
     <outputvaluefield>measure value</outputvaluefield>
     <caseSensitive>N</caseSensitive>
     <closervalue>Y</closervalue>
     <minimalValue>0</minimalValue>
-    <maximalValue>1</maximalValue>
+    <maximalValue>2</maximalValue>
     <separator>,</separator>
     <algorithm>levenshtein</algorithm>
     <lookup>
@@ -653,50 +673,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Postgresql Database</connection>
-    <commit>100</commit>
-    <update_bypassed>Y</update_bypassed>
-    <lookup>
-      <schema>public</schema>
-      <table>provincias</table>
-      <key>
-        <name>match</name>
-        <field>nombre</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nombre</name>
-        <rename>match</rename>
-        <update>N</update>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1040</xloc>
+      <xloc>416</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -999,14 +976,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
+      <xloc>0</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Renombrar Ciudad Autónoma de Buenos Aires</name>
-    <type>ValueMapper</type>
+    <name>Replace in string</name>
+    <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1015,13 +992,18 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <field_to_use>iso_nombre</field_to_use>
-    <target_field/>
-    <non_match_default/>
     <fields>
       <field>
-        <source_value>Ciudad Autónoma de Buenos Aires</source_value>
-        <target_value>Capital Federal</target_value>
+        <in_stream_name>Tipo de medio</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>R</replace_string>
+        <replace_by_string>Radio</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>yes</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>no</is_unicode>
       </field>
     </fields>
     <attributes/>
@@ -1033,8 +1015,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>384</yloc>
+      <xloc>304</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1064,13 +1046,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>736</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Select Provincias</name>
+    <name>Select Tipos de Medio</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1082,7 +1064,7 @@
     </partitioning>
     <fields>
       <field>
-        <name>Provincia</name>
+        <name>Tipo de medio</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1095,7 +1077,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
+      <xloc>160</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1137,7 +1119,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
+      <xloc>896</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1194,7 +1176,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
+      <xloc>992</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1214,10 +1196,124 @@
     <count_field/>
     <reject_duplicate_row>N</reject_duplicate_row>
     <error_description/>
+    <fields>      </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>992</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Insert / update</send_true_to>
+    <send_false_to>Write to log 2</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>match</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue>match</rightvalue>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert / update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Postgresql database</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>tipos_medio</table>
+      <key>
+        <name>match</name>
+        <field>descripcion</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>descripcion</name>
+        <rename>match</rename>
+        <update>N</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1216</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Write to log</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <loglevel>log_level_basic</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage>Not matched filter rows Fuzzy Match</logmessage>
     <fields>
       <field>
+        <name>Tipo de medio</name>
+      </field>
+      <field>
         <name>match</name>
-        <case_insensitive>N</case_insensitive>
+      </field>
+      <field>
+        <name>measure value</name>
       </field>
     </fields>
     <attributes/>
@@ -1229,12 +1325,59 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
-      <yloc>288</yloc>
+      <xloc>576</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Write to log 2</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <loglevel>log_level_basic</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage>Not matched filter rows Unique Values</logmessage>
+    <fields>
+      <field>
+        <name>match</name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1104</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step_error_handling>
+    <error>
+      <source_step>Select Match de Fuzzy Match</source_step>
+      <target_step/>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename/>
+      <descriptions_valuename/>
+      <fields_valuename/>
+      <codes_valuename/>
+      <max_errors/>
+      <max_pct_errors/>
+      <min_pct_rows/>
+    </error>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
