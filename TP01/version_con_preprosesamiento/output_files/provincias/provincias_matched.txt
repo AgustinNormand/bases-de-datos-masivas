@@ -1,0 +1,52 @@
+Provincia;matched_provincia_name;measure value
+Buenos Aires;Buenos Aires;0
+Capital Federal;Capital Federal;0
+CApital Federal;Capital Federal;0
+Capital Federal;Capital Federal;0
+Capital Federal ;Capital Federal;1
+Catamarca;Catamarca;0
+Chaco;Chaco;0
+Chubut;Chubut;0
+Corrientes;Corrientes;0
+Córdoba;Córdoba;0
+Córdoba ;Córdoba;1
+Entre Ríos;Entre Ríos;0
+Formosa;Formosa;0
+Jujuy;Jujuy;0
+Juuy;Jujuy;1
+Jyjuy;Jujuy;1
+La Pampa;La Pampa;0
+La Pampa ;La Pampa;1
+La Rioja;La Rioja;0
+La Rioja ;La Rioja;1
+Mendoza;Mendoza;0
+Misiones;Misiones;0
+Neuquen;Neuquén;1
+Neuquén;Neuquén;0
+Neuquén ;Neuquén;1
+Rio Negro;Río Negro;1
+Río Negro;Río Negro;0
+Salta;Salta;0
+Salta ;Salta;1
+San Juan;San Juan;0
+San Luis;San Luis;0
+San Luis ;San Luis;1
+Sana Fe;Santa Fe;1
+Santa;Salta;1
+Santa Cruz;Santa Cruz;0
+Santa Cruz ;Santa Cruz;1
+Santa Fe;Santa Fe;0
+Santa fe;Santa Fe;0
+Santa Fe;Santa Fe;0
+Santa fe;Santa Fe;0
+Santa Fe;Santa Fe;0
+Santa fe;Santa Fe;0
+Santa Fe;Santa Fe;0
+Santa fe;Santa Fe;0
+Santa Fe;Santa Fe;0
+Santa Fe ;Santa Fe;1
+Santa Fé;Santa Fe;1
+Santiago del Estero;Santiago del Estero;0
+Tierra del Fuego;Tierra del Fuego;0
+Tucuman;Tucumán;1
+Tucumán;Tucumán;0

@@ -1,0 +1,22 @@
+Tipo de medio
+*
+Agencia
+Blog
+Diario
+Digial
+Digital
+Guia
+Periodico
+Periódico
+Periódico Mens.
+Periódico Semanal
+Peródico
+Portal
+R
+Radio
+Radio 
+Revista
+Semanal
+Suplementos
+Television
+Televisión

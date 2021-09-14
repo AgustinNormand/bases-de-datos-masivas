@@ -1,0 +1,585 @@
+Ciudad;Provincia;match;measure value;match_1;measure value_1
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Don Torcuato;Buenos Aires;;;Don Torcuato;0
+Talar de Pacheco;Buenos Aires;;;Talar de Pacheco;0
+General Pacheco;Buenos Aires;;;General Pacheco;0
+Derqui;Buenos Aires;;;Derqui;0
+Derqui;Buenos Aires;;;Derqui;0
+Del Viso;Buenos Aires;;;Del Viso;0
+Necochea;Buenos Aires;;;Necochea;0
+Adrogu�;Buenos Aires;;;Adrogué;1
+Bol�var;Buenos Aires;;;Bolívar;1
+Bol�var;Buenos Aires;;;Bolívar;1
+Bol�var;Buenos Aires;;;Bolívar;1
+Bol�var;Buenos Aires;;;Bolívar;1
+Brandsen;Buenos Aires;;;Brandsen;0
+Brandsen;Buenos Aires;;;Brandsen;0
+Brandsen;Buenos Aires;;;Brandsen;0
+Carapachay;Buenos Aires;;;Carapachay;0
+Carapachay;Buenos Aires;;;Carapachay;0
+General Madariaga;Buenos Aires;;;General Madariaga;0
+General Viamonte;Buenos Aires;;;General Viamonte;0
+Gonz�lez Ch�vez;Buenos Aires;;;González Chávez;2
+Gonz�les Ch�ves;Buenos Aires;;;Gonzáles Cháves;2
+Mar de Aj�;Buenos Aires;;;Mar de Ajó;1
+Mar de Aj�;Buenos Aires;;;Mar de Ajó;1
+Mar de las Pampas;Buenos Aires;;;Mar de las Pampas;0
+Mar de las Pampas;Buenos Aires;;;Mar de las Pampas;0
+Mar del Tuy�;Buenos Aires;;;Mar del Tuyú;1
+Mart�nez;Buenos Aires;;;Martínez;1
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Rafael Castillo;Buenos Aires;;;Rafael Castillo;0
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Sarand�;Buenos Aires;;;Sarandí;1
+Sarand�;Buenos Aires;;;Sarandí;1
+Catamarca;Catamarca;;;Catamarca;0
+Catamarca;Catamarca;;;Catamarca;0
+Roque S. Pe�a;Chaco;;;Roque S. Peña;1
+Roque S. Pe�a;Chaco;;;Roque S. Peña;1
+Roque S. Pe�a;Chaco;;;Roque S. Peña;1
+Roque S. Pe�a;Chaco;;;Roque S. Peña;1
+Roque Saenz Pe�a;Chaco;;;Roque Saenz Peña;1
+Calamuchita;C�rdoba;;;Calamuchita;0
+Calamuchita;C�rdoba;;;Calamuchita;0
+Calamuchita;C�rdoba;;;Calamuchita;0
+Reducci�n;C�rdoba;;;Reducción;1
+Sierras de C�rdoba;C�rdoba;;;Sierras de Córdoba;1
+Confluencia;Corrientes;;;Confluencia;0
+Iguaz�;Misiones;;;Iguazú;1
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Met�n;Salta;;;Metán;1
+Met�n;Salta;;;Metán;1
+R�o Turbio;Santa Cruz;;;Río Turbio;1
+Yerba Buena;Tucum�n;;;Yerba Buena;0
+R�o Hondo;Santiago del Estero;;;Río Hondo;1
+R�o Hondo;Santiago del Estero;;;Río Hondo;1
+R�o Hondo;Santiago del Estero;;;Río Hondo;1
+Roque S. Pe�a;Chaco;;;Roque S. Peña;1
+Carapachay;Buenos Aires;;;Carapachay;0
+Francisco �lvarez;Buenos Aires;;;Francisco Álvarez;1
+Bariloche;R�o Negro;;;Bariloche;0
+Bols�n;Rio Negro;;;Bolsón;1
+J�chal;San Juan;;;Jáchal;1
+Bols�n;Rio Negro;;;Bolsón;1
+Gonz�les Chaves;Buenos Aires;;;Gonzáles Cháves;2
+Adrogu�;Buenos Aires;;;Adrogué;1
+Gral. Pacheco;Buenos Aires;;;Gral. Pacheco;0
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+J. B. Alberdi;Buenos Aires;;;J. B. Alberdi;0
+El Palomar;Buenos Aires;;;El Palomar;0
+Monte Grande;Buenos Aires;;;Monte Grande;0
+G de Laferrere;Buenos Aires;;;G. de Laferrere;1
+Claypole;Buenos Aires;;;Claypole;0
+Necochea;Buenos Aires;;;Necochea;0
+Monte Grande;Buenos Aires;;;Monte Grande;0
+Tapiales;Buenos Aires;;;Tapiales;0
+Ciudadela;Buenos Aires;;;Ciudadela;0
+Los Polvorines;Buenos Aires;;;Los Polvorines;0
+G. de Laferrere;Buenos Aires;;;G. de Laferrere;0
+Longchamps;Buenos Aires;;;Longchamps;0
+Luis Guillon;Buenos Aires;;;Luis Guillon;0
+Temperley;Buenos Aires;;;Temperley;0
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+R de Escalada;Buenos Aires;;;R de Escalada;0
+Monte Grande;Buenos Aires;;;Monte Grande;0
+Temperley;Buenos Aires;;;Temperley;0
+Canning;Buenos Aires;;;Canning;0
+San Fco. Solano;Buenos Aires;;;San Fco. Solano;0
+Necochea;Buenos Aires;;;Necochea;0
+Gral. Alvear;Buenos Aires;;;Gral. Alvear;0
+Necochea;Buenos Aires;;;Necochea;0
+Claypole;Buenos Aires;;;Claypole;0
+Gral. Rodriguez;Buenos Aires;;;Gral. Rodríguez;1
+La Dulce;Buenos Aires;;;La Dulce;0
+Gral. Pinto;Buenos Aires;;;Gral. Pinto;0
+Talar de Pacheco;Buenos Aires;;;Talar de Pacheco;0
+S. de los Padres;Buenos Aires;;;S. de los Padres;0
+Necochea;Buenos Aires;;;Necochea;0
+Glew;Buenos Aires;;;Glew;0
+Lucila del Mar;Buenos Aires;;;Lucila del Mar;0
+Alejandro Korn;Buenos Aires;;;Alejandro Korn;0
+Longchamps;Buenos Aires;;;Longchamps;0
+G. de Laferrere;Buenos Aires;;;G. de Laferrere;0
+Aguas Verdes;Buenos Aires;;;Aguas Verdes;0
+Gral. Las Heras;Buenos Aires;;;Gral. Las Heras;0
+S. de la Ventana;Buenos Aires;;;S. de la Ventana;0
+Angel Etcheverri;Buenos Aires;;;Angel Etcheverri;0
+Benavidez;Buenos Aires;;;Benavidez;0
+Beccar;Buenos Aires;;;Beccar;0
+Necochea;Buenos Aires;;;Necochea;0
+Gral. Rodr�guez;Buenos Aires;;;Gral. Rodríguez;1
+Temperley;Buenos Aires;;;Temperley;0
+Bol�var;Buenos Aires;;;Bolívar;1
+N. de la Riestra;Buenos Aires;;;N. de la Riestra;0
+Don Torcuato;Buenos Aires;;;Don Torcuato;0
+Rafael Castillo;Buenos Aires;;;Rafael Castillo;0
+Temperley;Buenos Aires;;;Temperley;0
+Bol�var;Buenos Aires;;;Bolívar;1
+Mar de Aj�;Buenos Aires;;;Mar de Ajó;1
+Claypole;Buenos Aires;;;Claypole;0
+G. de Laferrere;Buenos Aires;;;G. de Laferrere;0
+Don Torcuato;Buenos Aires;;;Don Torcuato;0
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+J. B. Alberdi;Buenos Aires;;;J. B. Alberdi;0
+Mart�nez;Buenos Aires;;;Martínez;1
+Mar de las Pampas;Buenos Aires;;;Mar de las Pampas;0
+Gral. Lavalle;Buenos Aires;;;Gral. Lavalle;0
+Canning;Buenos Aires;;;Canning;0
+Munro;Buenos Aires;;;Munro;0
+Villa Dominico;Buenos Aires;;;Villa Dominico;0
+Gral. Rodriguez;Buenos Aires;;;Gral. Rodríguez;1
+Bel�n de Escobar;Buenos Aires;;;Belén de Escobar;1
+Monte Grande;Buenos Aires;;;Monte Grande;0
+S. Clara del Mar;Buenos Aires;;;S. Clara del Mar;0
+Benavidez;Buenos Aires;;;Benavidez;0
+Claypole;Buenos Aires;;;Claypole;0
+Lomas del Mirador;Buenos Aires;;;Lomas del Mirador;0
+Mar de Aj�;Buenos Aires;;;Mar de Ajó;1
+Don Torcuato;Buenos Aires;;;Don Torcuato;0
+Necochea;Buenos Aires;;;Necochea;0
+Claypole;Buenos Aires;;;Claypole;0
+Gral. Lavalle;Buenos Aires;;;Gral. Lavalle;0
+C de Patagones;Buenos Aires;;;C. de Patagones;1
+Brandsen;Buenos Aires;;;Brandsen;0
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Mar de Aj�;Buenos Aires;;;Mar de Ajó;1
+C. de Patagones;Buenos Aires;;;C. de Patagones;0
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+Billinghurst;Buenos Aires;;;Billinghurst;0
+Gral. Rodriguez;Buenos Aires;;;Gral. Rodríguez;1
+Mart�nez;Buenos Aires;;;Martínez;1
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+Villa Dominico;Buenos Aires;;;Villa Dominico;0
+Necochea;Buenos Aires;;;Necochea;0
+Monte Grande;Buenos Aires;;;Monte Grande;0
+Loma Hermosa;Buenos Aires;;;Loma Hermosa;0
+Necochea;Buenos Aires;;;Necochea;0
+Pontevedra;Buenos Aires;;;Pontevedra;0
+Munro;Buenos Aires;;;Munro;0
+Gral. Lamadrid;Buenos Aires;;;Gral. Lamadrid;0
+Bonifacio;Buenos Aires;;;Bonifacio;0
+Fray Mrto. Esqui�;Buenos Aires;;;Fray Mrto. Esquiú;1
+Pablo Nogu�s;Buenos Aires;;;Pablo Nogués;1
+Necochea;Buenos Aires;;;Necochea;0
+J�uregui;Buenos Aires;;;Jáuregui;1
+Rafael Calzada;Buenos Aires;;;Rafael Calzada;0
+San A. de Areco;Buenos Aires;;;San A. de Areco;0
+Gral. Rodriguez;Buenos Aires;;;Gral. Rodríguez;1
+Banfield;Buenos Aires;;;Banfield;0
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+Martinez de Hoz;Buenos Aires;;;Martinez de Hoz;0
+Villa Bosch;Buenos Aires;;;Villa Bosch;0
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+El Socorro;Buenos Aires;;;El Socorro;0
+Necochea;Buenos Aires;;;Necochea;0
+Sarand�;Buenos Aires;;;Sarandí;1
+Necochea;Buenos Aires;;;Necochea;0
+N. de la Riestra;Buenos Aires;;;N. de la Riestra;0
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+Gral. Madariaga;Buenos Aires;;;Gral. Madariaga;0
+Virreyes;Buenos Aires;;;Virreyes;0
+Temperley;Buenos Aires;;;Temperley;0
+Gonzales Chaves;Buenos Aires;;;Gonzales Chávez;2
+La Dulce;Buenos Aires;;;La Dulce;0
+Gonzales Chaves;Buenos Aires;;;Gonzales Chávez;2
+Bel�n de Escobar;Buenos Aires;;;Belén de Escobar;1
+Necochea;Buenos Aires;;;Necochea;0
+Gral. Pacheco;Buenos Aires;;;Gral. Pacheco;0
+Monte Grande;Buenos Aires;;;Monte Grande;0
+Necochea;Buenos Aires;;;Necochea;0
+Bol�var;Buenos Aires;;;Bolívar;1
+Puerto Belgrano;Buenos Aires;;;Puerto Belgrano;0
+Gonzalez Cat�n;Buenos Aires;;;González Catán;2
+Mart�nez;Buenos Aires;;;Martínez;1
+Temperley;Buenos Aires;;;Temperley;0
+Gral. Lamadrid;Buenos Aires;;;Gral. Lamadrid;0
+Gral. Lamadrid;Buenos Aires;;;Gral. Lamadrid;0
+Temperley;Buenos Aires;;;Temperley;0
+C. de Patagones;Buenos Aires;;;C. de Patagones;0
+Gral Las Heras;Buenos Aires;;;Gral Las Heras;0
+G. de Laferrere;Buenos Aires;;;G. de Laferrere;0
+N. de la Riestra;Buenos Aires;;;N. de la Riestra;0
+S. Clara del Mar;Buenos Aires;;;S. Clara del Mar;0
+S. Clara del Mar;Buenos Aires;;;S. Clara del Mar;0
+Lomas del Mirador;Buenos Aires;;;Lomas del Mirador;0
+Ciudadela;Buenos Aires;;;Ciudadela;0
+Gral. Alvear;Buenos Aires;;;Gral. Alvear;0
+Temperley;Buenos Aires;;;Temperley;0
+Temperley;Buenos Aires;;;Temperley;0
+Claypole;Buenos Aires;;;Claypole;0
+Brandsen;Buenos Aires;;;Brandsen;0
+Lomas del Mirador;Buenos Aires;;;Lomas del Mirador;0
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+Pte. R. S�enz Pe�a;Chaco;;;Pte. R. Sáenz Peña;2
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+J. de San Mart�n;Chubut;;;J. de San Martín;1
+Gdor. Virasoro;Corrientes;;;Gdor. Virasoro;0
+Gral. Cabrera;C�rdoba;;;Gral. Cabrera;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Va. Gral. Belgrano;C�rdoba;;;Va. Gral. Belgrano;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Juan J. Castelli;Chaco;;;Juan J. Castelli;0
+Buchardo;C�rdoba;;;Buchardo;0
+Cnia. Sarmiento;Chubut;;;Cnia. Sarmiento;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Palmira;Mendoza;;;Palmira;0
+Va. Gral. Belgrano;C�rdoba;;;Va. Gral. Belgrano;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Gdor. Virasoro;Corrientes;;;Gdor. Virasoro;0
+M�sica;Chubut;;;Música;1
+Gral. Campos;Entre R�os;;;Gral. Campos;0
+Coronel Bustos;C�rdoba;;;Coronel Bustos;0
+Pcia. de la Plaza;Chaco;;;Pcia. de la Plaza;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Juan J. Castelli;Chaco;;;Juan J. Castelli;0
+Crpto A Bernardi;Entre R�os;;;Crpto A Bernardi;0
+Lib. Gral San Mart�n;Entre R�os;;;Lib. Gral. San Martín;2
+Cnia. Sarmiento;Chubut;;;Cnia. Sarmiento;0
+Lib. Gral San Mart�n;Jujuy;;;Lib. Gral. San Martín;2
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+SR Calamuchita;C�rdoba;;;SR Calamuchita;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+JuanJ. Castelli;Chaco;;;Juan J. Castelli;1
+Palmira;Mendoza;;;Palmira;0
+Ppa. del Infierno;Chaco;;;Ppa. del Infierno;0
+Strobel;Entre R�os;;;Strobel;0
+Gral. Cabrera;C�rdoba;;;Gral. Cabrera;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cnia. Avellaneda;Entre R�os;;;Cnia. Avellaneda;0
+Gdor. Virasoro;Corrientes;;;Gdor. Virasoro;0
+Jovita;C�rdoba;;;Jovita;0
+Cplla. Del Monte;C�rdoba;;;Cplla. Del Monte;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Lib. Gral. San Mart�n;Jujuy;;;Lib. Gral. San Martín;1
+Pte. Roque S�enz Pe�a;Chaco;;;Pte. Roque Sáenz Peña;2
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Gral. Deheza;C�rdoba;;;Gral. Deheza;0
+Juan J Castelli;Chaco;;;Juan J. Castelli;1
+Gral. Deheza;C�rdoba;;;Gral. Deheza;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+San Jos�;Entre R�os;;;San José;1
+Gral. Deheza;C�rdoba;;;Gral. Deheza;0
+Va. Cura Brochero;C�rdoba;;;Va. Cura Brochero;0
+Laguna Naineck;Formosa;;;Laguna Naineck;0
+Gral. Cabrera;C�rdoba;;;Gral. Cabrera;0
+Chacras de Coria;Mendoza;;;Chacras de Coria;0
+Pte. R. S�enz Pe�a;Chaco;;;Pte. R. Sáenz Peña;2
+Carrodilla;Mendoza;;;Carrodilla;0
+Cplla. Del Monte;C�rdoba;;;Cplla. Del Monte;0
+Gral. San Mart�n;Chaco;;;Gral. San Martín;1
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Gral. Pinedo;Chaco;;;Gral. Pinedo;0
+Gobernador Virasoro;Corrientes;;;Gobernador Virasoro;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Pte. Roque S�enz Pe�a;Chaco;;;Pte. Roque Sáenz Peña;2
+Villa Valle Mar�a;Entre R�os;;;Villa Valle María;1
+Ca. San Bartolom�;C�rdoba;;;Ca. San Bartolomé;1
+Juan J Castelli;Chaco;;;Juan J. Castelli;1
+Gbdor. Virasoro;Corrientes;;;Gdor. Virasoro;1
+Ca� Cati;Corrientes;;;Caá Catí;2
+VY de Calamuchita;C�rdoba;;;VY de Calamuchita;0
+Gbdor. Virasoro;Corrientes;;;Gdor. Virasoro;1
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Lib. Gral. San Mart�n;Jujuy;;;Lib. Gral. San Martín;1
+Atblo. Del Valle;Misiones;;;Atblo. Del Valle;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+Gral. Deheza;C�rdoba;;;Gral. Deheza;0
+Gral. San Mart�n;Chaco;;;Gral. San Martín;1
+Cnia. Sarmiento;Chubut;;;Cnia. Sarmiento;0
+Cdro. Rivadavia;Chubut;;;Cdro. Rivadavia;0
+San L del Palmar;Corrientes;;;San L del Palmar;0
+S Ramon Nva Or�n;Salta;;;S Ramon Nva Orán;1
+Ancaloo;Santa Fe;;;Ancaloo;0
+Bariloche;Rio Negro;;;Bariloche;0
+Joaqu�n V Gonz�lez;Salta;;;Joaquín V González;2
+Cruz;Santa;;;Cruz;0
+Joaqu�n V Gonz�lez;Salta;;;Joaquín V González;2
+S Ramon Nva Or�n;Salta;;;S Ramon Nva Orán;1
+Fern�ndez Oro;R�o Negro;;;Fernández Oro;1
+Termas Rio Hondo;Santiago del Estero;;;Termas Rio Hondo;0
+Difunta Correa;San Juan;;;Difunta Correa;0
+Eusebia;Santa Fe;;;Eusebia;0
+Ing Jacobacci;Rio Negro;;;Ing Jacobacci;0
+Puerto Gral San Mart�n;Sana Fe;;;Puerto Gral San Martín;1
+Ing Huergo;Rio Negro;;;Ing Huergo;0
+Villa de Merlo;San Juan;;;Villa de Merlo;0
+S Clara de Buena Vista;Santa Fe;;;S Clara de Buena Vista;0
+Joaqu�n V Gonz�lez;Salta;;;Joaquín V González;2
+Villa Gdor G�lvez;Santa Fe;;;Villa Gdor Gálvez;1
+S Ramon Nva Or�n;Salta;;;S Ramon Nva Orán;1
+Termas Rio Hondo;Santiago del Estero;;;Termas Rio Hondo;0
+Stefenelli;R�o Negro;;;Stefenelli;0
+Puerto Gral San Mart�n;Santa Fe;;;Puerto Gral San Martín;1
+Joaqu�n V Gonz�lez;Salta;;;Joaquín V González;2
+Sn Jos� de Met�n;Salta;;;Sn José de Metán;2
+Villa de Merlo;San Luis;;;Villa de Merlo;0
+S Jer�nimo Norte;Santa Fe;;;S Jerónimo Norte;1
+Joaqu�n V Gonz�lez;Salta;;;Joaquín V González;2
+CL Piedrabuena;Santa Cruz;;;C L Piedrabuena;1
+Sn Jos� de Met�n;Salta;;;Sn José de Metán;2
+Bariloche;Rio Negro;;;Bariloche;0
+C L Piedrabuena;Santa Cruz;;;C L Piedrabuena;0
+Yerba Buena;Tucum�n;;;Yerba Buena;0
+Rio Grande Drios;Tierra del Fuego;;;Rio Grande Drios;0
+San Isidro de Lules;Tucum�n;;;San Isidro de Lules;0
+Concepci�n;Tucum�n;;;Concepción;1
+Concepci�n;Tucum�n;;;Concepción;1
+Trancas;Tucum�n;;;Trancas;0
+Concepci�n;Tucum�n;;;Concepción;1
+Concepci�n;Tucum�n;;;Concepción;1
+Yerba Buena;Tucum�n;;;Yerba Buena;0
+Necochea;Buenos Aires;;;Necochea;0
+Bariloche;Rio Negro;;;Bariloche;0
+Necochea;Buenos Aires;;;Necochea;0
+San Isidro, Vicente L�pez y otros;Buenos Aires;;;San Isidro, Vicente López y otros;1
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Bariloche;Rio Negro;;;Bariloche;0
+Villa Krause;San Juan;;;Villa Krause;0
+Libertador Gral. San Mart�n;Jujuy;;;Libertador Gral. San Martín;1
+General Madariaga;Buenos Aires;;;General Madariaga;0
+Necochea;Buenos Aires;;;Necochea;0
+Libertador Gral San Mart�n;Juuy;;;Libertador Gral. San Martín;2
+Bariloche;Rio Negro;;;Bariloche;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Adrogu�;Buenos Aires;;;Adrogué;1
+Bol�var;Buenos Aires;;;Bolívar;1
+Talar de Pacheco;Buenos Aires;;;Talar de Pacheco;0
+Gral. Alvarado;Buenos Aires;;;Gral. Alvarado;0
+Gral. Belgrano;Buenos Aires;;;Gral. Belgrano;0
+Gral. Pacheco;Buenos Aires;;;Gral. Pacheco;0
+Gral. Pinto;Buenos Aires;;;Gral. Pinto;0
+Gral. Rodriguez;Buenos Aires;;;Gral. Rodríguez;1
+Gral. San Mart�n;Buenos Aires;;;Gral. San Martín;1
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+O�Brien;Buenos Aires;;;O'Brien;1
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Presidencia Roque Pe�a;Chaco;;;Presidencia Roque Peña;1
+Villa Gral. Belgrano;C�rdoba;;;Villa Gral. Belgrano;0
+Ca� Cat�;Corrientes;;;Caá Catí;2
+Gobernador Virasoro;Corrientes;;;Gobernador Virasoro;0
+Gobernador Virasoro;Corrientes;;;Gobernador Virasoro;0
+Bariloche;Rio Negro;;;Bariloche;0
+Bariloche;Rio Negro;;;Bariloche;0
+Tucum�n;Tucum�n;;;Tucumán;1
+Adrogu�;Buenos Aires;;;Adrogué;1
+Exaltaci�n de la Cruz;Buenos Aires;;;Exaltación de la Cruz;1
+Del Viso;Buenos Aires;;;Del Viso;0
+Del Viso;Buenos Aires;;;Del Viso;0
+Necochea;Buenos Aires;;;Necochea;0
+Saenz Pe�a;Chaco;;;Saenz Peña;1
+Saenz Pe�a;Chaco;;;Saenz Peña;1
+Saenz Pe�a;Chaco;;;Saenz Peña;1
+Saenz Pe�a;Chaco;;;Saenz Peña;1
+Saenz Pe�a;Chaco;;;Saenz Peña;1
+Anta Hualan;Catamarca;;;Anta Hualan;0
+Fray M. Esquiu;Catamarca;;;Fray M. Esquiu;0
+Bol�var;Buenos Aires;;;Bolívar;1
+Bol�var;Buenos Aires;;;Bolívar;1
+Bol�var;Buenos Aires;;;Bolívar;1
+Tortuguitas;Buenos Aires;;;Tortuguitas;0
+Bol�var;Buenos Aires;;;Bolívar;1
+General Madariaga;Buenos Aires;;;General Madariaga;0
+Bol�var;Buenos Aires;;;Bolívar;1
+El Palomar;Buenos Aires;;;El Palomar;0
+General Madariaga;Buenos Aires;;;General Madariaga;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Necochea;Buenos Aires;;;Necochea;0
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Remedios de Escalada;Buenos Aires;;;Remedios de Escalada;0
+Villa Ballester;Buenos Aires;;;Villa Ballester;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+R�o Hondo;Santiago del Estero;;;Río Hondo;1
+Mart�nez, San Isidro;Buenos Aires;;;Martínez, San Isidro;1
+San Antonio de Padua;Buenos Aires;;;San Antonio de Padua;0
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Sarand�;Buenos Aires;;;Sarandí;1
+Sarand�;Buenos Aires;;;Sarandí;1
+Necochea;Buenos Aires;;;Necochea;0
+Cnel. Pringles;Buenos Aires;;;Cnel. Pringles;0
+Lomas del Mirador;Buenos Aires;;;Lomas del Mirador;0
+Mar del Tuy�;Buenos Aires;;;Mar del Tuyú;1
+Mar del Tuy�;Buenos Aires;;;Mar del Tuyú;1
+Beccar;Buenos Aires;;;Beccar;0
+Carapachay;Buenos Aires;;;Carapachay;0
+Jos� Ingenieros;Buenos Aires;;;José Ingeniero;2
+Remedios de Escalada;Buenos Aires;;;Remedios de Escalada;0
+Gral. Madariaga;Buenos Aires;;;Gral. Madariaga;0
+S. de los Padres;Buenos Aires;;;S. de los Padres;0
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Cnel. Pringles;Buenos Aires;;;Cnel. Pringles;0
+Remedios de Escalada;Buenos Aires;;;Remedios de Escalada;0
+Remedios de Escalada;Buenos Aires;;;Remedios de Escalada;0
+General Alvarado;Buenos Aires;;;General Alvarado;0
+Remedios de Escalada;Buenos Aires;;;Remedios de Escalada;0
+Cnel. Brandsen;Buenos Aires;;;Cnel. Brandsen;0
+Tortuguitas;Buenos Aires;;;Tortuguitas;0
+Gral. Madariaga;Buenos Aires;;;Gral. Madariaga;0
+Necochea;Buenos Aires;;;Necochea;0
+Mart�n Coronado;Buenos Aires;;;Martín Coronado;1
+Mart�nez;Buenos Aires;;;Martínez;1
+Mart�nez;Buenos Aires;;;Martínez;1
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Mart�nez;Buenos Aires;;;Martínez;1
+Munro, Vicente Lopez;Buenos Aires;;;Munro, Vicente Lopez;0
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+El Jag�el;Buenos Aires;;;El Jagüel;1
+Lomas del Mirador;Buenos Aires;;;Lomas del Mirador;0
+Lan�s Oeste;Buenos Aires;;;Lanús Oeste;1
+Glew;Buenos Aires;;;Glew;0
+Gregorio de Laferrere;Buenos Aires;;;Gregorio de Laferrere;0
+Tapiales;Buenos Aires;;;Tapiales;0
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+Monte Grande, E. Echeverr�a;Buenos Aires;;;Monte Grande, E. Echeverría;1
+Villa Luzuriaga, La Matanza;Buenos Aires;;;Villa Luzuriaga, La Matanza;0
+Rafael Calzada;Buenos Aires;;;Rafael Calzada;0
+Llavallol;Buenos Aires;;;Llavallol;0
+El Talar, Tigre;Buenos Aires;;;El Talar, Tigre;0
+Isidro Casanova, La Matanza;Buenos Aires;;;Isidro Casanova, La Matanza;0
+Monte Grande;Buenos Aires;;;Monte Grande;0
+Monte Grande, E. Echeverr�a;Buenos Aires;;;Monte Grande, E. Echeverría;1
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+Valent�n Alsina;Buenos Aires;;;Valentín Alsina;1
+Villa Lynch;Buenos Aires;;;Villa Lynch;0
+Villa Maip�;Buenos Aires;;;Villa Maipú;1
+Claypole;Buenos Aires;;;Claypole;0
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+Monte Grande;Buenos Aires;;;Monte Grande;0
+Trist�n Su�rez;Buenos Aires;;;Tristán Suárez;2
+Puerto Rosales;Buenos Aires;;;Puerto Rosales;0
+Don Torcuato;Buenos Aires;;;Don Torcuato;0
+Cuartel V., Moreno;Buenos Aires;;;Cuartel V., Moreno;0
+Francisco �lvarez;Buenos Aires;;;Francisco Álvarez;1
+Rafael Calzada;Buenos Aires;;;Rafael Calzada;0
+Villa S�enz Pe�a;Buenos Aires;;;Villa Sáenz Peña;2
+Los Polvorines;Buenos Aires;;;Los Polvorines;0
+Necochea;Buenos Aires;;;Necochea;0
+Adrogu�;Buenos Aires;;;Adrogué;1
+Monte Grande;Buenos Aires;;;Monte Grande;0
+Ciudad E. Madero;Buenos Aires;;;Ciudad E. Madero;0
+Bol�var;Buenos Aires;;;Bolívar;1
+Necochea;Buenos Aires;;;Necochea;0
+Villa Ballester;Buenos Aires;;;Villa Ballester;0
+Mart�nez;Buenos Aires;;;Martínez;1
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+Temperley;Buenos Aires;;;Temperley;0
+Mart�nez;Buenos Aires;;;Martínez;1
+Gonzales Ch�vez;Buenos Aires;;;Gonzales Chávez;1
+Necochea;Buenos Aires;;;Necochea;0
+Adrogu�;Buenos Aires;;;Adrogué;1
+Monte Grande, E. Echeverr�a;Buenos Aires;;;Monte Grande, E. Echeverría;1
+Pablo Podest�;Buenos Aires;;;Pablo Podestá;1
+Gregorio de Laferrere;Buenos Aires;;;Gregorio de Laferrere;0
+Villa Bosch;Buenos Aires;;;Villa Bosch;0
+Pablo Podest�;Buenos Aires;;;Pablo Podestá;1
+Pontevedra;Buenos Aires;;;Pontevedra;0
+Paso del Rey;Buenos Aires;;;Paso del Rey;0
+Lomas del Mirador;Buenos Aires;;;Lomas del Mirador;0
+Gonz�lez Cat�n;Buenos Aires;;;González Catán;2
+San Andr�s;Buenos Aires;;;San Andrés;1
+San Francisco Solano;Buenos Aires;;;San Francisco Solano;0
+Trist�n Su�rez;Buenos Aires;;;Tristán Suárez;2
+Mar de Aj�;Buenos Aires;;;Mar de Ajó;1
+Paso del Rey;Buenos Aires;;;Paso del Rey;0
+Gral. Villegas;Buenos Aires;;;Gral. Villegas;0
+Ciudadela;Buenos Aires;;;Ciudadela;0
+Bol�var;Buenos Aires;;;Bolívar;1
+Necochea;Buenos Aires;;;Necochea;0
+Del Viso;Buenos Aires;;;Del Viso;0
+General Madariaga;Buenos Aires;;;General Madariaga;0
+Jos� Ingeniero;Buenos Aires;;;José Ingeniero;1
+Gral. Rojo;Buenos Aires;;;Gral. Rojo;0
+Ramos Mej�a;Buenos Aires;;;Ramos Mejía;1
+Mar de Aj�;Buenos Aires;;;Mar de Ajó;1
+Fray Mamerto Esqui�;Catamarca;;;Fray Mamerto Esquiú;1
+Las Tejas del Valle Viejo;Catamarca;;;Las Tejas del Valle Viejo;0
+Ciudad de C�rdoba;C�rdoba;;;Ciudad de Córdoba;1
+Sta. Rosa de Calamuchita;C�rdoba;;;Sta. Rosa de Calamuchita;0
+Barrio Marqu�s de Sobremonte;C�rdoba;;;Barrio Marqués de Sobremonte;1
+Ram�rez;Entre R�os;;;Ramírez;1
+San Jos�;Entre R�os;;;San José;1
+Tiro Federal;Entre R�os;;;Tiro Federal;0
+Mayor Vicente E. Villafa�e;Formosa;;;Mayor Vicente E. Villafañe;1
+Perico del Carmen;Jujuy;;;Perico del Carmen;0
+Libertador Gral. San Mart�n;Jujuy;;;Libertador Gral. San Martín;1
+Perico del Carmen;Jujuy;;;Perico del Carmen;0
+Libertador Gral. San Mart�n;Jujuy;;;Libertador Gral. San Martín;1
+Villa Nueva de Guaymall�n;Mendoza;;;Villa Nueva de Guaymallén;1
+Villa Nueva de Guaymall�n;Mendoza;;;Villa Nueva de Guaymallén;1
+Gral. Alvear;Mendoza;;;Gral. Alvear;0
+Gral. Alvear;Mendoza;;;Gral. Alvear;0
+Rodeo de la Cruz;Mendoza;;;Rodeo de la Cruz;0
+Gral. Alvear;Mendoza;;;Gral. Alvear;0
+Gral. Alvear;Mendoza;;;Gral. Alvear;0
+Gral. Alvear;Mendoza;;;Gral. Alvear;0
+Iguaz�;Misiones;;;Iguazú;1
+Bariloche;R�o Negro;;;Bariloche;0
+Bariloche;R�o Negro;;;Bariloche;0
+Gral. Conesa;R�o Negro;;;Gral. Conesa;0
+Gral. Roca;R�o Negro;;;Gral. Roca;0
+Met�n;Salta;;;Metán;1
+Gral. G�emes;Salta;;;Gral. Gúemes;1
+Ciudad de Caucete;San Juan;;;Ciudad de Caucete;0
+Villas Ca�as;Santa Fe;;;Villas Cañas;1
+Belgrano;Santa Fe;;;Belgrano;0
+Blgrano;Santa Fe;;;Belgrano;1
+Santa Fe de la Veracruz;Santa Fe;;;Santa Fe de la Veracruz;0
+R�o Hondo;Santiago del Estero;;;Río Hondo;1
+Yerba Buena;Tucum�n;;;Yerba Buena;0
+Isidro Casanova;Buenos Aires;;;Isidro Casanova;0
+General Alvarado;Buenos Aires;;;General Alvarado;0
+Longchamps;Buenos Aires;;;Longchamps;0
