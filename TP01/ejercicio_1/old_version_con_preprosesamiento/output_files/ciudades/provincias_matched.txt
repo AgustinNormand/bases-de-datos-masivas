@@ -1,0 +1,1101 @@
+Ciudad;Provincia;matched_ciudad;measure value;matched_provincia;measure value_1
+*;Capital Federal;*;0;Capital Federal;0
+*;CApital Federal;*;0;Capital Federal;0
+*;Capital Federal;*;0;Capital Federal;0
+*;Capital Federal ;*;0;Capital Federal;1
+*;Buenos Aires;*;0;Buenos Aires;0
+*;Capital Federal;*;0;Capital Federal;0
+*;Corrientes;*;0;Corrientes;0
+*;Entre Ríos;*;0;Entre Ríos;0
+*;Formosa;*;0;Formosa;0
+*;Jujuy;*;0;Jujuy;0
+*;La Pampa;*;0;La Pampa;0
+*;Mendoza;*;0;Mendoza;0
+*;Misiones;*;0;Misiones;0
+*;Río Negro;*;0;Río Negro;0
+*;Salta;*;0;Salta;0
+*;Santa Cruz;*;0;Santa Cruz;0
+*;Santa Fe;*;0;Santa Fe;0
+*;Tierra del Fuego;*;0;Tierra del Fuego;0
+25 de Mayo;Buenos Aires;25 de Mayo;0;Buenos Aires;0
+28 de Noviembre;Santa Cruz;28 de Noviembre;0;Santa Cruz;0
+30 de Agosto;Buenos Aires;30 de Agosto;0;Buenos Aires;0
+9 de Julio;Buenos Aires;9 de Julio;0;Buenos Aires;0
+Abra Pampa;Jujuy;Abra Pampa;0;Jujuy;0
+Acebal;Santa Fe;Acébal;1;Santa Fe;0
+Achiras;Córdoba;Achiras;0;Córdoba;0
+Adelia María;Córdoba;Adelia María;0;Córdoba;0
+Adrogué;Buenos Aires;Adrogué;0;Buenos Aires;0
+Aguas Verdes;Buenos Aires;Aguas Verdes;0;Buenos Aires;0
+Aguilares;Tucumán;Aguilares;0;Tucumán;0
+Aimogasta;La Rioja;Aimogasta;0;La Rioja;0
+Alberti;Buenos Aires;Alberti;0;Buenos Aires;0
+Alcira Gigena;Córdoba;Alcira Gigena;0;Córdoba;0
+Alcorta;Santa Fe;Alcorta;0;Santa Fe;0
+Alejandro Korn;Buenos Aires;Alejandro Korn;0;Buenos Aires;0
+Alejandro Roca;Córdoba;Alejandro Roca;0;Córdoba;0
+Allen;Río Negro;Allen;0;Río Negro;0
+Almirante Brown;Buenos Aires;Almirante Brown;0;Buenos Aires;0
+Alta Gracia;Córdoba;Alta Gracia;0;Córdoba;0
+Alta Italia;La Pampa;Alta Italia;0;La Pampa;0
+Alvarez;Santa Fe;Álvarez;1;Santa Fe;0
+América;Buenos Aires;América;0;Buenos Aires;0
+Ancaloo;Santa Fe;Ancaloo;0;Santa Fe;0
+Andalgala;Catamarca;Andalgalá;1;Catamarca;0
+Andalgalá;Catamarca;Andalgalá;0;Catamarca;0
+Angel Etcheverri;Buenos Aires;Angel Etcheverri;0;Buenos Aires;0
+Angélica;Santa Fe;Angélica;0;Santa Fe;0
+Anta Hualan;Catamarca;Anta Hualan;0;Catamarca;0
+Apóstoles;Misiones;Apóstoles;0;Misiones;0
+Arata;La Pampa;Arata;0;La Pampa;0
+Arequito;Santa Fe;Arequito;0;Santa Fe;0
+Arias;Córdoba;Arias;0;Córdoba;0
+Armstrong;Santa Fe;Armstrong;0;Santa Fe;0
+Arrecifes;Buenos Aires;Arrecifes;0;Buenos Aires;0
+Arroyito;Córdoba;Arroyito;0;Córdoba;0
+Arroyo Seco;Santa Fe;Arroyo Seco;0;Santa Fe;0
+Arteaga;Santa Fe;Arteaga;0;Santa Fe;0
+Ascensión;Buenos Aires;Ascensión;0;Buenos Aires;0
+Atblo. Del Valle;Misiones;Atblo. Del Valle;0;Misiones;0
+Avellaneda;Buenos Aires;Avellaneda;0;Buenos Aires;0
+Avellaneda;Santa Fe ;Avellaneda;0;Santa Fe;1
+Ayacucho;Buenos Aires;Ayacucho;0;Buenos Aires;0
+Azul;Buenos Aires;Azul;0;Buenos Aires;0
+Añatuya;Santiago del Estero;Añatuya;0;Santiago del Estero;0
+Bahía Blanca;Buenos Aires;Bahía Blanca;0;Buenos Aires;0
+Balcarce;Buenos Aires;Balcarce;0;Buenos Aires;0
+Balnearia;Córdoba;Balnearia;0;Córdoba;0
+Banda del rio Sali;Tucumán;Banda del rio Sali;0;Tucumán;0
+Banda del Rio Sali;Tucumán;Banda del rio Sali;0;Tucumán;0
+Banderas;Santiago del Estero;Bandera;1;Santiago del Estero;0
+Banfield;Buenos Aires;Banfield;0;Buenos Aires;0
+Baradero;Buenos Aires;Baradero;0;Buenos Aires;0
+Bariloche;Rio Negro;Bariloche;0;Río Negro;1
+Bariloche;Río Negro;Bariloche;0;Río Negro;0
+Barrancas;Santa Fe;Barrancas;0;Santa Fe;0
+Barranqueras;Chaco;Barranqueras;0;Chaco;0
+Barrio Marqués de Sobremonte;Córdoba;Barrio Marqués de Sobremonte;0;Córdoba;0
+Basavilbaso;Entre Ríos;Basavilbaso;0;Entre Ríos;0
+Beccar;Buenos Aires;Beccar;0;Buenos Aires;0
+Belgrano;Santa Fe;Belgrano;0;Santa Fe;0
+Bell Ville;Córdoba;Bell Ville;0;Córdoba;0
+Bella Vista;Buenos Aires;Bella Vista;0;Buenos Aires;0
+Bella Vista;Chaco;Bella Vista;0;Chaco;0
+Bella Vista;Corrientes;Bella Vista;0;Corrientes;0
+Belén;Catamarca;Belén;0;Catamarca;0
+Belén de Escobar;Buenos Aires;Belén de Escobar;0;Buenos Aires;0
+Benavidez;Buenos Aires;Benavidez;0;Buenos Aires;0
+Bengoolea;Córdoba;Bengolea;1;Córdoba;0
+Benito Juarez;Buenos Aires;Benito Juárez;1;Buenos Aires;0
+Benito Juárez;Buenos Aires;Benito Juárez;0;Buenos Aires;0
+Berazategui;Buenos Aires;Berazategui;0;Buenos Aires;0
+Berisso;Buenos Aires;Berisso;0;Buenos Aires;0
+Bernal;Buenos Aires;Berna;1;Buenos Aires;0
+Berrotarán;Córdoba;Berrotarán;0;Córdoba;0
+Bialet Massé;Córdoba;Bialet Massé;0;Córdoba;0
+Bigand;Santa Fe;Bigand;0;Santa Fe;0
+Billinghurst;Buenos Aires;Billinghurst;0;Buenos Aires;0
+Blaquier;Buenos Aires;Blaquier;0;Buenos Aires;0
+Blgrano;Santa Fe;Blgrano;0;Santa Fe;0
+Bolsón;Rio Negro;Bolsón;0;Río Negro;1
+Bolívar;Buenos Aires;Bolívar;0;Buenos Aires;0
+Bonifacio;Buenos Aires;Bonifacio;0;Buenos Aires;0
+Bonpland;Corrientes;Bonpland;0;Corrientes;0
+Bouquet;Santa Fe;Bouquet;0;Santa Fe;0
+Bovril;Entre Ríos;Bovril;0;Entre Ríos;0
+Bowen;Mendoza;Bowen;0;Mendoza;0
+Bragado;Buenos Aires;Bragado;0;Buenos Aires;0
+Brandsen;Buenos Aires;Brandsen;0;Buenos Aires;0
+Brinckmann;Córdoba;Brinkmann;1;Córdoba;0
+Brinkmann;Córdoba;Brinkmann;0;Córdoba;0
+Buchardo;Córdoba;Buchardo;0;Córdoba;0
+C de Patagones;Buenos Aires;C de Patagones;0;Buenos Aires;0
+C L Piedrabuena;Santa Cruz;C L Piedrabuena;0;Santa Cruz;0
+C. de Patagones;Buenos Aires;C. de Patagones;0;Buenos Aires;0
+Ca. San Bartolomé;Córdoba;Ca. San Bartolomé;0;Córdoba;0
+Cacharí;Buenos Aires;Cacharí;0;Buenos Aires;0
+Cafayate;Salta;Cafayate;0;Salta;0
+Calafate;Santa Cruz;Calafate;0;Santa Cruz;0
+Calamuchita;Córdoba;Calamuchita;0;Córdoba;0
+Calchaqui;Santa Fe;Calchaquí;1;Santa Fe;0
+Calchaquí;Santa Fe;Calchaquí;0;Santa Fe;0
+Calchaquí;Santa Fe ;Calchaquí;0;Santa Fe;1
+Caleta Oliva;Santa Cruz;Caleta Olivia;1;Santa Cruz;0
+Caleta Olivia;Santa Cruz;Caleta Olivia;0;Santa Cruz;0
+Caleta Olivia;Santa Cruz ;Caleta Olivia;0;Santa Cruz;1
+Caleufú;La Pampa;Caleufú;0;La Pampa;0
+Camarones;Chubut;Camarones;0;Chubut;0
+Campana;Buenos Aires;Campana;0;Buenos Aires;0
+Campo Grande;Misiones;Campo Grande;0;Misiones;0
+Campo Largo;Chaco;Campo Largo;0;Chaco;0
+Campo Viera;Misiones;Campo Viera;0;Misiones;0
+Canals;Córdoba;Canals;0;Córdoba;0
+Candelaria;Misiones;Candelaria;0;Misiones;0
+Canning;Buenos Aires;Canning;0;Buenos Aires;0
+Capilla del Señor;Buenos Aires;Capilla del Señor;0;Buenos Aires;0
+Capiovy;Misiones;Capioví;1;Misiones;0
+Capioví;Misiones;Capioví;0;Misiones;0
+Capitán Bermudez;Santa Fe;Capitán Bermúdez;1;Santa Fe;0
+Capitán Sarmiento;Buenos Aires;Capitán Sarmiento;0;Buenos Aires;0
+Carapachay;Buenos Aires;Carapachay;0;Buenos Aires;0
+Carcaraña;Santa Fe;Carcarañá;1;Santa Fe;0
+Carcarañá;Santa Fe;Carcarañá;0;Santa Fe;0
+Carhué;Buenos Aires;Carhué;0;Buenos Aires;0
+Cariló;Buenos Aires;Catriló;1;Buenos Aires;0
+Carlos Casares;Buenos Aires;Carlos Casares;0;Buenos Aires;0
+Carlos Pellegrini;Santa Fe;Carlos Pellegrini;0;Santa Fe;0
+Carlos Pellegrini;Santa Fé;Carlos Pellegrini;0;Santa Fe;1
+Carlos Tejedor;Buenos Aires;Carlos Tejedor;0;Buenos Aires;0
+Carmen de Areco;Buenos Aires;Carmen de Areco;0;Buenos Aires;0
+Carmen de Patagones;Buenos Aires;Carmen de Patagones;0;Buenos Aires;0
+Carrodilla;Mendoza;Carrodilla;0;Mendoza;0
+Casbas;Buenos Aires;Casbas;0;Buenos Aires;0
+Caseros;Buenos Aires;Caseros;0;Buenos Aires;0
+Caseros;Entre Ríos;Caseros;0;Entre Ríos;0
+Casilda;Santa Fe;Casilda;0;Santa Fe;0
+Castelar;Buenos Aires;Castelar;0;Buenos Aires;0
+Castelli;Buenos Aires;Castelli;0;Buenos Aires;0
+Catamarca;Catamarca;Catamarca;0;Catamarca;0
+Catriel;Rio Negro;Catriel;0;Río Negro;1
+Catriló;La Pampa;Catriló;0;La Pampa;0
+Caucete;San Juan;Caucete;0;San Juan;0
+Caviahue;Neuquén;Caviahue;0;Neuquén;0
+Caá Cati;Corrientes;Caá Cati;0;Corrientes;0
+Caá Catí;Corrientes;Caá Catí;0;Corrientes;0
+Cañada de Gómez;Santa Fe;Cañada de Gómez;0;Santa Fe;0
+Cañada Rosquín;Santa Fe;Cañada Rosquín;0;Santa Fe;0
+Cañada Seca;Buenos Aires;Cañada Seca;0;Buenos Aires;0
+Cañuelas;Buenos Aires;Cañuelas;0;Buenos Aires;0
+Cdro. Rivadavia;Chubut;Cdro. Rivadavia;0;Chubut;0
+Centenario;Neuquén;Centenario;0;Neuquén;0
+Ceres;Santa Fe;Ceres;0;Santa Fe;0
+Cerrito;Entre Ríos;Cerrito;0;Entre Ríos;0
+Cerro Azul;Misiones;Cerro Azul;0;Misiones;0
+Cervantes;Río Negro;Cervantes;0;Río Negro;0
+Chabás;Santa Fe;Chabas;1;Santa Fe;0
+Chabás;Santa Fé;Chabas;1;Santa Fe;1
+Chacabuco;Buenos Aires;Chacabuco;0;Buenos Aires;0
+Chacras de Coria;Mendoza;Chacras de Coria;0;Mendoza;0
+Chajarí;Entre Ríos;Chajarí;0;Entre Ríos;0
+Chaján;Córdoba;Chaján;0;Córdoba;0
+Chamical;La Rioja;Chamical;0;La Rioja;0
+Charata;Chaco;Charata;0;Chaco;0
+Charata;Chaco;Charata;0;Chaco;0
+Chascomús;Buenos Aires;Chascomús;0;Buenos Aires;0
+Chavarría;Corrientes;Chavarría;0;Corrientes;0
+Chañar Ladeado;Santa Fe;Chañar Ladeado;0;Santa Fe;0
+Chepes;La Rioja;Chepes;0;La Rioja;0
+Chilecito;La Rioja;Chilecito;0;La Rioja;0
+Chillar;Buenos Aires;Chillar;0;Buenos Aires;0
+Chivilcoy;Buenos Aires;Chivilcoy;0;Buenos Aires;0
+Choele Choel;Rio Negro;Choele Choel;0;Río Negro;1
+Choele Choel;Río Negro;Choele Choel;0;Río Negro;0
+Chos Malal;Neuquén;Chos Malal;0;Neuquén;0
+Chovet;Santa Fe;Chovet;0;Santa Fe;0
+Chovet;Santa fe;Chovet;0;Santa Fe;0
+Chovet;Santa Fe;Chovet;0;Santa Fe;0
+Cinco Saltos;Río Negro;Cinco Saltos;0;Río Negro;0
+Cipoletti;Rio Negro;Cipolletti;1;Río Negro;1
+Cipoletti;Río Negro;Cipolletti;1;Río Negro;0
+Cipolletti;Río Negro;Cipolletti;0;Río Negro;0
+Ciudad de Caucete;San Juan;Ciudad de Caucete;0;San Juan;0
+Ciudad de Córdoba;Córdoba;Ciudad de Córdoba;0;Córdoba;0
+Ciudad E. Madero;Buenos Aires;Ciudad E. Madero;0;Buenos Aires;0
+Ciudadela;Buenos Aires;Ciudadela;0;Buenos Aires;0
+CL Piedrabuena;Santa Cruz;CL Piedrabuena;0;Santa Cruz;0
+Claromecó;Buenos Aires;Claromecó;0;Buenos Aires;0
+Claypole;Buenos Aires;Claypole;0;Buenos Aires;0
+Clorinda;Formosa;Clorinda;0;Formosa;0
+Cnel. Brandsen;Buenos Aires;Cnel. Brandsen;0;Buenos Aires;0
+Cnel. Pringles;Buenos Aires;Cnel. Pringles;0;Buenos Aires;0
+Cnia. Avellaneda;Entre Ríos;Cnia. Avellaneda;0;Entre Ríos;0
+Cnia. Sarmiento;Chubut;Cnia. Sarmiento;0;Chubut;0
+Colonia Caroya;Córdoba;Colonia Caroya;0;Córdoba;0
+Colón;Buenos Aires;Colón;0;Buenos Aires;0
+Colón;Entre Ríos;Colón;0;Entre Ríos;0
+Comodoro Rivadavia;Chubut;Comodoro Rivadavia;0;Chubut;0
+Concepción;Tucumán;Concepción;0;Tucumán;0
+Concepción del Bermejo;Chaco;Concepción del Bermejo;0;Chaco;0
+Concepción del Uruguay;Entre Ríos;Concepción del Uruguay;0;Entre Ríos;0
+Concepción del Uruguay;Tucumán;Concepción del Uruguay;0;Tucumán;0
+Concordia;Entre Ríos;Concordia;0;Entre Ríos;0
+Confluencia;Corrientes;Confluencia;0;Corrientes;0
+Coronda;Santa Fe;Coronda;0;Santa Fe;0
+Coronda;Santa Fé;Coronda;0;Santa Fe;1
+Coronel Baigorria;Córdoba;Coronel Baigorria;0;Córdoba;0
+Coronel Bustos;Córdoba;Coronel Bustos;0;Córdoba;0
+Coronel Charlone;Buenos Aires;Coronel Charlone;0;Buenos Aires;0
+Coronel Dorrego;Buenos Aires;Coronel Dorrego;0;Buenos Aires;0
+Coronel Du Graty;Chaco;Coronel Du Graty;0;Chaco;0
+Coronel Moldes;Córdoba;Coronel Moldes;0;Córdoba;0
+Coronel Pringles;Buenos Aires;Coronel Pringles;0;Buenos Aires;0
+Coronel Suárez;Buenos Aires;Coronel Suárez;0;Buenos Aires;0
+Coronel Vidal;Buenos Aires;Coronel Vidal;0;Buenos Aires;0
+Corral de Bustos;Córdoba;Corral de Bustos;0;Córdoba;0
+Corrientes;Corrientes;Corrientes;0;Corrientes;0
+Corzuela;Chaco;Corzuela;0;Chaco;0
+Corzuela;Chaco;Corzuela;0;Chaco;0
+Cosquín;Córdoba;Cosquín;0;Córdoba;0
+Costa Azul;Buenos Aires;Costa Azul;0;Buenos Aires;0
+Cplla del Monte;Córdoba;Cplla del Monte;0;Córdoba;0
+Cplla. Del Monte;Córdoba;Cplla. Del Monte;0;Córdoba;0
+Crespo;Entre Ríos;Crespo;0;Entre Ríos;0
+Crpto A Bernardi;Entre Ríos;Crpto A Bernardi;0;Entre Ríos;0
+Cruz;Santa;Cruz;0;Salta;1
+Cruz Alta;Córdoba;Cruz Alta;0;Córdoba;0
+Cruz del Eje;Córdoba;Cruz del Eje;0;Córdoba;0
+Cuartel V., Moreno;Buenos Aires;Cuartel V., Moreno;0;Buenos Aires;0
+Curuzú Cuatiá;Corrientes;Curuzú Cuatiá;0;Corrientes;0
+Cutral Có;Neuquén;Cutral Có;0;Neuquén;0
+Córdoba;Córdoba;Córdoba;0;Córdoba;0
+Córdoba;Córdoba ;Córdoba;0;Córdoba;1
+Daireaux;Buenos Aires;Daireaux;0;Buenos Aires;0
+Darregueira;Buenos Aires;Darregueira;0;Buenos Aires;0
+Dean Funes;Córdoba;Deán Funes;1;Córdoba;0
+Del Viso;Buenos Aires;Del Viso;0;Buenos Aires;0
+Derqui;Buenos Aires;Derqui;0;Buenos Aires;0
+Diamante;Entre Ríos;Diamante;0;Entre Ríos;0
+Difunta Correa;San Juan;Difunta Correa;0;San Juan;0
+Dolavón;Chubut;Dolavon;1;Chubut;0
+Dolores;Buenos Aires;Dolores;0;Buenos Aires;0
+Don Torcuato;Buenos Aires;Don Torcuato;0;Buenos Aires;0
+Eduardo Castex;La Pampa;Eduardo Castex;0;La Pampa;0
+El Bolsón;Rio Negro;El Bolsón;0;Río Negro;1
+El Bolsón;Río Negro;El Bolsón;0;Río Negro;0
+El Calafate;Santa Cruz;El Calafate;0;Santa Cruz;0
+El Chalten;Santa Cruz;El Chaltén;1;Santa Cruz;0
+El Colorado;Formosa;El Colorado;0;Formosa;0
+El Dorado;Misiones;El Dorado;0;Misiones;0
+El Hoyo;Chubut;El Hoyo;0;Chubut;0
+El Jagüel;Buenos Aires;El Jagüel;0;Buenos Aires;0
+El Maitén;Chubut;El Maitén;0;Chubut;0
+El Palomar;Buenos Aires;El Palomar;0;Buenos Aires;0
+El Pato;Buenos Aires;El Pato;0;Buenos Aires;0
+El Quebrachal;Salta;El Quebrachal;0;Salta;0
+El Soberbio;Misiones;El Soberbio;0;Misiones;0
+El Socorro;Buenos Aires;El Socorro;0;Buenos Aires;0
+El Tala;Salta;El Tala;0;Salta;0
+El Talar, Tigre;Buenos Aires;El Talar, Tigre;0;Buenos Aires;0
+El Trébol;Santa Fe;El Trébol;0;Santa Fe;0
+El Trébol;Santa Fé;El Trébol;0;Santa Fe;1
+Eldorado;Misiones;Eldorado;0;Misiones;0
+Elortondo;Santa Fé;Elortondo;0;Santa Fe;1
+Embajador Martini;La Pampa;Embajador Martini;0;La Pampa;0
+Embalse;Córdoba;Embalse;0;Córdoba;0
+Embarcación;Salta;Embarcación;0;Salta;0
+Emilia;Santa Fe;Emilia;0;Santa Fe;0
+Empedrado;Corrientes;Empedrado;0;Corrientes;0
+Ensenada;Buenos Aires;Ensenada;0;Buenos Aires;0
+Escobar;Buenos Aires;Escobar;0;Buenos Aires;0
+Esperanza;Santa Fe;Esperanza;0;Santa Fe;0
+Esperanza;Santa Fé;Esperanza;0;Santa Fe;1
+Esquel;Chubut;Esquel;0;Chubut;0
+Esquel;Chubut;Esquel;0;Chubut;0
+Esquina;Corrientes;Esquina;0;Corrientes;0
+Esteban Echeverría;Buenos Aires;Esteban Echeverría;0;Buenos Aires;0
+Etruria;Córdoba;Etruria;0;Córdoba;0
+Eugenio Bustos;Mendoza;Eugenio Bustos;0;Mendoza;0
+Eusebia;Santa Fe;Eusebia;0;Santa Fe;0
+Exaltación de la Cruz;Buenos Aires;Exaltación de la Cruz;0;Buenos Aires;0
+Ezeiza;Buenos Aires;Ezeiza;0;Buenos Aires;0
+Famaila;Tucumán;Famaila;0;Tucumán;0
+Famatina;La Rioja;Famatina;0;La Rioja;0
+Federación;Entre Ríos;Federación;0;Entre Ríos;0
+Federal;Entre Ríos;Federal;0;Entre Ríos;0
+Felipe Solá;Buenos Aires;Felipe Solá;0;Buenos Aires;0
+Fernandez;Santiago del Estero;Fernández;1;Santiago del Estero;0
+Fernández Oro;Río Negro;Fernández Oro;0;Río Negro;0
+Fiambalá;Catamarca;Fiambalá;0;Catamarca;0
+Firmat;Santa Fe;Firmat;0;Santa Fe;0
+Firmat;Santa Fé;Firmat;0;Santa Fe;1
+Florencio Varela;Buenos Aires;Florencio Varela;0;Buenos Aires;0
+Florentino Ameghino;Buenos Aires;Florentino Ameghino;0;Buenos Aires;0
+Florida;Buenos Aires;Florida;0;Buenos Aires;0
+Fontana;Chaco;Fontana;0;Chaco;0
+Formosa;Formosa;Formosa;0;Formosa;0
+Fortín Olmos;Santa Fé;Fortín Olmos;0;Santa Fe;1
+Francisco Álvarez;Buenos Aires;Francisco Álvarez;0;Buenos Aires;0
+Franck;Santa Fé;Franck;0;Santa Fe;1
+Fray Luis Beltrán;Santa Fé;Fray Luis Beltrán;0;Santa Fe;1
+Fray M. Esquiu;Catamarca;Fray M. Esquiu;0;Catamarca;0
+Fray Mamerto Esquiú;Catamarca;Fray Mamerto Esquiú;0;Catamarca;0
+Fray Mrto. Esquiú;Buenos Aires;Fray Mrto. Esquiú;0;Buenos Aires;0
+Freyre;Córdoba;Freyre;0;Córdoba;0
+Frías;Santiago del Estero;Frías;0;Santiago del Estero;0
+Fuentes;Santa Fé;Fuentes;0;Santa Fe;1
+Funes;Santa Fe;Funes;0;Santa Fe;0
+Funes;Santa Fé;Funes;0;Santa Fe;1
+G de Laferrere;Buenos Aires;G de Laferrere;0;Buenos Aires;0
+G. de Laferrere;Buenos Aires;G. de Laferrere;0;Buenos Aires;0
+Gaiman;Chubut;Gaiman;0;Chubut;0
+Galvez;Santa Fe;Gálvez;1;Santa Fe;0
+Gaona;Salta;Gaona;0;Salta;0
+Garré;Buenos Aires;Garré;0;Buenos Aires;0
+Garupá;Misiones;Garupá;0;Misiones;0
+Garín;Buenos Aires;Garín;0;Buenos Aires;0
+Gbdor. Virasoro;Corrientes;Gbdor. Virasoro;0;Corrientes;0
+Gdor. Virasoro;Corrientes;Gdor. Virasoro;0;Corrientes;0
+General Alvarado;Buenos Aires;General Alvarado;0;Buenos Aires;0
+General Alvear;Buenos Aires;General Alvear;0;Buenos Aires;0
+General Alvear;Mendoza;General Alvear;0;Mendoza;0
+General Alvear;Buenos Aires;General Alvear;0;Buenos Aires;0
+General Alvear;Mendoza;General Alvear;0;Mendoza;0
+General Arenales;Buenos Aires;General Arenales;0;Buenos Aires;0
+General Belgrano;Buenos Aires;General Belgrano;0;Buenos Aires;0
+General Cabrera;Córdoba;General Cabrera;0;Córdoba;0
+General Campos;Entre Ríos;General Campos;0;Entre Ríos;0
+General Conesa;Rio Negro;General Conesa;0;Río Negro;1
+General Galarza;Entre Ríos;General Galarza;0;Entre Ríos;0
+General Güemes;Salta;General Güemes;0;Salta;0
+General Las Heras;Buenos Aires;General Las Heras;0;Buenos Aires;0
+General Las Heras;Santa Cruz;General Las Heras;0;Santa Cruz;0
+General Madariaga;Buenos Aires;General Madariaga;0;Buenos Aires;0
+General Mosconi;Salta;General Mosconi;0;Salta;0
+General Pacheco;Buenos Aires;General Pacheco;0;Buenos Aires;0
+General Pico;La Pampa;General Pico;0;La Pampa;0
+General Pinedo;Chaco;General Pinedo;0;Chaco;0
+General Pinto;Buenos Aires;General Pinto;0;Buenos Aires;0
+General Ramírez;Entre Ríos;General Ramírez;0;Entre Ríos;0
+General Roca;Rio Negro;General Roca;0;Río Negro;1
+General Roca;Río Negro;General Roca;0;Río Negro;0
+General Rodríguez;Buenos Aires;General Rodríguez;0;Buenos Aires;0
+General San Martin;Buenos Aires;General San Martín;1;Buenos Aires;0
+General San Martín;Buenos Aires;General San Martín;0;Buenos Aires;0
+General Viamonte;Buenos Aires;General Viamonte;0;Buenos Aires;0
+General Villegas;Buenos Aires;General Villegas;0;Buenos Aires;0
+General. Belgrano;Buenos Aires;General Belgrano;1;Buenos Aires;0
+Glew;Buenos Aires;Glew;0;Buenos Aires;0
+Gobernador Crespo;Santa Fe;Gobernador Crespo;0;Santa Fe;0
+Gobernador Crespo;Santa Fé;Gobernador Crespo;0;Santa Fe;1
+Gobernador Gregores;Santa Cruz;Gobernador Gregores;0;Santa Cruz;0
+Gobernador Virasoro;Corrientes;Gobernador Virasoro;0;Corrientes;0
+Godoy Cruz;Mendoza;Godoy Cruz;0;Mendoza;0
+Gonzales Chaves;Buenos Aires;Gonzales Chaves;0;Buenos Aires;0
+Gonzales Chávez;Buenos Aires;Gonzales Chávez;0;Buenos Aires;0
+Gonzalez Catán;Buenos Aires;Gonzalez Catán;0;Buenos Aires;0
+Gonzáles Chaves;Buenos Aires;Gonzáles Chaves;0;Buenos Aires;0
+Gonzáles Cháves;Buenos Aires;Gonzáles Cháves;0;Buenos Aires;0
+González Catán;Buenos Aires;González Catán;0;Buenos Aires;0
+González Chávez;Buenos Aires;González Chávez;0;Buenos Aires;0
+Goya;Corrientes;Goya;0;Corrientes;0
+Gral Las Heras;Buenos Aires;Gral Las Heras;0;Buenos Aires;0
+Gral. Alvarado;Buenos Aires;Gral. Alvarado;0;Buenos Aires;0
+Gral. Alvear;Buenos Aires;Gral. Alvear;0;Buenos Aires;0
+Gral. Alvear;Mendoza;Gral. Alvear;0;Mendoza;0
+Gral. Belgrano;Buenos Aires;Gral. Belgrano;0;Buenos Aires;0
+Gral. Cabrera;Córdoba;Gral. Cabrera;0;Córdoba;0
+Gral. Campos;Entre Ríos;Gral. Campos;0;Entre Ríos;0
+Gral. Conesa;Río Negro;Gral. Conesa;0;Río Negro;0
+Gral. Deheza;Córdoba;Gral. Deheza;0;Córdoba;0
+Gral. Güemes;Salta;Gral. Güemes;0;Salta;0
+Gral. Lamadrid;Buenos Aires;Gral. Lamadrid;0;Buenos Aires;0
+Gral. Las Heras;Buenos Aires;Gral. Las Heras;0;Buenos Aires;0
+Gral. Lavalle;Buenos Aires;Gral. Lavalle;0;Buenos Aires;0
+Gral. Madariaga;Buenos Aires;Gral. Madariaga;0;Buenos Aires;0
+Gral. Pacheco;Buenos Aires;Gral. Pacheco;0;Buenos Aires;0
+Gral. Pinedo;Chaco;Gral. Pinedo;0;Chaco;0
+Gral. Pinto;Buenos Aires;Gral. Pinto;0;Buenos Aires;0
+Gral. Roca;Río Negro;Gral. Roca;0;Río Negro;0
+Gral. Rodriguez;Buenos Aires;Gral. Rodriguez;0;Buenos Aires;0
+Gral. Rodríguez;Buenos Aires;Gral. Rodríguez;0;Buenos Aires;0
+Gral. Rojo;Buenos Aires;Gral. Rojo;0;Buenos Aires;0
+Gral. San Martín;Buenos Aires;Gral. San Martín;0;Buenos Aires;0
+Gral. San Martín;Chaco;Gral. San Martín;0;Chaco;0
+Gral. Villegas;Buenos Aires;Gral. Villegas;0;Buenos Aires;0
+Granadero Baigorria;Santa Fé;Granadero Baigorria;0;Santa Fe;1
+Gregorio de Laferrere;Buenos Aires;Gregorio de Laferrere;0;Buenos Aires;0
+Gualeguay;Entre Ríos;Gualeguay;0;Entre Ríos;0
+Gualeguay;Entre Ríos;Gualeguay;0;Entre Ríos;0
+Gualeguaychú;Entre Ríos;Gualeguaychú;0;Entre Ríos;0
+Guaminí;Buenos Aires;Guaminí;0;Buenos Aires;0
+Guatraché;La Pampa ;Guatraché;0;La Pampa;1
+Guaymallén;Mendoza;Guaymallén;0;Mendoza;0
+Guernica;Buenos Aires;Guernica;0;Buenos Aires;0
+Gálvez;Santa Fe;Gálvez;0;Santa Fe;0
+Gálvez;Santa Fé;Gálvez;0;Santa Fe;1
+Haedo;Buenos Aires;Haedo;0;Buenos Aires;0
+Hanguelén;Buenos Aires;Huanguelén;1;Buenos Aires;0
+Hasenkamp;Entre Ríos;Hasenkamp;0;Entre Ríos;0
+Helvecia;Santa Fe;Helvecia;0;Santa Fe;0
+Henderson;Buenos Aires;Henderson;0;Buenos Aires;0
+Hernando;Córdoba;Hernando;0;Córdoba;0
+Hersilia;Santa Fé;Hersilia;0;Santa Fe;1
+Huanchilla;Córdoba;Huanchillas;1;Córdoba;0
+Huanguelén;Buenos Aires;Huanguelén;0;Buenos Aires;0
+Hughes;Santa Fe;Hughes;0;Santa Fe;0
+Huinca Renancó;Córdoba;Huinca Renancó;0;Córdoba;0
+Humahuaca;Jujuy;Humahuaca;0;Jujuy;0
+Hurligham;Buenos Aires;Hurlingham;1;Buenos Aires;0
+Hurlingham;Buenos Aires;Hurlingham;0;Buenos Aires;0
+Ibarreta;Formosa;Ibarreta;0;Formosa;0
+Ibicuy;Entre Ríos;Ibicuy;0;Entre Ríos;0
+Iguazú;Misiones;Iguazú;0;Misiones;0
+Indio Rico;Buenos Aires;Indio Rico;0;Buenos Aires;0
+Ing Huergo;Rio Negro;Ing Huergo;0;Río Negro;1
+Ing Jacobacci;Rio Negro;Ing Jacobacci;0;Río Negro;1
+Ingeniero Jacobacci;Río Negro;Ingeniero Jacobacci;0;Río Negro;0
+Ingeniero Luiggi;La Pampa;Ingeniero Luiggi;0;La Pampa;0
+Inriville;Córdoba;Inriville;0;Córdoba;0
+Intendente Alvear;La Pampa;Intendente Alvear;0;La Pampa;0
+Isidro Casanova;Buenos Aires;Isidro Casanova;0;Buenos Aires;0
+Isidro Casanova, La Matanza;Buenos Aires;Isidro Casanova, La Matanza;0;Buenos Aires;0
+Isla Verde;Córdoba;Isla Verde;0;Córdoba;0
+Islas Malvinas;Tierra del Fuego;Islas Malvinas;0;Tierra del Fuego;0
+Italo;Córdoba;Italó;1;Córdoba;0
+Itatí;Corrientes;Itatí;0;Corrientes;0
+Ituzaingó;Buenos Aires;Ituzaingó;0;Buenos Aires;0
+Ituzaingó;Corrientes;Ituzaingó;0;Corrientes;0
+J. B. Alberdi;Buenos Aires;J. B. Alberdi;0;Buenos Aires;0
+J. de San Martín;Chubut;J. de San Martín;0;Chubut;0
+Jacinto Aráuz;La Pampa;Jacinto Aráuz;0;La Pampa;0
+James Craik;Córdoba;James Craik;0;Córdoba;0
+Jardín América;Misiones;Jardín América;0;Misiones;0
+Jesús María;Córdoba;Jesús María;0;Córdoba;0
+Joaquín V González;Salta;Joaquín V. González;1;Salta;0
+Joaquín V. González;Salta;Joaquín V. González;0;Salta;0
+José C Paz;Buenos Aires;José C. Paz;1;Buenos Aires;0
+José C. Paz;Buenos Aires;José C. Paz;0;Buenos Aires;0
+José Ingeniero;Buenos Aires;José Ingeniero;0;Buenos Aires;0
+José Ingenieros;Buenos Aires;José Ingenieros;0;Buenos Aires;0
+José León Suárez;Buenos Aires;José León Suárez;0;Buenos Aires;0
+Jovita;Córdoba;Jovita;0;Córdoba;0
+Juan Bautista Alberdi;Tucumán;Juan Bautista Alberdi;0;Tucumán;0
+Juan J Castelli;Chaco;Juan J Castelli;0;Chaco;0
+Juan J. Castelli;Chaco;Juan J. Castelli;0;Chaco;0
+Juan José Castelli;Chaco;Juan José Castelli;0;Chaco;0
+Juan Pujol;Corrientes;Juan Pujol;0;Corrientes;0
+JuanJ. Castelli;Chaco;JuanJ. Castelli;0;Chaco;0
+Junin;Buenos Aires;Junín;1;Buenos Aires;0
+Junin de los Andes;Neuquén;Júnin de los Andes;1;Neuquén;0
+Junín;Buenos Aires;Junín;0;Buenos Aires;0
+Junín de los Andes;Neuquén;Junín de los Andes;0;Neuquén;0
+Justiniano Posse;Córdoba;Justiniano Posse;0;Córdoba;0
+Justo Daract;San Juan;Justo Daract;0;San Juan;0
+Justo Daract;San Luis;Justo Daract;0;San Luis;0
+Jáchal;San Juan;Jáchal;0;San Juan;0
+Jáuregui;Buenos Aires;Jáuregui;0;Buenos Aires;0
+Júnin de los Andes;Neuquén;Júnin de los Andes;0;Neuquén;0
+La Banda;Santiago del Estero;La Banda;0;Santiago del Estero;0
+La Calera;Córdoba;La Calera;0;Córdoba;0
+La Carlota;Córdoba;La Carlota;0;Córdoba;0
+La Cocha;Tucumán;La Cocha;0;Tucumán;0
+La Consulta;Mendoza;La Consulta;0;Mendoza;0
+La Cruz;Corrientes;La Cruz;0;Corrientes;0
+La Cumbre;Córdoba;La Cumbre;0;Córdoba;0
+La Dulce;Buenos Aires;La Dulce;0;Buenos Aires;0
+La Falda;Córdoba;La Falda;0;Córdoba;0
+La Leonesa;Chaco;La Leonesa;0;Chaco;0
+La Lucila;Buenos Aires;La Lucila;0;Buenos Aires;0
+La Matanza;Buenos Aires;La Matanza;0;Buenos Aires;0
+La Para;Córdoba;La Para;0;Córdoba;0
+La Paz;Buenos Aires;La Paz;0;Buenos Aires;0
+La Paz;Entre Ríos;La Paz;0;Entre Ríos;0
+La Plata;Buenos Aires;La Plata;0;Buenos Aires;0
+La Punta;San Luis;La Punta;0;San Luis;0
+La Qiuaca;Jujuy;La Qiuaca;0;Jujuy;0
+La Quiaca;Jujuy;La Quiaca;0;Jujuy;0
+La Quiaca;Jyjuy;La Quiaca;0;Jujuy;1
+La Rioja;La Rioja;La Rioja;0;La Rioja;0
+La Salada;Buenos Aires;La Salada;0;Buenos Aires;0
+La Toma;San Luis;La Toma;0;San Luis;0
+La Unión;Buenos Aires;La Unión;0;Buenos Aires;0
+Laborde;Córdoba;Laborde;0;Córdoba;0
+Laboulaye;Córdoba;Laboulaye;0;Córdoba;0
+Lago Pueblo;Chubut;Lago Puelo;1;Chubut;0
+Lago Puelo;Chubut;Lago Puelo;0;Chubut;0
+Laguna Blanca;Formosa;Laguna Blanca;0;Formosa;0
+Laguna Larga;Córdoba;Laguna Larga;0;Córdoba;0
+Laguna Naineck;Formosa;Laguna Naineck;0;Formosa;0
+Laguna Paiva;Santa Fé;Laguna Paiva;0;Santa Fe;1
+Lamarque;Rio Negro;Lamarque;0;Río Negro;1
+Lanús;Buenos Aires;Lanús;0;Buenos Aires;0
+Lanús Oeste;Buenos Aires;Lanús Oeste;0;Buenos Aires;0
+Laprida;Buenos Aires;Laprida;0;Buenos Aires;0
+Larroque;Entre Ríos;Larroque;0;Entre Ríos;0
+Las Acequias;Córdoba;Las Acequias;0;Córdoba;0
+Las Breñas;Chaco;Las Breñas;0;Chaco;0
+Las Flores;Buenos Aires;Las Flores;0;Buenos Aires;0
+Las Grutas;Río Negro;Las Grutas;0;Río Negro;0
+Las Heras;Buenos Aires;Las Heras;0;Buenos Aires;0
+Las Heras;Mendoza;Las Heras;0;Mendoza;0
+Las Lajitas;Salta;Las Lajitas;0;Salta;0
+Las Lomitas;Formosa;Las Lomitas;0;Formosa;0
+Las Palmas;Chaco;Las Palmas;0;Chaco;0
+Las Parejas;Santa Fe;Las Parejas;0;Santa Fe;0
+Las Parejas;Santa Fé;Las Parejas;0;Santa Fe;1
+Las Perdices;Córdoba;Las Perdices;0;Córdoba;0
+Las Rosas;Santa Fe;Las Rosas;0;Santa Fe;0
+Las Rosas;Santa Fé;Las Rosas;0;Santa Fe;1
+Las Talitas;Tucuman;Las Talitas;0;Tucumán;1
+Las Talitas;Tucumán;Las Talitas;0;Tucumán;0
+Las Tejas del Valle Viejo;Catamarca;Las Tejas del Valle Viejo;0;Catamarca;0
+Las Toscas;Santa Fé;Las Toscas;0;Santa Fe;1
+Las Varas;Córdoba;Las Varas;0;Córdoba;0
+Las Varillas;Córdoba;Las Varillas;0;Córdoba;0
+Leandro N. Alem;Misiones;Leandro N. Alem;0;Misiones;0
+Leones;Córdoba;Leones;0;Córdoba;0
+Lezama;Buenos Aires;Lezama;0;Buenos Aires;0
+Lib. Gral San Martín;Entre Ríos;Lib. Gral San Martín;0;Entre Ríos;0
+Lib. Gral San Martín;Jujuy;Lib. Gral San Martín;0;Jujuy;0
+Lib. Gral. San Martín;Jujuy;Lib. Gral. San Martín;0;Jujuy;0
+Libertad;Buenos Aires;Libertad;0;Buenos Aires;0
+Libertad;Buenos Aires;Libertad;0;Buenos Aires;0
+Libertador Gral San Martín;Juuy;Libertador Gral San Martín;0;Jujuy;1
+Libertador Gral. San Martín;Jujuy;Libertador Gral. San Martín;0;Jujuy;0
+Lima;Buenos Aires;Lima;0;Buenos Aires;0
+Lincoln;Buenos Aires;Lincoln;0;Buenos Aires;0
+Llavallol;Buenos Aires;Llavallol;0;Buenos Aires;0
+Lnús;Buenos Aires;Lanús;1;Buenos Aires;0
+Lobería;Buenos Aires;Lobería;0;Buenos Aires;0
+Lobos;Buenos Aires;Lobos;0;Buenos Aires;0
+Loma Hermosa;Buenos Aires;Loma Hermosa;0;Buenos Aires;0
+Lomas de Zamora;Buenos Aires;Lomas de Zamora;0;Buenos Aires;0
+Lomas del Mirador;Buenos Aires;Lomas del Mirador;0;Buenos Aires;0
+Longchamps;Buenos Aires;Longchamps;0;Buenos Aires;0
+Los Antiguos;Santa Cruz;Los Antiguos;0;Santa Cruz;0
+Los Cocos;Córdoba;Los Cocos;0;Córdoba;0
+Los Condores;Córdoba;Los Cóndores;1;Córdoba;0
+Los Cóndores;Córdoba;Los Cóndores;0;Córdoba;0
+Los cóndores;Córdoba ;Los Cóndores;0;Córdoba;1
+Los Polvorines;Buenos Aires;Los Polvorines;0;Buenos Aires;0
+Los Ralos;Tucumán;Los Ralos;0;Tucumán;0
+Los Reartes;Córdoba;Los Reartes;0;Córdoba;0
+Los Surgentes;Córdoba;Los Surgentes;0;Córdoba;0
+Los Toldos;Buenos Aires;Los Toldos;0;Buenos Aires;0
+Los Zorros;Córdoba;Los Zorros;0;Córdoba;0
+Lucas Gonzáles;Entre Ríos;Lucas González;1;Entre Ríos;0
+Lucas González;Entre Ríos;Lucas González;0;Entre Ríos;0
+Lucila del Mar;Buenos Aires;Lucila del Mar;0;Buenos Aires;0
+Luis Beltrán;Rio Negro;Luis Beltrán;0;Río Negro;1
+Luis Beltrán;Río Negro;Luis Beltrán;0;Río Negro;0
+Luis Guillon;Buenos Aires;Luis Guillon;0;Buenos Aires;0
+Luján;Buenos Aires;Luján;0;Buenos Aires;0
+Luque;Córdoba;Luque;0;Córdoba;0
+Machagai;Chaco;Machagai;0;Chaco;0
+Macia;Entre Ríos;Maciá;1;Entre Ríos;0
+Maciá;Entre Ríos;Maciá;0;Entre Ríos;0
+Magdalena;Buenos Aires;Magdalena;0;Buenos Aires;0
+Maipú;Buenos Aires;Maipú;0;Buenos Aires;0
+Maipú;Mendoza;Maipú;0;Mendoza;0
+Makallé;Chaco;Makallé;0;Chaco;0
+Malabrigo;Santa Fé;Malabrigo;0;Santa Fe;1
+Malargüe;Mendoza;Malargüe;0;Mendoza;0
+Malvinas Argentinas;Buenos Aires;Malvinas Argentinas;0;Buenos Aires;0
+Manfredy;Córdoba;Manfredi;1;Córdoba;0
+Maquinchao;Rio Negro;Maquinchao;0;Río Negro;1
+Mar de Ajó;Buenos Aires;Mar de Ajó;0;Buenos Aires;0
+Mar de las Pampas;Buenos Aires;Mar de las Pampas;0;Buenos Aires;0
+Mar del Plata;Buenos Aires;Mar del Plata;0;Buenos Aires;0
+Mar del Tuyú;Buenos Aires;Mar del Tuyú;0;Buenos Aires;0
+Marcos Juarez;Córdoba;Marcos Juárez;1;Córdoba;0
+Marcos Juárez;Córdoba;Marcos Juárez;0;Córdoba;0
+Marcos Paz;Buenos Aires;Marcos Paz;0;Buenos Aires;0
+Maria Juana;Santa Fe;María Juana;1;Santa Fe;0
+Maria Susana;Santa Fe;María Susana;1;Santa Fe;0
+Mariano H. Alfonzo;Buenos Aires;Mariano H. Alfonzo;0;Buenos Aires;0
+Martinez de Hoz;Buenos Aires;Martinez de Hoz;0;Buenos Aires;0
+Martín Coronado;Buenos Aires;Martín Coronado;0;Buenos Aires;0
+Martínez;Buenos Aires;Martínez;0;Buenos Aires;0
+Martínez, San Isidro;Buenos Aires;Martínez, San Isidro;0;Buenos Aires;0
+María Grande;Entre Ríos;María Grande;0;Entre Ríos;0
+María Juana;Santa Fe;María Juana;0;Santa Fe;0
+Mayor Vicente E. Villafañe;Formosa;Mayor Vicente E. Villafañe;0;Formosa;0
+Mburucuyá;Corrientes;Mburucuyá;0;Corrientes;0
+Mechita;Buenos Aires;Mechita;0;Buenos Aires;0
+Mechongué;Buenos Aires;Mechongué;0;Buenos Aires;0
+Melo;Córdoba;Melo;0;Córdoba;0
+Mendoza;Mendoza;Mendoza;0;Mendoza;0
+Mercedes;Buenos Aires;Mercedes;0;Buenos Aires;0
+Mercedes;Corrientes;Mercedes;0;Corrientes;0
+Merlo;Buenos Aires;Merlo;0;Buenos Aires;0
+Merlo;San Luis;Merlo;0;San Luis;0
+Mesón de Fierro;Chaco;Mesón de Fierro;0;Chaco;0
+Metán;Salta;Metán;0;Salta;0
+Milagro;La Rioja;Milagro;0;La Rioja;0
+Mina Clavero;Córdoba;Mina Clavero;0;Córdoba;0
+Miraflores;Chaco;Miraflores;0;Chaco;0
+Miramar;Buenos Aires;Miramar;0;Buenos Aires;0
+Mocoretà;Corrientes;Mocoretá;1;Corrientes;0
+Mocoretá;Corrientes;Mocoretá;0;Corrientes;0
+Monte Buey;Córdoba;Monte Buey;0;Córdoba;0
+Monte Caseros;Corrientes;Monte Caseros;0;Corrientes;0
+Monte Coseros;Corrientes;Monte Caseros;1;Corrientes;0
+Monte Grande;Buenos Aires;Monte Grande;0;Buenos Aires;0
+Monte Grande;Buenos Aires;Monte Grande;0;Buenos Aires;0
+Monte Grande, E. Echeverría;Buenos Aires;Monte Grande, E. Echeverría;0;Buenos Aires;0
+Monte Hermoso;Buenos Aires;Monte Hermoso;0;Buenos Aires;0
+Monte Maíz;Córdoba;Monte Maíz;0;Córdoba;0
+Monte Quemado;Santiago del Estero;Monte Quemado;0;Santiago del Estero;0
+Montecarlo;Misiones;Montecarlo;0;Misiones;0
+Monteros;Tucumán;Monteros;0;Tucumán;0
+Monterrico;Jujuy;Monterrico;0;Jujuy;0
+Monterrico;Jyjuy;Monterrico;0;Jujuy;1
+Montes de Oca;Santa Fe;Montes de Oca;0;Santa Fe;0
+Moreno;Buenos Aires;Moreno;0;Buenos Aires;0
+Morrison;Córdoba;Morrison;0;Córdoba;0
+Morteros;Córdoba;Morteros;0;Córdoba;0
+Morón;Buenos Aires;Morón;0;Buenos Aires;0
+Munro;Buenos Aires;Munro;0;Buenos Aires;0
+Munro, Vicente Lopez;Buenos Aires;Munro, Vicente Lopez;0;Buenos Aires;0
+Murphy;Santa Fe;Murphy;0;Santa Fe;0
+Música;Chubut;Música;0;Chubut;0
+N. de la Riestra;Buenos Aires;N. de la Riestra;0;Buenos Aires;0
+Navarro;Buenos Aires;Navarro;0;Buenos Aires;0
+Necochea;Buenos Aires;Necochea;0;Buenos Aires;0
+Nelson;Santa Fe ;Nelson;0;Santa Fe;1
+Neuquen;Neuquen;Neuquén;1;Neuquén;1
+Neuquen;Neuquén;Neuquén;1;Neuquén;0
+Neuquén;Neuquen;Neuquén;0;Neuquén;1
+Neuquén;Neuquén;Neuquén;0;Neuquén;0
+Neuquén;Neuquén ;Neuquén;0;Neuquén;1
+Noetinger;Córdoba;Noetinger;0;Córdoba;0
+Nogoyá;Entre Ríos;Nogoyá;0;Entre Ríos;0
+Nono;Córdoba;Nono;0;Córdoba;0
+Norberto de la Riestra;Buenos Aires;Norberto de la Riestra;0;Buenos Aires;0
+Oberá;Misiones;Oberá;0;Misiones;0
+Olavarría;Buenos Aires;Olavarría;0;Buenos Aires;0
+Oliva;Córdoba;Oliva;0;Córdoba;0
+Olivos;Buenos Aires;Olivos;0;Buenos Aires;0
+Olta;La Rioja;Olta;0;La Rioja;0
+Olta;La Rioja ;Olta;0;La Rioja;1
+Oncativo;Córdoba;Oncativo;0;Córdoba;0
+Ordóñez;Córdoba;Ordoñez;1;Córdoba;0
+Orense;Buenos Aires;Orense;0;Buenos Aires;0
+Oro Verde;Entre Ríos;Oro Verde;0;Entre Ríos;0
+Orán;Salta;Orán;0;Salta;0
+O´Brien;Buenos Aires;O´Brien;0;Buenos Aires;0
+Pablo Nogués;Buenos Aires;Pablo Nogués;0;Buenos Aires;0
+Pablo Podestá;Buenos Aires;Pablo Podestá;0;Buenos Aires;0
+Palmira;Mendoza;Palmira;0;Mendoza;0
+Palpalá;Jujuy;Palpalá;0;Jujuy;0
+Pampa De Los Guanacos;Santiago del Estero;Pampa de los Guanacos;0;Santiago del Estero;0
+Pampa del Indio;Chaco;Pampa del Indio;0;Chaco;0
+Paraná;Entre Ríos;Paraná;0;Entre Ríos;0
+Parera;La Pampa;Parera;0;La Pampa;0
+Pascanas;Córdoba;Pascanas;0;Córdoba;0
+Paso de los Libres;Corrientes;Paso de los Libres;0;Corrientes;0
+Paso del Rey;Buenos Aires;Paso del Rey;0;Buenos Aires;0
+Pblo Libertador;Corrientes;Pblo Libertador;0;Corrientes;0
+Pcia. de la Plaza;Chaco;Pcia. de la Plaza;0;Chaco;0
+Pedro Luro;Buenos Aires;Pedro Luro;0;Buenos Aires;0
+Pehuajó;Buenos Aires;Pehuajó;0;Buenos Aires;0
+Pellegrini;Buenos Aires;Pellegrini;0;Buenos Aires;0
+Perez;Santa Fe;Pérez;1;Santa Fe;0
+Pergamino;Buenos Aires;Pergamino;0;Buenos Aires;0
+Perico del Carmen;Jujuy;Perico del Carmen;0;Jujuy;0
+Pericó;Jujuy;Perico;1;Jujuy;0
+Perito Moreno;Santa Cruz;Perito Moreno;0;Santa Cruz;0
+Peyrano;Santa Fe;Peyrano;0;Santa Fe;0
+Pichanal;Salta;Pichanal;0;Salta;0
+Pico truncado;Santa Cruz;Pico Truncado;0;Santa Cruz;0
+Pico Truncado;Santa Cruz;Pico Truncado;0;Santa Cruz;0
+Pico truncado;Santa Cruz;Pico Truncado;0;Santa Cruz;0
+Piedra del Aguila;Neuquén;Piedra del Águila;1;Neuquén;0
+Piedras Blancas;Entre Ríos;Piedras Blancas;0;Entre Ríos;0
+Pigué;Buenos Aires;Pigüé;1;Buenos Aires;0
+Pigüé;Buenos Aires;Pigüé;0;Buenos Aires;0
+Pilar;Buenos Aires;Pilar;0;Buenos Aires;0
+Pilar;Córdoba;Pilar;0;Córdoba;0
+Pilar;Santa Fe;Pilar;0;Santa Fe;0
+Pinamar;Buenos Aires;Pinamar;0;Buenos Aires;0
+Pirané;Formosa;Pirané;0;Formosa;0
+Piñeyro;Buenos Aires;Piñero;1;Buenos Aires;0
+Poman;Catamarca;Pomán;1;Catamarca;0
+Pomán;Catamarca;Pomán;0;Catamarca;0
+Pontevedra;Buenos Aires;Pontevedra;0;Buenos Aires;0
+Porteña;Córdoba;Porteña;0;Córdoba;0
+Posadas;Misiones;Posadas;0;Misiones;0
+Pozo del Molle;Córdoba;Pozo del Molle;0;Córdoba;0
+Ppa. del Infierno;Chaco;Ppa. del Infierno;0;Chaco;0
+Presidencia Roque Peña;Chaco;Presidencia Roque Peña;0;Chaco;0
+Presidencia Roque Sáenz Peña;Chaco;Presidencia Roque Sáenz Peña;0;Chaco;0
+Progreso;Santa Fe;Progreso;0;Santa Fe;0
+Ps de los Libres;Corrientes;Ps de los Libres;0;Corrientes;0
+Pte. R. Sáenz Peña;Chaco;Pte. R. Sáenz Peña;0;Chaco;0
+Pte. Roque Sáenz Peña;Chaco;Pte. Roque Sáenz Peña;0;Chaco;0
+Puan;Buenos Aires;Puán;1;Buenos Aires;0
+Pueblo Esther;Santa Fe;Pueblo Esther;0;Santa Fe;0
+Pueblo Italiano;Córdoba;Pueblo Italiano;0;Córdoba;0
+Puerto Belgrano;Buenos Aires;Puerto Belgrano;0;Buenos Aires;0
+Puerto Deseado;Santa Cruz;Puerto Deseado;0;Santa Cruz;0
+Puerto Esperanza;Misiones;Puerto Esperanza;0;Misiones;0
+Puerto Gral San Martín;Sana Fe;Puerto Gral San Martín;0;Santa Fe;1
+Puerto Gral San Martín;Santa Fe;Puerto Gral San Martín;0;Santa Fe;0
+Puerto Iguazú;Misiones;Puerto Iguazú;0;Misiones;0
+Puerto Madryn;Chubut;Puerto Madryn;0;Chubut;0
+Puerto Madryn;Chubut;Puerto Madryn;0;Chubut;0
+Puerto Rico;Misiones;Puerto Rico;0;Misiones;0
+Puerto Rosales;Buenos Aires;Puerto Rosales;0;Buenos Aires;0
+Puerto San Julian;Santa Cruz;Puerto San Julián;1;Santa Cruz;0
+Puerto San Julián;Santa Cruz;Puerto San Julián;0;Santa Cruz;0
+Puerto Santa Cruz;Santa Cruz;Puerto Santa Cruz;0;Santa Cruz;0
+Punta Alta;Buenos Aires;Punta Alta;0;Buenos Aires;0
+Punta Indio;Buenos Aires;Punta Indio;0;Buenos Aires;0
+Puán;Buenos Aires;Puán;0;Buenos Aires;0
+Quilmes;Buenos Aires;Quilmes;0;Buenos Aires;0
+Quimili;Santiago del Estero;Quimili;0;Santiago del Estero;0
+Quines;San Juan;Quines;0;San Juan;0
+Quitilipi;Chaco;Quitilipi;0;Chaco;0
+R de Escalada;Buenos Aires;R de Escalada;0;Buenos Aires;0
+Rafael Calzada;Buenos Aires;Rafael Calzada;0;Buenos Aires;0
+Rafael Castillo;Buenos Aires;Rafael Castillo;0;Buenos Aires;0
+Rafaela;Santa Fe;Rafaela;0;Santa Fe;0
+Rafaela;Santa Fe ;Rafaela;0;Santa Fe;1
+Ramallo;Buenos Aires;Ramallo;0;Buenos Aires;0
+Ramona;Santa Fe;Ramona;0;Santa Fe;0
+Ramos Mejía;Buenos Aires;Ramos Mejía;0;Buenos Aires;0
+Ramírez;Entre Ríos;Ramírez;0;Entre Ríos;0
+Ranchos;Buenos Aires;Ranchos;0;Buenos Aires;0
+Rancul;La Pampa;Rancul;0;La Pampa;0
+Rauch;Buenos Aires;Rauch;0;Buenos Aires;0
+Rawson;Chubut;Rawson;0;Chubut;0
+Rawson;San Juan;Rawson;0;San Juan;0
+Realicó;La Pampa;Realicó;0;La Pampa;0
+Reconquista;Santa Fe;Reconquista;0;Santa Fe;0
+Reconquista;Santa Fe ;Reconquista;0;Santa Fe;1
+Recreo;Catamarca;Recreo;0;Catamarca;0
+Recreo;Santa Fe;Recreo;0;Santa Fe;0
+Recreo;Santa Fe ;Recreo;0;Santa Fe;1
+Reducción;Córdoba;Reducción;0;Córdoba;0
+Remedios de Escalada;Buenos Aires;Remedios de Escalada;0;Buenos Aires;0
+Resistencia;Chaco;Resistencia;0;Chaco;0
+Reta;Buenos Aires;Reta;0;Buenos Aires;0
+Ricardone;Santa Fe;Ricardone;0;Santa Fe;0
+Rincon de los Sauces;Neuquén;Rincón de los Sauces;1;Neuquén;0
+Rincón de los Sauces;Neuquén;Rincón de los Sauces;0;Neuquén;0
+Rio Colorado;Rio Negro;Río Colorado;1;Río Negro;1
+Rio Colorado;Río Negro;Río Colorado;1;Río Negro;0
+Rio Cuarto;Córdoba;Río Cuarto;1;Córdoba;0
+Rio Gallegos;Santa Cruz;Río Gallegos;1;Santa Cruz;0
+Rio Grande;Tierra del Fuego;Río Grande;1;Tierra del Fuego;0
+Rio Grande Drios;Tierra del Fuego;Rio Grande Drios;0;Tierra del Fuego;0
+Rio Mayo;Chubut;Río Mayo;1;Chubut;0
+Rivadavia;Buenos Aires;Rivadavia;0;Buenos Aires;0
+Rivadavia;Mendoza;Rivadavia;0;Mendoza;0
+Rivadavia;San Juan;Rivadavia;0;San Juan;0
+Rivera;Buenos Aires;Rivera;0;Buenos Aires;0
+Rodeo de la Cruz;Mendoza;Rodeo de la Cruz;0;Mendoza;0
+Rojas;Buenos Aires;Rojas;0;Buenos Aires;0
+Roldán;Santa Fe;Roldán;0;Santa Fe;0
+Romang;Santa Fe;Romang;0;Santa Fe;0
+Román;Santa Fe;Pomán;1;Santa Fe;0
+Roque Peréz;Buenos Aires;Roque Peréz;0;Buenos Aires;0
+Roque Pérez;Buenos Aires;Roque Pérez;0;Buenos Aires;0
+Roque S. Peña;Chaco;Roque S. Peña;0;Chaco;0
+Roque Saenz Peña;Chaco;Roque Saenz Peña;0;Chaco;0
+Rosario;Santa Fe;Rosario;0;Santa Fe;0
+Rosario;Santa Fe ;Rosario;0;Santa Fe;1
+Rosario de la Frontera;Salta;Rosario de la Frontera;0;Salta;0
+Rosario de la frontera;Salta;Rosario de la Frontera;0;Salta;0
+Rosario de la Frontera;Salta;Rosario de la Frontera;0;Salta;0
+Rosario de Lerma;Salta;Rosario de Lerma;0;Salta;0
+Rosario del Tala;Entre Ríos;Rosario del Tala;0;Entre Ríos;0
+Rufino;Santa Fe;Rufino;0;Santa Fe;0
+Rufino;Santa Fe ;Rufino;0;Santa Fe;1
+Río Ceballos;Córdoba;Río Ceballos;0;Córdoba;0
+Río Colorado;Río Negro;Río Colorado;0;Río Negro;0
+Río Cuarto;Córdoba;Río Cuarto;0;Córdoba;0
+Río Cuarto;Córdoba ;Río Cuarto;0;Córdoba;1
+Río de los Sauces;Córdoba;Río de los Sauces;0;Córdoba;0
+Río Gallegos;Buenos Aires;Río Gallegos;0;Buenos Aires;0
+Río Gallegos;Santa Cruz;Río Gallegos;0;Santa Cruz;0
+Río Grande;Tierra del Fuego;Río Grande;0;Tierra del Fuego;0
+Río Hondo;Santiago del Estero;Río Hondo;0;Santiago del Estero;0
+Río Mayo;Chubut;Río Mayo;0;Chubut;0
+Río Primero;Córdoba;Río Primero;0;Córdoba;0
+Río Segundo;Córdoba;Río Segundo;0;Córdoba;0
+Río Tercero;Córdoba;Río Tercero;0;Córdoba;0
+Río Turbio;Santa Cruz;Río Turbio;0;Santa Cruz;0
+S Carlos Centro;Santa Fe;S Carlos Centro;0;Santa Fe;0
+S Clara de Buena Vista;Santa Fe;S Clara de Buena Vista;0;Santa Fe;0
+S Jerónimo Norte;Santa Fe;S Jerónimo Norte;0;Santa Fe;0
+S Ramon Nva Orán;Salta;S Ramon Nva Orán;0;Salta;0
+S. Clara del Mar;Buenos Aires;S. Clara del Mar;0;Buenos Aires;0
+S. de la Ventana;Buenos Aires;S. de la Ventana;0;Buenos Aires;0
+S. de los Padres;Buenos Aires;S. de los Padres;0;Buenos Aires;0
+Saavedra;Buenos Aires;Saavedra;0;Buenos Aires;0
+Sacháyoj;Santiago del Estero;Sachayoj;1;Santiago del Estero;0
+Saenz Peña;Chaco;Saenz Peña;0;Chaco;0
+Saladas;Corrientes;Saladas;0;Corrientes;0
+Saladillo;Buenos Aires;Saladillo;0;Buenos Aires;0
+Salazar;Buenos Aires;Salazar;0;Buenos Aires;0
+Salliqueló;Buenos Aires;Salliqueló;0;Buenos Aires;0
+Salta;Salta;Salta;0;Salta;0
+Salta;Salta ;Salta;0;Salta;1
+Salto;Buenos Aires;Salto;0;Buenos Aires;0
+Salvador Mazza;Salta;Salvador Mazza;0;Salta;0
+Sampacho;Córdoba;Sampacho;0;Córdoba;0
+San A. de Areco;Buenos Aires;San A. de Areco;0;Buenos Aires;0
+San Andrés;Buenos Aires;San Andrés;0;Buenos Aires;0
+San Andrés de Giles;Buenos Aires;San Andrés de Giles;0;Buenos Aires;0
+San Antonio de Areco;Buenos Aires;San Antonio de Areco;0;Buenos Aires;0
+San Antonio de Padua;Buenos Aires;San Antonio de Padua;0;Buenos Aires;0
+San Antonio Oeste;Rio Negro;San Antonio Oeste;0;Río Negro;1
+San Antonio Oeste;Río Negro;San Antonio Oeste;0;Río Negro;0
+San Basilio;Córdoba;San Basilio;0;Córdoba;0
+San Benito;Entre Ríos;San Benito;0;Entre Ríos;0
+San Bernardo;Buenos Aires;San Bernardo;0;Buenos Aires;0
+San Bernardo;Chaco;San Bernardo;0;Chaco;0
+San Carlos Centro;Santa Fe;San Carlos Centro;0;Santa Fe;0
+San Carlos de Bariloche;Rio Negro;San Carlos de Bariloche;0;Río Negro;1
+San Carlos de Bariloche;Río Negro;San Carlos de Bariloche;0;Río Negro;0
+San Cayetano;Buenos Aires;San Cayetano;0;Buenos Aires;0
+San Clemente;Buenos Aires;San Clemente;0;Buenos Aires;0
+San Clemente del Tuyú;Buenos Aires;San Clemente del Tuyú;0;Buenos Aires;0
+San Cristóbal;Santa Fe;San Cristóbal;0;Santa Fe;0
+San Fco. Solano;Buenos Aires;San Fco. Solano;0;Buenos Aires;0
+San Fernando;Buenos Aires;San Fernando;0;Buenos Aires;0
+San Fernando;Catamarca;San Fernando;0;Catamarca;0
+San Francisco;Córdoba;San Francisco;0;Córdoba;0
+San Francisco;Córdoba;San Francisco;0;Córdoba;0
+San Francisco Solano;Buenos Aires;San Francisco Solano;0;Buenos Aires;0
+San Genaro;Buenos Aires;San Genaro;0;Buenos Aires;0
+San Genaro;Santa Fe;San Genaro;0;Santa Fe;0
+San Genaro Norte;Santa Fe;San Genaro Norte;0;Santa Fe;0
+San Gregorio;Santa Fe;San Gregorio;0;Santa Fe;0
+San Guillermo;Santa Fe;San Guillermo;0;Santa Fe;0
+San Isidro;Buenos Aires;San Isidro;0;Buenos Aires;0
+San Isidro;Catamarca;San Isidro;0;Catamarca;0
+San Isidro de Lules;Tucumán;San Isidro de Lules;0;Tucumán;0
+San Isidro, Vicente López y otros;Buenos Aires;San Isidro, Vicente López y otros;0;Buenos Aires;0
+San Javier;Misiones;San Javier;0;Misiones;0
+San Javier;Santa Fe;San Javier;0;Santa Fe;0
+San Jenaro Norte;Santa Fe;San Genaro Norte;1;Santa Fe;0
+San Jerónimo Norte;Santa Fe;San Jerónimo Norte;0;Santa Fe;0
+San Jorge;Santa Fe;San Jorge;0;Santa Fe;0
+San Jorge;Santa Fe ;San Jorge;0;Santa Fe;1
+San José;Entre Ríos;San José;0;Entre Ríos;0
+San José;Entre Ríos;San José;0;Entre Ríos;0
+San José de Feliciano;Entre Ríos;San José de Feliciano;0;Entre Ríos;0
+San José de Jáchal;San Juan;San José de Jáchal;0;San Juan;0
+San Juan;San Juan;San Juan;0;San Juan;0
+San Justo;Buenos Aires;San Justo;0;Buenos Aires;0
+San Justo;Entre Ríos;San Justo;0;Entre Ríos;0
+San Justo;Santa Fe;San Justo;0;Santa Fe;0
+San Justo;Santa Fe ;San Justo;0;Santa Fe;1
+San Justo;Buenos Aires;San Justo;0;Buenos Aires;0
+San Jóse de la Esquina;Santa Fe;San Jóse de la Esquina;0;Santa Fe;0
+San L del Palmar;Corrientes;San L del Palmar;0;Corrientes;0
+San Lorenzo;Santa Fe;San Lorenzo;0;Santa Fe;0
+San Luis;San Luis;San Luis;0;San Luis;0
+San Luis;San Luis ;San Luis;0;San Luis;1
+San Marcos Sierra;Córdoba;San Marcos Sierra;0;Córdoba;0
+San Martín;Buenos Aires;San Martín;0;Buenos Aires;0
+San Martín;Mendoza;San Martín;0;Mendoza;0
+San Martín;Buenos Aires;San Martín;0;Buenos Aires;0
+San Martín;Buenos Aires;San Martín;0;Buenos Aires;0
+San Martín de los Andes;Neuquén;San Martín de los Andes;0;Neuquén;0
+San Martín de los Andes;Neuquén ;San Martín de los Andes;0;Neuquén;1
+San Matín;Buenos Aires;San Martín;1;Buenos Aires;0
+San Miguel;Buenos Aires;San Miguel;0;Buenos Aires;0
+San Miguel;Corrientes;San Miguel;0;Corrientes;0
+San Miguel;Buenos Aires;San Miguel;0;Buenos Aires;0
+San Miguel de Tucumán;Tucumán;San Miguel de Tucumán;0;Tucumán;0
+San Miguel del Monte;Buenos Aires;San Miguel del Monte;0;Buenos Aires;0
+San Mimguel de Tucumán;Tucumán;San Miguel de Tucumán;1;Tucumán;0
+San Nicolás;Buenos Aires;San Nicolás;0;Buenos Aires;0
+San Nicolás;Buenos Aires;San Nicolás;0;Buenos Aires;0
+San Nicolás de los Arroyos;Buenos Aires;San Nicolás de los Arroyos;0;Buenos Aires;0
+San Pedro;Buenos Aires;San Pedro;0;Buenos Aires;0
+San Pedro;Jujuy;San Pedro;0;Jujuy;0
+San rafael;Mendoza;San Rafael;0;Mendoza;0
+San Rafael;Mendoza;San Rafael;0;Mendoza;0
+San rafael;Mendoza;San Rafael;0;Mendoza;0
+San Rafael;Mendoza;San Rafael;0;Mendoza;0
+San rafael;Mendoza;San Rafael;0;Mendoza;0
+San Rafael;Mendoza;San Rafael;0;Mendoza;0
+San rafael;Mendoza;San Rafael;0;Mendoza;0
+San Rafael;Mendoza;San Rafael;0;Mendoza;0
+San Ramón;Salta;San Ramón;0;Salta;0
+San Roque;Corrientes;San Roque;0;Corrientes;0
+San Salvador;Entre Ríos;San Salvador;0;Entre Ríos;0
+San Salvador;Entre Ríos;San Salvador;0;Entre Ríos;0
+San Salvador;Entre Ríos;San Salvador;0;Entre Ríos;0
+San Salvador de Jujuy;Jujuy;San Salvador de Jujuy;0;Jujuy;0
+San Vicente;Buenos Aires;San Vicente;0;Buenos Aires;0
+San Vicente;Santa Fe;San Vicente;0;Santa Fe;0
+Sana Fe;Santa Fe ;Santa Fe;1;Santa Fe;1
+Sancti Spiritu;Santa Fe;Sancti Spiritu;0;Santa Fe;0
+Santa Ana;Tucumán;Santa Ana;0;Tucumán;0
+Santa Catalina;Córdoba;Santa Catalina;0;Córdoba;0
+Santa Cruz;Santa Cruz;Santa Cruz;0;Santa Cruz;0
+Santa Elena;Entre Ríos;Santa Elena;0;Entre Ríos;0
+Santa Eufemia;Córdoba;Santa Eufemia;0;Córdoba;0
+Santa Fe;Santa Fe;Santa Fe;0;Santa Fe;0
+Santa Fe;Santa fe;Santa Fe;0;Santa Fe;0
+Santa Fe;Santa Fe;Santa Fe;0;Santa Fe;0
+Santa Fe;Santa Fe ;Santa Fe;0;Santa Fe;1
+Santa Fe;Santa Fe;Santa Fe;0;Santa Fe;0
+Santa Fe;Santa Fe ;Santa Fe;0;Santa Fe;1
+Santa Fe de la Veracruz;Santa Fe;Santa Fe de la Veracruz;0;Santa Fe;0
+Santa Isabel;Santa Fe;Santa Isabel;0;Santa Fe;0
+Santa María;Buenos Aires;Santa María;0;Buenos Aires;0
+Santa María;Catamarca;Santa María;0;Catamarca;0
+Santa Rosa;Corrientes;Santa Rosa;0;Corrientes;0
+Santa Rosa;La Pampa;Santa Rosa;0;La Pampa;0
+Santa Rosa del Conlara;San Juan;Santa Rosa del Conlara;0;San Juan;0
+Santa Sylvina;Chaco;Santa Sylvina;0;Chaco;0
+Santa Teresa;Santa Fe;Santa Teresa;0;Santa Fe;0
+Santa Teresita;Buenos Aires;Santa Teresita;0;Buenos Aires;0
+Santiago del Estero;Santiago del Estero;Santiago del Estero;0;Santiago del Estero;0
+Santo Tomé;Corrientes;Santo Tomé;0;Corrientes;0
+Santo Tomé;Santa Fe;Santo Tomé;0;Santa Fe;0
+Sarandí;Buenos Aires;Sarandí;0;Buenos Aires;0
+Sastre;Santa fe;Sastre;0;Santa Fe;0
+Sastre;Santa Fe;Sastre;0;Santa Fe;0
+Sauce;Corrientes;Sauce;0;Corrientes;0
+Sauce de Luna;Entre Ríos;Sauce de Luna;0;Entre Ríos;0
+Segui;Entre Ríos;Seguí;1;Entre Ríos;0
+Seguí;Entre Ríos;Seguí;0;Entre Ríos;0
+Serrano;Córdoba;Serrano;0;Córdoba;0
+Sierra de la Ventana;Buenos Aires;Sierra de la Ventana;0;Buenos Aires;0
+Sierra Grande;Rio Negro;Sierra Grande;0;Río Negro;1
+Sierras de Córdoba;Córdoba;Sierras de Córdoba;0;Córdoba;0
+Simoca;Tucumán;Simoca;0;Tucumán;0
+Sn José de Metán;Salta;Sn José de Metán;0;Salta;0
+SR Calamuchita;Córdoba;SR Calamuchita;0;Córdoba;0
+Sta. Rosa de Calamuchita;Córdoba;Sta. Rosa de Calamuchita;0;Córdoba;0
+Stefenelli;Río Negro;Stefenelli;0;Río Negro;0
+Strobel;Entre Ríos;Strobel;0;Entre Ríos;0
+Suardi;Santa Fe;Suardi;0;Santa Fe;0
+Suchales;Santa Fe;Sunchales;1;Santa Fe;0
+Suipacha;Buenos Aires;Suipacha;0;Buenos Aires;0
+Sumampa;Santiago del Estero;Sumampa;0;Santiago del Estero;0
+Sunchales;Santa Fe;Sunchales;0;Santa Fe;0
+Sunchales;Santa Fe ;Sunchales;0;Santa Fe;1
+Tacuarendí;Santa Fe;Tacuarendí;0;Santa Fe;0
+Tafi Viejo;Tucumán;Tafí Viejo;1;Tucumán;0
+Talar de Pacheco;Buenos Aires;Talar de Pacheco;0;Buenos Aires;0
+Tandil;Buenos Aires;Tandil;0;Buenos Aires;0
+Tapalqué;Buenos Aires;Tapalqué;0;Buenos Aires;0
+Tapiales;Buenos Aires;Tapiales;0;Buenos Aires;0
+Tartagal;Salta;Tartagal;0;Salta;0
+Temperley;Buenos Aires;Temperley;0;Buenos Aires;0
+Teodelina;Santa Fe;Teodelina;0;Santa Fe;0
+Teodelina;Santa Fe ;Teodelina;0;Santa Fe;1
+Termas Rio Hondo;Santiago del Estero;Termas Rio Hondo;0;Santiago del Estero;0
+Ticino;Córdoba;Ticino;0;Córdoba;0
+Tigre;Buenos Aires;Tigre;0;Buenos Aires;0
+Tilcara;Jujuy;Tilcara;0;Jujuy;0
+Tiro Federal;Entre Ríos;Tiro Federal;0;Entre Ríos;0
+Toay;La Pampa;Toay;0;La Pampa;0
+Tolhuin;Tierra del Fuego;Tolhuin;0;Tierra del Fuego;0
+Tornquist;Buenos Aires;Tornquist;0;Buenos Aires;0
+Tortuguitas;Buenos Aires;Tortuguitas;0;Buenos Aires;0
+Tostado;Santa Fe;Tostado;0;Santa Fe;0
+Totoras;Santa Fe;Totoras;0;Santa Fe;0
+Trancas;Tucumán;Trancas;0;Tucumán;0
+Trelew;Chubut;Trelew;0;Chubut;0
+Trelew;Chubut;Trelew;0;Chubut;0
+Trenque Lauquen;Buenos Aires;Trenque Lauquen;0;Buenos Aires;0
+Trenque Lauquen;Buenos Aires;Trenque Lauquen;0;Buenos Aires;0
+Tres Algarrobos;Buenos Aires;Tres Algarrobos;0;Buenos Aires;0
+Tres Arroyos;Buenos Aires;Tres Arroyos;0;Buenos Aires;0
+Tres de Febrero;Buenos Aires;Tres de Febrero;0;Buenos Aires;0
+Tres Isletas;Chaco;Tres Isletas;0;Chaco;0
+Tres Lomas;Buenos Aires;Tres Lomas;0;Buenos Aires;0
+Tres Lomas;Buenos Aires;Tres Lomas;0;Buenos Aires;0
+Tristán Suárez;Buenos Aires;Tristán Suárez;0;Buenos Aires;0
+Tucumán;Tucumán;Tucumán;0;Tucumán;0
+Tunuyán;Mendoza;Tunuyán;0;Mendoza;0
+Tupungato;Mendoza;Tupungato;0;Mendoza;0
+Ucacha;Córdoba;Ucacha;0;Córdoba;0
+Ullún;San Juan;Ullún;0;San Juan;0
+Unquillo;Córdoba;Unquillo;0;Córdoba;0
+Urdinarrain;Entre Ríos;Urdinarrain;0;Entre Ríos;0
+Ushuaia;Tierra del Fuego;Ushuaia;0;Tierra del Fuego;0
+Uspallata;Mendoza;Uspallata;0;Mendoza;0
+Va. Cura Brochero;Córdoba;Va. Cura Brochero;0;Córdoba;0
+Va. Gral. Belgrano;Córdoba;Va. Gral. Belgrano;0;Córdoba;0
+Valcheta;Rio Negro;Valcheta;0;Río Negro;1
+Valcheta;Río Negro;Valcheta;0;Río Negro;0
+Valentín Alsina;Buenos Aires;Valentín Alsina;0;Buenos Aires;0
+Vedia;Buenos Aires;Vedia;0;Buenos Aires;0
+Venado Tuerto;Santa Fe;Venado Tuerto;0;Santa Fe;0
+Venado Tuerto;Santa fe;Venado Tuerto;0;Santa Fe;0
+Venado Tuerto;Santa Fe;Venado Tuerto;0;Santa Fe;0
+Venado Tuerto;Santa fe;Venado Tuerto;0;Santa Fe;0
+Venado Tuerto;Santa Fe;Venado Tuerto;0;Santa Fe;0
+Vera;Santa Fe;Vera;0;Santa Fe;0
+Vertiz;La Pampa;Vértiz;1;La Pampa;0
+Verónica;Buenos Aires;Verónica;0;Buenos Aires;0
+Viale;Entre Ríos;Viale;0;Entre Ríos;0
+Vicente López;Buenos Aires;Vicente López;0;Buenos Aires;0
+Victoria;Buenos Aires;Victoria;0;Buenos Aires;0
+Victoria;Entre Ríos;Victoria;0;Entre Ríos;0
+Victorica;La Pampa;Victorica;0;La Pampa;0
+Vicuña Mackenna;Córdoba;Vicuña Mackenna;0;Córdoba;0
+Viedma;Rio Negro;Viedma;0;Río Negro;1
+Viedma;Río Negro;Viedma;0;Río Negro;0
+Villa Adelina;Buenos Aires;Villa Adelina;0;Buenos Aires;0
+Villa Allende;Córdoba;Villa Allende;0;Córdoba;0
+Villa Angela;Chaco;Villa Angela;0;Chaco;0
+Villa Ballester;Buenos Aires;Villa Ballester;0;Buenos Aires;0
+Villa Berthet;Chaco;Villa Berthet;0;Chaco;0
+Villa Bosch;Buenos Aires;Villa Bosch;0;Buenos Aires;0
+Villa Carlos Paz;Córdoba;Villa Carlos Paz;0;Córdoba;0
+Villa Cañas;Santa Fe;Villas Cañas;1;Santa Fe;0
+Villa Celina;Buenos Aires;Villa Celina;0;Buenos Aires;0
+Villa Constitucion;Santa Fe;Villa Constitución;1;Santa Fe;0
+Villa Constitución;Santa Fe;Villa Constitución;0;Santa Fe;0
+Villa de Merlo;San Juan;Villa de Merlo;0;San Juan;0
+Villa de Merlo;San Luis;Villa de Merlo;0;San Luis;0
+Villa de Soto;Córdoba;Villa de Soto;0;Córdoba;0
+Villa del Carmen;San Luis;Villa del Carmen;0;San Luis;0
+Villa del Rosario;Córdoba;Villa del Rosario;0;Córdoba;0
+Villa del Totoral;Córdoba;Villa del Totoral;0;Córdoba;0
+Villa Dolores;Córdoba;Villa Dolores;0;Córdoba;0
+Villa Dominico;Buenos Aires;Villa Dominico;0;Buenos Aires;0
+Villa el Chocón;Neuquén;Villa El Chocón;0;Neuquén;0
+Villa Elisa;Entre Ríos;Villa Elisa;0;Entre Ríos;0
+Villa Eloisa;Santa Fe;Villa Elisa;1;Santa Fe;0
+Villa Gdor Gálvez;Santa Fe;Villa Gdor Gálvez;0;Santa Fe;0
+Villa Gesel;Buenos Aires;Villa Gesell;1;Buenos Aires;0
+Villa Gesell;Buenos Aires;Villa Gesell;0;Buenos Aires;0
+Villa Giardino;Córdoba;Villa Giardino;0;Córdoba;0
+Villa Gobernador Gálvez;Santa Fe;Villa Gobernador Gálvez;0;Santa Fe;0
+Villa Gobernador Gálvez;Santa Fe ;Villa Gobernador Gálvez;0;Santa Fe;1
+Villa Gral. Belgrano;Córdoba;Villa Gral. Belgrano;0;Córdoba;0
+Villa Huidobro;Córdoba;Villa Huidobro;0;Córdoba;0
+Villa Iris;Buenos Aires;Villa Iris;0;Buenos Aires;0
+Villa Krause;San Juan;Villa Krause;0;San Juan;0
+Villa la Angostura;Neuquén;Villa La Angostura;0;Neuquén;0
+Villa La Angostura;Neuquén;Villa La Angostura;0;Neuquén;0
+Villa la Angostura;Neuquén;Villa La Angostura;0;Neuquén;0
+Villa La Angostura;Neuquén;Villa La Angostura;0;Neuquén;0
+Villa la Angostura;Neuquén;Villa La Angostura;0;Neuquén;0
+Villa Libertador San Martín;Entre Ríos;Villa Libertador San Martín;0;Entre Ríos;0
+Villa Luzuriaga, La Matanza;Buenos Aires;Villa Luzuriaga, La Matanza;0;Buenos Aires;0
+Villa Lynch;Buenos Aires;Villa Lynch;0;Buenos Aires;0
+Villa Madero;Buenos Aires;Villa Madero;0;Buenos Aires;0
+Villa Maipú;Buenos Aires;Villa Maipú;0;Buenos Aires;0
+Villa Martelli;Buenos Aires;Villa Martelli;0;Buenos Aires;0
+Villa María;Córdoba;Villa María;0;Córdoba;0
+Villa Maza;Buenos Aires;Villa Maza;0;Buenos Aires;0
+Villa Mercedes;San Luis;Villa Mercedes;0;San Luis;0
+Villa Nueva;Córdoba;Villa Nueva;0;Córdoba;0
+Villa Nueva de Guaymallén;Mendoza;Villa Nueva de Guaymallén;0;Mendoza;0
+Villa Ocampo;Santa Fe;Villa Ocampo;0;Santa Fe;0
+Villa Pehuenia;Neuquén;Villa Pehuenia;0;Neuquén;0
+Villa Regina;Rio Negro;Villa Regina;0;Río Negro;1
+Villa Regina;Río Negro;Villa Regina;0;Río Negro;0
+Villa San José;Entre Ríos;Villa San José;0;Entre Ríos;0
+Villa Santa Rosa;Córdoba;Villa Santa Rosa;0;Córdoba;0
+Villa Sáenz Peña;Buenos Aires;Villa Sáenz Peña;0;Buenos Aires;0
+Villa Unión;La Rioja;Villa Unión;0;La Rioja;0
+Villa Valeria;Córdoba;Villa Valeria;0;Córdoba;0
+Villa Valle María;Entre Ríos;Villa Valle María;0;Entre Ríos;0
+Villa Ángela;Chaco;Villa Angela;1;Chaco;0
+Villaguay;Entre Ríos;Villaguay;0;Entre Ríos;0
+Villalonga;Buenos Aires;Villalonga;0;Buenos Aires;0
+Villas Cañas;Santa Fe;Villas Cañas;0;Santa Fe;0
+Virreyes;Buenos Aires;Virreyes;0;Buenos Aires;0
+VY de Calamuchita;Córdoba;VY de Calamuchita;0;Córdoba;0
+Wheelwright;Santa Fe;Wheelwright;0;Santa Fe;0
+Wheelwright;Santa Fe ;Wheelwright;0;Santa Fe;1
+Whellwright;Santa Fe;Wheelwright;1;Santa Fe;0
+Wilde;Buenos Aires;Wilde;0;Buenos Aires;0
+Winifreda;La Pampa;Winifreda;0;La Pampa;0
+Yerba Buena;Tucumán;Yerba Buena;0;Tucumán;0
+Zapala;Neuquén;Zapala;0;Neuquén;0
+Zárate;Buenos Aires;Zárate;0;Buenos Aires;0

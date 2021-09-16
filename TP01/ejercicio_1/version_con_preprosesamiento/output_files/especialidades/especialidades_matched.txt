@@ -1,0 +1,96 @@
+Especialidad;matched_especialidad;measure value
+*;*;0
+Adolescentes;Adolescentes;0
+Agro;Agropecuario;0
+Andinismo;Andinismo;0
+Animales;Animales;0
+Armas;Armas;0
+Arquitectura;Arquitectura;0
+Arte;Arte;0
+Astrología;Astrología;0
+Automovilismo;Automóviles;0
+Autos;Autos;0
+Bailable;Bailable;0
+Barrial;Barrial;0
+Belleza;Belleza;0
+Bicicletas;Bicicletas;0
+Cine;Cine;0
+Clasificados;Clasificados;0
+Clima;Clima;0
+Cocina;Cocina;0
+Computación;Computación;0
+Comunicación;Comunicación;0
+Construcción;Construcción;0
+Consumo;Consumo;0
+Countries;Countries;0
+Cultural y Musical;Cultural y Musical;0
+Decoración;Decoración;0
+Deportes;Deportes;0
+Derecho;Derecho;0
+Diexismo;Diexismo;0
+Disco Pub;Disco Pub;0
+Ecología;Ecología;0
+Economía;Economía;0
+Editorial;Editorial;0
+Educación;Educación;0
+Electrónica;Electrónica;0
+Empleos;Empleos;0
+Empresas;Empresas;0
+Entretenimiento;Entretenimiento;0
+Exparcimiento;Esparcimiento;0
+Espectáculo;Espectáculo;0
+Esqui;Esqui;0
+Estilo de vida;Estilo de vida;0
+Eventos;Eventos;0
+Familia;Familia;0
+Folcklore;Folclore;1
+Fotografía;Fotografía;0
+Gastronomía;Gastronomía;0
+Geografía;Geografía;0
+Gremio Prensa;Gremio Prensa;0
+Guia;Guía;1
+Historia;Historia;0
+Hockey;Hockey;0
+Humor;Humor;0
+Industria;Industria;0
+Infantil;Infantil;0
+Informática;Informática;0
+Interés general;Interés general;0
+Intimidades;Intimidades;0
+Judiciales;Judicial;2
+Juegos;Juegos;0
+Jurídico;Jurídico;0
+Legislación;Legislación;0
+Manualidades;Manualidades;0
+Masculino;Masculino;0
+Maternidad;Maternidad;0
+Medio Ambiente;Medio Ambiente;0
+Medios;Medios;0
+Meteorología;Meteorología;0
+Moda;Moda;0
+Mujer;Mujer;0
+Musica;Música;1
+Música clasica;Música clasica;0
+Negocios;Negocios;0
+Obras Estatales;Obras Estatales;0
+Ofertas;Ofertas;0
+Paisajismo;Paisajismo;0
+Policiales;Policiales;0
+Política;Política;0
+Propiedades;Propiedades;0
+Publicidad;Publicidad;0
+Regional;Regional;0
+Religión;Religión;0
+Salud;Salud;0
+Salud Ambiental;Salud Ambiental;0
+Salud Animal;Salud Animal;0
+Salud Mental;Salud Mental;0
+Ciencia/Salud;Salud/Ciencia;0
+Sastre;Sastre;0
+Tecnología;Tecnología;0
+Tendencias;Tendencias;0
+Transportes;Transportes;0
+Turismo y gral;Turismo;0
+TV por Cable;TV por Cable;0
+Vinos;Vinos;0
+Vivienda;Vivienda;0

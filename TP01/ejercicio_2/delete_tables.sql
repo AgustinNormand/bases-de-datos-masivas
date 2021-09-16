@@ -1,0 +1,7 @@
+DROP TABLE cohortes CASCADE;
+DROP TABLE sexo CASCADE;
+DROP TABLE sede CASCADE;
+DROP TABLE ciudades CASCADE;
+DROP TABLE planes CASCADE;
+DROP TABLE rendimiento_academico CASCADE;
+

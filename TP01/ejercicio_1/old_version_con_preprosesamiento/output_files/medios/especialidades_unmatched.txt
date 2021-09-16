@@ -1,0 +1,5 @@
+Medio;Dirección;Especialidad;Tipo de medio;Ciudad;Provincia;matched_especialidad;measure value
+FM 90.1 - Gospel24Hs;Bouquet Rold�n 36 - (8300) Neuquén - Neuquén, Argentina;Musica  ;Radio ;Neuquén;Neuquén;;
+FM 90.5 - Radio Shock;*;Musica  ;Radio;Neuquén;Neuquén;;
+FM 91.5 - Limite-Zero;*;Musica  ;Radio;Centenario;Neuquén;;
+FM 91.9 - La Mega ;*;Musica  ;Radio;Zapala;Neuquén;;

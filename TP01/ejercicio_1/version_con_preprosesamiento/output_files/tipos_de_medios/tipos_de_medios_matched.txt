@@ -1,0 +1,16 @@
+Tipo de medio;matched_tipo_de_medio;measure value
+*;*;0
+Agencia;Agencia;0
+Blog;Blog;0
+Diario;Diario;0
+Digial;Digital;1
+Guia;Guia;0
+Periodico;Periódico;1
+Periódico Mens.;Periódico Mens.;0
+Periódico Semanal;Periódico Semanal;0
+Portal;Portal;0
+Radio;Radio;0
+Revista;Revista;0
+Semanal;Semanal;0
+Suplementos;Suplementos;0
+Television;Televisión;1

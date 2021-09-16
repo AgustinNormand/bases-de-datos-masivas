@@ -1,0 +1,26 @@
+Provincia;matched_provincia;measure value
+*;*;0
+Buenos Aires;Buenos Aires;0
+Capital Federal;Capital Federal;0
+Catamarca;Catamarca;0
+Chaco;Chaco;0
+Chubut;Chubut;0
+Corrientes;Corrientes;0
+Córdoba;Córdoba;0
+Entre Ríos;Entre Ríos;0
+Formosa;Formosa;0
+Jujuy;Jujuy;0
+La Pampa;La Pampa;0
+La Rioja;La Rioja;0
+Mendoza;Mendoza;0
+Misiones;Misiones;0
+Neuquén;Neuquén;0
+Río Negro;Río Negro;0
+Salta ;Salta;1
+San Juan;San Juan;0
+San Luis;San Luis;0
+Santa Cruz ;Santa Cruz;1
+Santa Fe;Santa Fe;0
+Santiago del Estero;Santiago del Estero;0
+Tierra del Fuego;Tierra del Fuego;0
+Tucuman;Tucumán;1
