@@ -1,0 +1,131 @@
+---
+title: "TP02- Preprocesamiento con R"
+author: "Agustín normand"
+date: "18 Septiembre 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+``` {r include=FALSE}
+install.packages("readr")      #For import dataset
+install.packages("VIM")
+install.packages("ggplot2")
+
+library(readr)      #For import dataset
+library(VIM)
+library(ggplot2)
+
+encuesta_universitaria <- read_csv("/home/rstudio/data/encuesta_universitaria.csv")
+```
+## Limpieza de datos: 
+### 1. Datos faltantes
+#### a. Verifique cual es la proporción de valores faltantes respecto a la cantidad total de instancias del dataset.
+
+Cantidad de instancias en el dataset.
+``` {r echo=FALSE}
+cantidad_total<-nrow(encuesta_universitaria) #Lo guardo en una variable
+cantidad_total #Hago esto para que lo muestre
+```
+
+Cantidad de datos faltantes para el atributo *tiempo_translado*.
+``` {r echo=FALSE}
+cantidad_faltantes<-sum(is.na(encuesta_universitaria$`'Tiempo_Traslado'`)) #Lo guardo en una variable
+cantidad_faltantes #Hago esto para que lo muestre
+```
+
+
+Proporcion de datos faltantes respecto a la cantidad total de instancias del dataset.
+Redondeada a 2 decimales.
+``` {r echo=FALSE}
+proporcion_faltantes<-(cantidad_faltantes/cantidad_total)*100
+proporcion_faltantes_redondeada<-round(proporcion_faltantes,2)
+proporcion_faltantes_redondeada
+```
+
+#### b. Genere un nuevo atributo utilizando solo los registros con valores observados para el atributo.
+
+Omito los nulos utilzando la siguiente linea de código.
+``` {r}
+encuesta_universitaria_reg_completos<-na.omit(encuesta_universitaria)
+```
+
+Si ahora vemos la cantidad de filas del dataset resultante. Podemos comprobar que efectivamente eliminó las filas que contenían *missing values*, ya que la cantidad es menor a la calculada anteriormente.
+``` {r echo=FALSE}
+encuesta_universitaria_reg_completos_cantidad_total<-nrow(encuesta_universitaria_reg_completos)
+encuesta_universitaria_reg_completos_cantidad_total
+```
+
+Para terminar de comprobar que los faltantes fueron eliminados, si contamos la cantidad de faltantes, da como resultado 0.
+``` {r echo=FALSE}
+encuesta_universitaria_reg_completos_cantidad_faltantes<-sum(is.na(encuesta_universitaria_reg_completos$`'Tiempo_Traslado'`))
+encuesta_universitaria_reg_completos_cantidad_faltantes
+```
+
+#### c. Genere un nuevo atributo en el que sustituya los falores faltantes por la media encontrada para el atributo.
+
+Genero un nuevo atributo con el nombre *media*, y remplazo los valores faltantes, por el valor de la media del *Tiempo de traslado*.
+``` {r}
+encuesta_universitaria_imp<-encuesta_universitaria
+encuesta_universitaria_imp$media <- encuesta_universitaria$`'Tiempo_Traslado'`
+encuesta_universitaria_imp$media[is.na(encuesta_universitaria_imp$media)]<-mean(encuesta_universitaria_imp$media, na.rm = TRUE)
+```
+
+Si cuento la cantidad de faltantes del atributo *media*, podemos comprobar que da 0.
+``` {r echo=FALSE}
+sum(is.na(encuesta_universitaria_imp$media))
+```
+
+#### d. Genere un nuevo atributo en el que sustituya los valores faltantes de acuerdo al método de "hot deck imputation".
+
+Defino un dataframe auxiliar para no perder el *Tiempo de Traslado* original, asigno el resultado del hotdeck en un atributo llamado *hotdeck* y creo un flag
+llamado *hotdeckbool* que indica si fue imputado o no el dato.
+``` {r}
+df_aux<-hotdeck(encuesta_universitaria, variable="'Tiempo_Traslado'")
+encuesta_universitaria_imp$hotdeck<-df_aux$`'Tiempo_Traslado'`
+encuesta_universitaria_imp$hotdeckbool<-df_aux$`'Tiempo_Traslado'_imp`
+```
+
+Si cuento la cantidad de faltantes del atributo *hotdeck* podemos comprobar que da 0.
+``` {r echo=FALSE}
+sum(is.na(encuesta_universitaria_imp$hotdeck))
+```
+
+#### e. Genere un nuevo atributo en el que sustituya los valores faltantes de acuerdo al método de "hot deck imputation".
+
+
+``` {r echo=FALSE}
+par(mar=c(1,1,1,1))
+
+plot(density(encuesta_universitaria_imp$`'Tiempo_Traslado'`, na.rm=TRUE), type="l", 
+col="red", ylab = "Original", ylim=c(0,0.03), xlim=c(0,150), main="Análisis Gráfico de los métodos de imputación")
+
+lines(density(encuesta_universitaria_imp$media, na.rm=TRUE), type = "l", col="blue")
+
+lines(density(encuesta_universitaria_imp$hotdeck, na.rm=TRUE), type = "l", col="green")
+
+legend("topright", legend=c("Original", "Media", "Hotdeck"),
+col=c("red", "blue", "green"), lty=1,
+cex=0.75)
+```
+
+**Observaciones:**
+
++ (Linea azul) Se puede observar como se ve influenciada la distribucion de los datos con imputaciones a traves de la media. Ya que estoy estableciendo un único valor para garantizar la continuidad de los datos. Obviamente, aumenta la frecuencia donde tengo ubicada la media.
++ (Linea roja) Los datos originales y los imputados mediante *hotdeck* (Linea verde), se puede ver que respeta la distribucion de la variable.
+
+### 2. Manejo de Ruido
+#### a. Verifique en primer lugar la distribución de los datos, utilice algún método gráfico para esto.
+
+``` {r echo=FALSE}
+ggplot(encuesta_universitaria, aes(x=`'Carrera'`)) + 
+    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 30) +
+    geom_density(alpha=0.2, fill="grey50") +
+    labs(x = "Carrera",
+         y = "Frecuencia", 
+         title = "Histograma de 'Carrera'") +
+    xlim(-10, 65)
+```
