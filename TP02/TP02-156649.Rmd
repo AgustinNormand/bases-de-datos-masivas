@@ -11,13 +11,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ``` {r include=FALSE}
-install.packages("readr")      #For import dataset
-install.packages("VIM")
-install.packages("ggplot2")
+#install.packages("readr")      #For import dataset
+#install.packages("VIM")
+#install.packages("gplot2")
+#install.packages("infotheo")
+#install.packages("ggplots")
+#install.packages("RColorBrewer")
+#install.packages("caret")
 
 library(readr)      #For import dataset
 library(VIM)
 library(ggplot2)
+library(infotheo)
+library(gplots)
+library(RColorBrewer)
+library(caret)
 
 encuesta_universitaria <- read_csv("/home/rstudio/data/encuesta_universitaria.csv")
 ```
@@ -121,11 +129,318 @@ cex=0.75)
 #### a. Verifique en primer lugar la distribución de los datos, utilice algún método gráfico para esto.
 
 ``` {r echo=FALSE}
-ggplot(encuesta_universitaria, aes(x=`'Carrera'`)) + 
+h_carrera<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Carrera'`)) + 
     geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 30) +
     geom_density(alpha=0.2, fill="grey50") +
     labs(x = "Carrera",
          y = "Frecuencia", 
          title = "Histograma de 'Carrera'") +
     xlim(-10, 65)
+
+h_sede<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Sede'`)) + 
+    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 20) +
+    geom_density(alpha=0.2, fill="grey50") +
+    labs(x = "Sede",
+         y = "Frecuencia", 
+         title = "Histograma de 'Sede'") +
+    xlim(0, 15)
+
+h_tiempo_traslado<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Tiempo_Traslado'`)) + 
+    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 23) +
+    geom_density(alpha=0.2, fill="grey50") +
+    labs(x = "Tiempo_Traslado",
+         y = "Frecuencia", 
+         title = "Histograma de 'Tiempo_Traslado'") +
+    xlim(-10, 280)
+
+h_cantidad_grupo_familiar<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Cantidad_Grupo_Familiar'`)) + 
+    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 12) +
+    geom_density(alpha=0.2, fill="grey50") +
+    labs(x = "Cantidad_Grupo_Familiar",
+         y = "Frecuencia", 
+         title = "Histograma de 'Cantidad_Grupo_Familiar'") +
+    xlim(-1, 10)
+
+suppressWarnings(print(h_carrera))
+suppressWarnings(print(h_sede))
+suppressWarnings(print(h_tiempo_traslado))
+suppressWarnings(print(h_cantidad_grupo_familiar))
 ```
+
+Se puede observar que el histograma de *Cantidad Grupo Familiar* se asemeja a una distribución normal.
+
+#### b. Realice un suavizado utilizando *binning* por frecuencias iguales (con 5 bins) y estime el valor del bin por el cálculo de medias.
+
+``` {r echo=FALSE}
+carrera_bin_eq_freq <- discretize(encuesta_universitaria_reg_completos$`'Carrera'`, "equalfreq", 5)
+carrera_bin_eq_freq$Carrera = encuesta_universitaria_reg_completos$`'Carrera'`
+for(bin in 1:5){
+    carrera_bin_eq_freq$suavizado[ carrera_bin_eq_freq$X==bin ] = mean(carrera_bin_eq_freq$Carrera[ carrera_bin_eq_freq$X==bin ])
+}
+
+par(mar=c(1,1,1,1))
+plot(sort(carrera_bin_eq_freq$Carrera, decreasing = FALSE), type = "l", col="red", ylab = "Carrera", main="Plot de 'Carrera' suavizado igual frecuencia")
+lines(sort(carrera_bin_eq_freq$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+``` {r echo=FALSE}
+sede_bin_eq_freq <- discretize(encuesta_universitaria_reg_completos$`'Sede'`, "equalfreq", 5)
+sede_bin_eq_freq$Sede = encuesta_universitaria_reg_completos$`'Sede'`
+for(bin in 1:5){
+    sede_bin_eq_freq$suavizado[ sede_bin_eq_freq$X==bin ] = mean(sede_bin_eq_freq$Sede[ sede_bin_eq_freq$X==bin ])
+}
+
+par(mar=c(1,1,1,1))
+plot(sort(sede_bin_eq_freq$Sede, decreasing = FALSE), type = "l", col="red", ylab = "Sede", main="Plot de 'Sede' suavizado igual frecuencia")
+lines(sort(sede_bin_eq_freq$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+``` {r echo=FALSE}
+tiempo_traslado_bin_eq_freq <- discretize(encuesta_universitaria_reg_completos$`'Tiempo_Traslado'`, "equalfreq", 5)
+tiempo_traslado_bin_eq_freq$Tiempo_Traslado = encuesta_universitaria_reg_completos$`'Tiempo_Traslado'`
+for(bin in 1:5){
+    tiempo_traslado_bin_eq_freq$suavizado[ tiempo_traslado_bin_eq_freq$X==bin ] = mean(tiempo_traslado_bin_eq_freq$Tiempo_Traslado[ tiempo_traslado_bin_eq_freq$X==bin ])
+}
+
+par(mar=c(1,1,1,1))
+plot(sort(tiempo_traslado_bin_eq_freq$Tiempo_Traslado, decreasing = FALSE), type = "l", col="red", ylab = "Tiempo_Traslado", main="Plot de 'Tiempo_Traslado' suavizado igual frecuencia")
+lines(sort(tiempo_traslado_bin_eq_freq$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+``` {r echo=FALSE}
+cantidad_grupo_familiar_bin_eq_freq <- discretize(encuesta_universitaria_reg_completos$`'Cantidad_Grupo_Familiar'`, "equalfreq", 5)
+cantidad_grupo_familiar_bin_eq_freq$Cantidad_Grupo_Familiar = encuesta_universitaria_reg_completos$`'Cantidad_Grupo_Familiar'`
+for(bin in 1:5){
+    cantidad_grupo_familiar_bin_eq_freq$suavizado[ cantidad_grupo_familiar_bin_eq_freq$X==bin ] = mean(cantidad_grupo_familiar_bin_eq_freq$Cantidad_Grupo_Familiar[ cantidad_grupo_familiar_bin_eq_freq$X==bin ])
+}
+
+par(mar=c(1,1,1,1))
+plot(sort(cantidad_grupo_familiar_bin_eq_freq$Cantidad_Grupo_Familiar, decreasing = FALSE), type = "l", col="red", ylab = "Cantidad_Grupo_Familiar", main="Plot de 'Cantidad_Grupo_Familiar' suavizado igual frecuencia")
+lines(sort(cantidad_grupo_familiar_bin_eq_freq$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+#### b. Realice un suavizado utilizando *binning* por frecuencias iguales (con 5 bins) y estime el valor del bin por el cálculo de medias.
+
+``` {r echo=FALSE}
+carrera_bin_eq_width <- discretize(encuesta_universitaria_reg_completos$`'Carrera'`, "equalwidth", 5)
+carrera_bin_eq_width$Carrera = encuesta_universitaria_reg_completos$`'Carrera'`
+for(bin in 1:5){
+    carrera_bin_eq_width$suavizado[ carrera_bin_eq_width$X==bin ] = mean(carrera_bin_eq_width$Carrera[ carrera_bin_eq_width$X==bin ])
+}
+par(mar=c(1,1,1,1))
+plot(sort(carrera_bin_eq_width$Carrera, decreasing = FALSE), type = "l", col="red", ylab = "Carrera", main="Plot de 'Carrera' suavizado igual ancho")
+lines(sort(carrera_bin_eq_width$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+``` {r echo=FALSE}
+sede_bin_eq_width <- discretize(encuesta_universitaria_reg_completos$`'Sede'`, "equalwidth", 5)
+sede_bin_eq_width$Sede = encuesta_universitaria_reg_completos$`'Sede'`
+for(bin in 1:5){
+    sede_bin_eq_width$suavizado[ sede_bin_eq_width$X==bin ] = mean(sede_bin_eq_width$Sede[ sede_bin_eq_width$X==bin ])
+}
+par(mar=c(1,1,1,1))
+plot(sort(sede_bin_eq_width$Sede, decreasing = FALSE), type = "l", col="red", ylab = "Sede", main="Plot de 'Sede' suavizado igual ancho")
+lines(sort(sede_bin_eq_width$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+``` {r echo=FALSE}
+tiempo_traslado_bin_eq_width <- discretize(encuesta_universitaria_reg_completos$`'Tiempo_Traslado'`, "equalwidth", 5)
+tiempo_traslado_bin_eq_width$Tiempo_Traslado = encuesta_universitaria_reg_completos$`'Tiempo_Traslado'`
+for(bin in 1:5){
+    tiempo_traslado_bin_eq_width$suavizado[ tiempo_traslado_bin_eq_width$X==bin ] = mean(tiempo_traslado_bin_eq_width$Tiempo_Traslado[ tiempo_traslado_bin_eq_width$X==bin ])
+}
+par(mar=c(1,1,1,1))
+plot(sort(tiempo_traslado_bin_eq_width$Tiempo_Traslado, decreasing = FALSE), type = "l", col="red", ylab = "Tiempo_Traslado", main="Plot de 'Tiempo_Traslado' suavizado igual ancho")
+lines(sort(tiempo_traslado_bin_eq_width$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+``` {r echo=FALSE}
+cantidad_grupo_familiar_bin_eq_width <- discretize(encuesta_universitaria_reg_completos$`'Cantidad_Grupo_Familiar'`, "equalwidth", 5)
+cantidad_grupo_familiar_bin_eq_width$Cantidad_Grupo_Familiar = encuesta_universitaria_reg_completos$`'Cantidad_Grupo_Familiar'`
+for(bin in 1:5){
+    cantidad_grupo_familiar_bin_eq_width$suavizado[ cantidad_grupo_familiar_bin_eq_width$X==bin ] = mean(cantidad_grupo_familiar_bin_eq_width$Cantidad_Grupo_Familiar[ cantidad_grupo_familiar_bin_eq_width$X==bin ])
+}
+par(mar=c(1,1,1,1))
+plot(sort(cantidad_grupo_familiar_bin_eq_width$Cantidad_Grupo_Familiar, decreasing = FALSE), type = "l", col="red", ylab = "Cantidad_Grupo_Familiar", main="Plot de 'Cantidad_Grupo_Familiar' suavizado igual ancho")
+lines(sort(cantidad_grupo_familiar_bin_eq_width$suavizado), type = "l", col="blue")
+legend("topleft", legend=c("Original", "Suavizado"),
+       col=c("red", "blue"), lty=1,
+       cex=0.75)
+```
+
+**Comparación**
+
++ Se puede observar que el *binning* por igual ancho abarca los valores extremos como se puede ver en los plot de *Cantidad_Grupo_Familiar* y *Tiempo_Traslado*. Pero el *binning* de igual frecuencia, no incluye estos valores extremos.
++ Sin embargo, cuando se trata del agrupamiento por igual ancho, se ajusta mejor a la distribución original de la variable. No así el agrupamiento por igual frecuencia, que genera una varianza mayor con respecto a la distribución original.
+
+### 3. Detección de outliers
+#### a. Verifique la existencia de *outliers* en el atributo *tiempo_traslado* en función del resto de los atributos. ¿En todos se trata de un valor anómalo?
+
+``` {r echo=FALSE}
+boxplot(encuesta_universitaria$`'Tiempo_Traslado'`, main="Boxplot de Tiempo de Traslado")
+```
+
+Podemos observar la existencia de *outliers* en el atributo *tiempo_traslado*
+
+Si bien en el grafico se puede observar aproximadamente de que valor se trata, lo obtengo con la funcion *max*.
+``` {r echo=FALSE}
+max(encuesta_universitaria$`'Tiempo_Traslado'`, na.rm = TRUE)
+```
+
+Obtengo las filas cuyo valor de *tiempo_traslado* es 3600
+```{r}
+outlier<-na.omit(encuesta_universitaria[encuesta_universitaria$`'Tiempo_Traslado'`==3600, ])
+```
+
+Cuando se trata del atributo *Carrera* el valor es:
+``` {r echo=FALSE}
+outlier$`'Carrera'`
+```
+
+Y el boxplot correspondiente a dicho atributo es:
+``` {r echo=FALSE}
+boxplot(encuesta_universitaria$`'Carrera'`, na.rm = TRUE, main="Boxplot de Carrera")
+```
+
+Por lo tanto podemos afirmar que no se trata de un *outlier* para el atributo *Carrera*.
+
+Realizando este mismo analisis para el resto de los atributos, se puede concluir que no en todos los casos se trata de un valor anómalo.
+
+#### b. Aplique las técnicas de análisis y detección vistas en clase: IRQ, SD(seleccione el N que mejor se adapte a su criterio) y Z-Score (seleccione el umbral que mejor se adapte a su criterio)
+
+##### Método IRQ
+``` {r echo=FALSE}
+data<-encuesta_universitaria$`'Tiempo_Traslado'`
+data.riq<-IQR(data, na.rm = TRUE)
+
+cuantiles<-quantile(data, c(0.25, 0.5, 0.75, 1), type = 7, na.rm = TRUE)
+#print(cuantiles)
+
+outliers_min<-as.numeric(cuantiles[1])-1.5*data.riq
+#print(outliers_min)
+
+outliers_max<-as.numeric(cuantiles[3])+1.5*data.riq
+#print(outliers_max)
+
+par(mar=c(1,1,1,1))
+plot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Plot de Tiempo_Traslado sin outliers")
+
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers")
+```
+
+Modificando el outliers_max, remuevo el mas alejado de los outliers, y dejo los mas cercanos.
+``` {r echo=FALSE}
+outliers_max<-as.numeric(cuantiles[3])+7*data.riq
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers")
+```
+
+##### Método SD
+
+Para obtener una distribución sin ningún outlier, para el atributo *Tiempo_Traslado* es necesario usar N=1
+``` {r echo=FALSE}
+N=1
+data<-encuesta_universitaria$`'Tiempo_Traslado'`
+desvio<-sd(data, na.rm = TRUE)
+
+outliers_max<-mean(data, na.rm = TRUE)+N*desvio
+outliers_min<-mean(data, na.rm = TRUE)-N*desvio
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers")
+```
+
+Para remover el outlier mas alejado y dejar los mas cercanos, tal como mostramos en método anterior, es necesario usar un N=4
+``` {r echo=FALSE}
+N=4
+data<-encuesta_universitaria$`'Tiempo_Traslado'`
+desvio<-sd(data, na.rm = TRUE)
+
+outliers_max<-mean(data, na.rm = TRUE)+N*desvio
+outliers_min<-mean(data, na.rm = TRUE)-N*desvio
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers")
+```
+
+##### Método Z-Score
+Para remover todos los *outliers* se utilizó un umbral de 100.
+``` {r echo=FALSE}
+data<-na.omit(encuesta_universitaria)
+data$zscore<-(data$`'Tiempo_Traslado'`-mean(data$`'Tiempo_Traslado'`)/sd(data$`'Tiempo_Traslado'`))
+boxplot(sort(data$`'Tiempo_Traslado'`[data$zscore<100], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers")
+```
+
+Al igual que en los métodos anteriores, para dejar solo los *outliers* mas cercanos, se determinó que el umbral debía ser de 250.
+``` {r echo=FALSE}
+data<-na.omit(encuesta_universitaria)
+data$zscore<-(data$`'Tiempo_Traslado'`-mean(data$`'Tiempo_Traslado'`)/sd(data$`'Tiempo_Traslado'`))
+boxplot(sort(data$`'Tiempo_Traslado'`[data$zscore<250], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers")
+```
+
+#### c. Concluya respecto a los resultados obtenidos con cada técnica.
+
+Los resultados obtenidos con cada técnica son prácticamente los mismos, la diferencia que noté es que en el método de Z-Score, tuve mayor facilidad para parametrizar los umbrales en los que quería remover los outliers.
+Sin embargo, en los métodos de IRQ y SD, es un poco menos sencilla, dado que es prueba y error hasta encontrar que los outliers se remueven de la manera que estaba buscando.
+En el caso de Z-Score, como el score lo agrego como un atributo del dataframe, puedo ordenar de mayor a menor los Tiempos de Traslado, ver los score que tienen las primeras filas, y guiarme para establecer un umbral correcto.
+
+### 3. Reducción de dimensionalidad
+#### a. Evalúe la relación entre atributos a partir del coeficiente de correlación de Pearson y un análisis gráfico de heatmap para estudiar la posibilidad de eliminar redundancia en el dataset. En caso de corresponder, aplique las técnicas de Reducing Highly Correlated Columns trabajadas en clase.
+
+Coeficientes de Correlacion de Pearson entre cada uno de los atributos.
+``` {r echo=FALSE}
+auto_mpg_data_original <- read_table2("/home/rstudio/data/auto-mpg.data-original.txt", 
+    col_names = FALSE)
+
+round(cor(na.omit(auto_mpg_data_original[,c(1,2,3,4,5,6,7,8)])), 2)
+```
+
+**Observaciones:**
+
++ Hay un gran porcentaje de valores superiores a 0.70 o inferiores a -0.70.
++ El atributo X2 y X3 presentan 0.95 de correlación.
++ El atributo X2 y X5 presentan 0.90 de correlación.
+
++ El atributo X3 y X4 presentan 0.90 de correlación.
++ El atributo X3 y X5 presentan 0.93 de correlación.
+
+Análisis gráfico de Heatmap
+
+``` {r echo=FALSE}
+ds.cor<-cor(auto_mpg_data_original[,c(1,2,3,4,5,6,7,8)], use="complete.obs")
+heatmap.2(ds.cor, cellnote = round(ds.cor, 1), main = "Correlación", notecol = "black", density.info = "none", trace="none", col = brewer.pal('RdYlBu', n=5), dendrogram = "none", Colv="NA")
+```
+
+**Observaciones**
+
++ Se confirma lo dicho anteriormente, hay muchos valores azules y rojos, lo cual indica una gran cantidad de valores con correlación superior a 0.80 o inferior a -0.80.
+Además, hay muy pocos valores blancos, y pocos valores azul claro y naranja claro.
+
++ Los atributos X2, X3, X4 y X5, tienen una gran correlación positiva entre si.
+
++ El atributo X1 se encuentra correlacionado negativamente con los atributos X2, X3, X4 y X5.
+
+Comprobamos lo dicho anteriormente utilizando *findCorrelation* de la libreria *caret*.
+``` {r echo=FALSE}
+matriz.correlacion<-cor(auto_mpg_data_original[,c(1,2,3,4,5,6,7,8)], use="complete.obs")
+highlyCorrelated <- findCorrelation(matriz.correlacion, cutoff=0.75)
+print(highlyCorrelated)
+```
+
+Por lo tanto habría que reducir 
