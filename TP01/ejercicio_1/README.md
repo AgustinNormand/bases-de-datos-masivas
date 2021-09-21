@@ -1,7 +1,7 @@
 #Dependencies
 sudo apt install libpq-dev
 pip install psycopg2
-#install pandas
+pip install pandas
 pip install xlrd
 pip install Levenshtein
 

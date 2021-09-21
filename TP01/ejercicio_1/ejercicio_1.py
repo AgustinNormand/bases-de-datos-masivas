@@ -8,10 +8,10 @@ class Migrator():
         self.connect_to_database()
         self.read_excel_file()
         self.read_required_files()
-        #self.migrate_provincias()
-        #self.migrate_tipos_de_medio()
-        #self.migrate_especialidades()
-        #self.migrate_ciudades()
+        self.migrate_provincias()
+        self.migrate_tipos_de_medio()
+        self.migrate_especialidades()
+        self.migrate_ciudades()
         self.migrate_medios()
 
     def connect_to_database(self):
