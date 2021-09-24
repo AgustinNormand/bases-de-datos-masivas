@@ -1,7 +1,7 @@
 ---
 title: "TP02- Preprocesamiento con R"
 author: "Agustín normand"
-date: "18 Septiembre 2021"
+date: "24 Septiembre 2021"
 output: html_document
 ---
 
@@ -18,6 +18,12 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("ggplots")
 #install.packages("RColorBrewer")
 #install.packages("caret")
+#install.packages("MASS")
+#install.packages("infotheo")
+install.packages("dendextend") #For colours
+install.packages("installr")   #For colours
+install.packages("colorspace") #For colours
+
 
 library(readr)      #For import dataset
 library(VIM)
@@ -26,6 +32,11 @@ library(infotheo)
 library(gplots)
 library(RColorBrewer)
 library(caret)
+library(MASS)
+library(infotheo)
+library(dendextend) #For colours
+library(installr)   #For colours
+library(colorspace) #For colours
 
 encuesta_universitaria <- read_csv("/home/rstudio/data/encuesta_universitaria.csv")
 ```
@@ -46,7 +57,7 @@ cantidad_faltantes #Hago esto para que lo muestre
 ```
 
 
-Proporcion de datos faltantes respecto a la cantidad total de instancias del dataset.
+Proporción de datos faltantes respecto a la cantidad total de instancias del dataset.
 Redondeada a 2 decimales.
 ``` {r echo=FALSE}
 proporcion_faltantes<-(cantidad_faltantes/cantidad_total)*100
@@ -54,28 +65,37 @@ proporcion_faltantes_redondeada<-round(proporcion_faltantes,2)
 proporcion_faltantes_redondeada
 ```
 
+\
+\
+
 #### b. Genere un nuevo atributo utilizando solo los registros con valores observados para el atributo.
 
-Omito los nulos utilzando la siguiente linea de código.
+Omito los nulos utilizando la siguiente línea de código.
 ``` {r}
+tiempo_traslado_reg_completos<-na.omit(encuesta_universitaria$`'Tiempo_Traslado'`)
+```
+``` {r echo=FALSE}
 encuesta_universitaria_reg_completos<-na.omit(encuesta_universitaria)
 ```
 
 Si ahora vemos la cantidad de filas del dataset resultante. Podemos comprobar que efectivamente eliminó las filas que contenían *missing values*, ya que la cantidad es menor a la calculada anteriormente.
 ``` {r echo=FALSE}
 encuesta_universitaria_reg_completos_cantidad_total<-nrow(encuesta_universitaria_reg_completos)
-encuesta_universitaria_reg_completos_cantidad_total
+length(tiempo_traslado_reg_completos)
 ```
 
 Para terminar de comprobar que los faltantes fueron eliminados, si contamos la cantidad de faltantes, da como resultado 0.
 ``` {r echo=FALSE}
 encuesta_universitaria_reg_completos_cantidad_faltantes<-sum(is.na(encuesta_universitaria_reg_completos$`'Tiempo_Traslado'`))
-encuesta_universitaria_reg_completos_cantidad_faltantes
+sum(is.na(tiempo_traslado_reg_completos))
 ```
 
-#### c. Genere un nuevo atributo en el que sustituya los falores faltantes por la media encontrada para el atributo.
+\
+\
 
-Genero un nuevo atributo con el nombre *media*, y remplazo los valores faltantes, por el valor de la media del *Tiempo de traslado*.
+#### c. Genere un nuevo atributo en el que sustituya los valores faltantes por la media encontrada para el atributo.
+
+Genero un nuevo atributo con el nombre *media*, y reemplazo los valores faltantes, por el valor de la media del *Tiempo de traslado*.
 ``` {r}
 encuesta_universitaria_imp<-encuesta_universitaria
 encuesta_universitaria_imp$media <- encuesta_universitaria$`'Tiempo_Traslado'`
@@ -86,6 +106,9 @@ Si cuento la cantidad de faltantes del atributo *media*, podemos comprobar que d
 ``` {r echo=FALSE}
 sum(is.na(encuesta_universitaria_imp$media))
 ```
+
+\
+\
 
 #### d. Genere un nuevo atributo en el que sustituya los valores faltantes de acuerdo al método de "hot deck imputation".
 
@@ -102,8 +125,10 @@ Si cuento la cantidad de faltantes del atributo *hotdeck* podemos comprobar que 
 sum(is.na(encuesta_universitaria_imp$hotdeck))
 ```
 
-#### e. Genere un nuevo atributo en el que sustituya los valores faltantes de acuerdo al método de "hot deck imputation".
+\
+\
 
+#### e. Genere un nuevo atributo en el que sustituya los valores faltantes de acuerdo al método de "hot deck imputation".
 
 ``` {r echo=FALSE}
 par(mar=c(1,1,1,1))
@@ -122,23 +147,36 @@ cex=0.75)
 
 **Observaciones:**
 
-+ (Linea azul) Se puede observar como se ve influenciada la distribucion de los datos con imputaciones a traves de la media. Ya que estoy estableciendo un único valor para garantizar la continuidad de los datos. Obviamente, aumenta la frecuencia donde tengo ubicada la media.
-+ (Linea roja) Los datos originales y los imputados mediante *hotdeck* (Linea verde), se puede ver que respeta la distribucion de la variable.
++ (Línea azul) Se puede observar como se ve influenciada la distribución de los datos con imputaciones a través de la media. Ya que estoy estableciendo un único valor para garantizar la continuidad de los datos. Obviamente, aumenta la frecuencia donde tengo ubicada la media.
++ (Línea roja) Los datos originales y los imputados mediante *hotdeck* (Línea verde), se puede ver que respeta la distribución de la variable.
+
+\
+\
 
 ### 2. Manejo de Ruido
 #### a. Verifique en primer lugar la distribución de los datos, utilice algún método gráfico para esto.
 
 ``` {r echo=FALSE}
 h_carrera<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Carrera'`)) + 
-    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 30) +
+    geom_histogram(aes(y=..density..), color="grey20", fill=rainbow_hcl(30), bins = 30) +
     geom_density(alpha=0.2, fill="grey50") +
     labs(x = "Carrera",
          y = "Frecuencia", 
          title = "Histograma de 'Carrera'") +
     xlim(-10, 65)
 
+#not_null_carrera<-data.frame(na.omit(encuesta_universitaria$`'Carrera'`))
+#names(not_null_carrera)[1]<-"Carrera"
+#ggplot(not_null_carrera, aes(x=Carrera)) + 
+    #geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 30) +
+    #geom_density(alpha=0.2, fill="grey50") +
+    #labs(x = "Carrera",
+         #y = "Frecuencia", 
+         #title = "Histograma de 'Carrera'") +
+    #xlim(-10, 65)
+
 h_sede<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Sede'`)) + 
-    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 20) +
+    geom_histogram(aes(y=..density..), color="grey20", fill=rainbow_hcl(20), bins = 20) +
     geom_density(alpha=0.2, fill="grey50") +
     labs(x = "Sede",
          y = "Frecuencia", 
@@ -146,7 +184,7 @@ h_sede<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Sede'`)) +
     xlim(0, 15)
 
 h_tiempo_traslado<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Tiempo_Traslado'`)) + 
-    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 23) +
+    geom_histogram(aes(y=..density..), color="grey20", fill=rainbow_hcl(23), bins = 23) +
     geom_density(alpha=0.2, fill="grey50") +
     labs(x = "Tiempo_Traslado",
          y = "Frecuencia", 
@@ -154,7 +192,7 @@ h_tiempo_traslado<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Tiempo_T
     xlim(-10, 280)
 
 h_cantidad_grupo_familiar<-ggplot(encuesta_universitaria_reg_completos, aes(x=`'Cantidad_Grupo_Familiar'`)) + 
-    geom_histogram(aes(y=..density..), color="sienna4", fill="sienna2", bins = 12) +
+    geom_histogram(aes(y=..density..), color="grey20", fill=rainbow_hcl(12), bins = 12) +
     geom_density(alpha=0.2, fill="grey50") +
     labs(x = "Cantidad_Grupo_Familiar",
          y = "Frecuencia", 
@@ -168,6 +206,9 @@ suppressWarnings(print(h_cantidad_grupo_familiar))
 ```
 
 Se puede observar que el histograma de *Cantidad Grupo Familiar* se asemeja a una distribución normal.
+
+\
+\
 
 #### b. Realice un suavizado utilizando *binning* por frecuencias iguales (con 5 bins) y estime el valor del bin por el cálculo de medias.
 
@@ -231,7 +272,10 @@ legend("topleft", legend=c("Original", "Suavizado"),
        cex=0.75)
 ```
 
-#### b. Realice un suavizado utilizando *binning* por frecuencias iguales (con 5 bins) y estime el valor del bin por el cálculo de medias.
+\
+\
+
+#### c. Ahora, realice el suavizado por anchos iguales (con 5 bins) y compare los resultados gráficamente.
 
 ``` {r echo=FALSE}
 carrera_bin_eq_width <- discretize(encuesta_universitaria_reg_completos$`'Carrera'`, "equalwidth", 5)
@@ -294,16 +338,19 @@ legend("topleft", legend=c("Original", "Suavizado"),
 + Se puede observar que el *binning* por igual ancho abarca los valores extremos como se puede ver en los plot de *Cantidad_Grupo_Familiar* y *Tiempo_Traslado*. Pero el *binning* de igual frecuencia, no incluye estos valores extremos.
 + Sin embargo, cuando se trata del agrupamiento por igual ancho, se ajusta mejor a la distribución original de la variable. No así el agrupamiento por igual frecuencia, que genera una varianza mayor con respecto a la distribución original.
 
+\
+\
+
 ### 3. Detección de outliers
 #### a. Verifique la existencia de *outliers* en el atributo *tiempo_traslado* en función del resto de los atributos. ¿En todos se trata de un valor anómalo?
 
 ``` {r echo=FALSE}
-boxplot(encuesta_universitaria$`'Tiempo_Traslado'`, main="Boxplot de Tiempo de Traslado")
+boxplot(encuesta_universitaria$`'Tiempo_Traslado'`, main="Boxplot de Tiempo de Traslado", col=rainbow_hcl(13))
 ```
 
 Podemos observar la existencia de *outliers* en el atributo *tiempo_traslado*
 
-Si bien en el grafico se puede observar aproximadamente de que valor se trata, lo obtengo con la funcion *max*.
+Si bien en el gráfico se puede observar aproximadamente de qué valor se trata, lo obtengo con la funcion *max*.
 ``` {r echo=FALSE}
 max(encuesta_universitaria$`'Tiempo_Traslado'`, na.rm = TRUE)
 ```
@@ -320,15 +367,17 @@ outlier$`'Carrera'`
 
 Y el boxplot correspondiente a dicho atributo es:
 ``` {r echo=FALSE}
-boxplot(encuesta_universitaria$`'Carrera'`, na.rm = TRUE, main="Boxplot de Carrera")
+boxplot(encuesta_universitaria$`'Carrera'`, na.rm = TRUE, main="Boxplot de Carrera", col=rainbow_hcl(13))
 ```
 
 Por lo tanto podemos afirmar que no se trata de un *outlier* para el atributo *Carrera*.
 
-Realizando este mismo analisis para el resto de los atributos, se puede concluir que no en todos los casos se trata de un valor anómalo.
+Realizando este mismo análisis para el resto de los atributos, se puede concluir que no en todos los casos se trata de un valor anómalo.
+
+\
+\
 
 #### b. Aplique las técnicas de análisis y detección vistas en clase: IRQ, SD(seleccione el N que mejor se adapte a su criterio) y Z-Score (seleccione el umbral que mejor se adapte a su criterio)
-
 ##### Método IRQ
 ``` {r echo=FALSE}
 data<-encuesta_universitaria$`'Tiempo_Traslado'`
@@ -344,16 +393,18 @@ outliers_max<-as.numeric(cuantiles[3])+1.5*data.riq
 #print(outliers_max)
 
 par(mar=c(1,1,1,1))
-plot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Plot de Tiempo_Traslado sin outliers")
+plot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Plot de Tiempo_Traslado sin outliers", col=rainbow_hcl(13))
 
-boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers")
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers", col=rainbow_hcl(13))
 ```
 
 Modificando el outliers_max, remuevo el mas alejado de los outliers, y dejo los mas cercanos.
 ``` {r echo=FALSE}
 outliers_max<-as.numeric(cuantiles[3])+7*data.riq
-boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers")
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers", col=rainbow_hcl(13))
 ```
+
+\
 
 ##### Método SD
 
@@ -365,7 +416,7 @@ desvio<-sd(data, na.rm = TRUE)
 
 outliers_max<-mean(data, na.rm = TRUE)+N*desvio
 outliers_min<-mean(data, na.rm = TRUE)-N*desvio
-boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers")
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers", col=rainbow_hcl(13))
 ```
 
 Para remover el outlier mas alejado y dejar los mas cercanos, tal como mostramos en método anterior, es necesario usar un N=4
@@ -376,23 +427,27 @@ desvio<-sd(data, na.rm = TRUE)
 
 outliers_max<-mean(data, na.rm = TRUE)+N*desvio
 outliers_min<-mean(data, na.rm = TRUE)-N*desvio
-boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers")
+boxplot(sort(data[data>outliers_min & data<outliers_max], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers", col=rainbow_hcl(13))
 ```
+
+\
 
 ##### Método Z-Score
 Para remover todos los *outliers* se utilizó un umbral de 100.
 ``` {r echo=FALSE}
 data<-na.omit(encuesta_universitaria)
 data$zscore<-(data$`'Tiempo_Traslado'`-mean(data$`'Tiempo_Traslado'`)/sd(data$`'Tiempo_Traslado'`))
-boxplot(sort(data$`'Tiempo_Traslado'`[data$zscore<100], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers")
+boxplot(sort(data$`'Tiempo_Traslado'`[data$zscore<100], decreasing = FALSE), main="Boxplot de Tiempo_Traslado sin outliers", col=rainbow_hcl(13))
 ```
 
 Al igual que en los métodos anteriores, para dejar solo los *outliers* mas cercanos, se determinó que el umbral debía ser de 250.
 ``` {r echo=FALSE}
 data<-na.omit(encuesta_universitaria)
 data$zscore<-(data$`'Tiempo_Traslado'`-mean(data$`'Tiempo_Traslado'`)/sd(data$`'Tiempo_Traslado'`))
-boxplot(sort(data$`'Tiempo_Traslado'`[data$zscore<250], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers")
+boxplot(sort(data$`'Tiempo_Traslado'`[data$zscore<250], decreasing = FALSE), main="Boxplot de Tiempo_Traslado con menos outliers", col=rainbow_hcl(13))
 ```
+
+\
 
 #### c. Concluya respecto a los resultados obtenidos con cada técnica.
 
@@ -400,14 +455,23 @@ Los resultados obtenidos con cada técnica son prácticamente los mismos, la dif
 Sin embargo, en los métodos de IRQ y SD, es un poco menos sencilla, dado que es prueba y error hasta encontrar que los outliers se remueven de la manera que estaba buscando.
 En el caso de Z-Score, como el score lo agrego como un atributo del dataframe, puedo ordenar de mayor a menor los Tiempos de Traslado, ver los score que tienen las primeras filas, y guiarme para establecer un umbral correcto.
 
+\
+\
+
 ### 3. Reducción de dimensionalidad
 #### a. Evalúe la relación entre atributos a partir del coeficiente de correlación de Pearson y un análisis gráfico de heatmap para estudiar la posibilidad de eliminar redundancia en el dataset. En caso de corresponder, aplique las técnicas de Reducing Highly Correlated Columns trabajadas en clase.
 
-Coeficientes de Correlacion de Pearson entre cada uno de los atributos.
-``` {r echo=FALSE}
-auto_mpg_data_original <- read_table2("/home/rstudio/data/auto-mpg.data-original.txt", 
-    col_names = FALSE)
+Coeficientes de Correlación de Pearson entre cada uno de los atributos.
+``` {r include=FALSE}
+#LEER CON ESTO
+#auto_mpg_data_original <- read.table("/home/rstudio/data/auto-mpg.data-original.txt", sep = "", header = F)
 
+#https://www.youtube.com/watch?v=Azidhs-8wCA&t=944s
+auto_mpg_data_original <- read_table("/home/rstudio/data/auto-mpg.data-original.txt", 
+    col_names = FALSE)
+```
+
+``` {r echo=FALSE}
 round(cor(na.omit(auto_mpg_data_original[,c(1,2,3,4,5,6,7,8)])), 2)
 ```
 
@@ -423,7 +487,7 @@ round(cor(na.omit(auto_mpg_data_original[,c(1,2,3,4,5,6,7,8)])), 2)
 Análisis gráfico de Heatmap
 
 ``` {r echo=FALSE}
-ds.cor<-cor(auto_mpg_data_original[,c(1,2,3,4,5,6,7,8)], use="complete.obs")
+ds.cor<-cor(auto_mpg_data_original[,c(1,8,6,7,4,5,3,2)], use="complete.obs")
 heatmap.2(ds.cor, cellnote = round(ds.cor, 1), main = "Correlación", notecol = "black", density.info = "none", trace="none", col = brewer.pal('RdYlBu', n=5), dendrogram = "none", Colv="NA")
 ```
 
@@ -436,11 +500,300 @@ Además, hay muy pocos valores blancos, y pocos valores azul claro y naranja cla
 
 + El atributo X1 se encuentra correlacionado negativamente con los atributos X2, X3, X4 y X5.
 
-Comprobamos lo dicho anteriormente utilizando *findCorrelation* de la libreria *caret*.
+Comprobamos lo dicho anteriormente utilizando *findCorrelation* de la librería *caret*.
 ``` {r echo=FALSE}
 matriz.correlacion<-cor(auto_mpg_data_original[,c(1,2,3,4,5,6,7,8)], use="complete.obs")
 highlyCorrelated <- findCorrelation(matriz.correlacion, cutoff=0.75)
 print(highlyCorrelated)
 ```
 
-Por lo tanto habría que reducir 
+Decido dejar unicamente el atributo X3, ya que es el que la suma de las correlaciones da el mayor numero, por lo tanto tendría la menor pérdida de información dejando este atributo.
+
+El dataset quedaría de la siguiente manera:
+``` {r echo=FALSE}
+head(auto_mpg_data_original[,c(1,3,6,7,8)])
+```
+
+El heatmap luego de eliminar los atributos sería:
+``` {r echo=FALSE}
+ds.cor<-cor(auto_mpg_data_original[,c(3,6,7,8,1)], use="complete.obs")
+heatmap.2(ds.cor, cellnote = round(ds.cor, 1), main = "Correlación", notecol = "black", density.info = "none", trace="none", col = brewer.pal('RdYlBu', n=5), dendrogram = "none", Colv="NA")
+```
+
+Si además eliminamos el atributo X1 ya que posee una correlación de -0.80 con el atributo X3.
+
+El heatmap queda de la siguiente manera:
+``` {r echo=FALSE}
+#LEER CON ESTO
+#auto_mpg_data_original <- read.table("/home/rstudio/data/auto-mpg.data-original.txt", sep = "", header = F)
+
+ds.cor<-cor(auto_mpg_data_original[,c(3,8,6,7)], use="complete.obs")
+heatmap.2(ds.cor, cellnote = round(ds.cor, 1), main = "Correlación", notecol = "black", density.info = "none", trace="none", col = brewer.pal('RdYlBu', n=5), dendrogram = "none", Colv="NA")
+```
+
+\
+\
+
+#### b. Verifique a través del Test de Chi-Cuadrado si existe dependencia entre pares de atributos discretos. Determine en qué casos es conveniente reducir la dimensionalidad.
+
+Al haber leído los atributos con separador *whitespace*, el modelo del auto quedó separado en 2 atributos, luego de unirlos, el head del dataframe queda de la siguiente manera.
+``` {r echo=FALSE}
+
+
+auto_mpg_data_original$X10<-gsub('[NA,"]', '', auto_mpg_data_original$X10)
+auto_mpg_data_original$X11<-gsub('[NA,"]', '', auto_mpg_data_original$X11)
+
+auto_mpg_data_original$X10<-paste(auto_mpg_data_original$X10,auto_mpg_data_original$X11)
+
+auto_mpg_data_original$X11<-NULL
+auto_mpg_data_original$X12<-NULL
+
+auto_mpg_data_original$X9<-gsub('[NA,"]', '', auto_mpg_data_original$X9)
+
+head(auto_mpg_data_original)
+
+x = auto_mpg_data_original$X10
+y = auto_mpg_data_original$X9
+tbl_cont=table(x,y)
+```
+
+El test de chi cuadrado
+``` {r echo=FALSE}
+chisq.test(tbl_cont)
+```
+
+\
+\
+
+### 5. Análisis de Componentes Principales
+#### a. Calcule la matriz de covarianzas. ¿Qué nos indica la misma sobre los atributos del dataset?
+
+``` {r include=FALSE}
+europa <- read.table("/home/rstudio/data/europa.dat", sep = "")
+```
+
+``` {r echo=FALSE}
+round(cov(europa),2)
+```
+
+Los elementos de la diagonal de la matriz contienen las varianzas de las variables.
+
+Los elementos que se encuentran fuera de la diagonal, contienen las covarianzas entre todos los pares de atributos del dataframe.
+
+Es simetrica, ya que la covarianza entre AGR y SSP es la misma que la de SSP y AGR.
+
+\
+\
+
+#### b. Realice ahora el análisis de componentes principales. ¿Cuánto explica de la variación total del  dataset la  primera  componente? ¿Y  si se incorpora  la  segunda? ¿Y el primer auto-valor?
+
+``` {r echo=FALSE}
+europa.escalado <- data.frame(scale(europa))
+pca.europa <- princomp(europa.escalado, cor=F)
+summary(pca.europa)
+```
+
+
+La primera componente explica el 30% de la variación total del dataset.
+
+Si se incorpora la segunda, se explica el 55% de la variación total del dataset.
+
+En cuanto a los *loadings* :
+``` {r echo=FALSE}
+loadings(pca.europa)
+```
+
+El primer autovalor explica un 11% de la varianza.
+
+\
+\
+
+#### c. Grafique  el  perfil  de  variación  de  las  componentes  en  un  gráfico  de  dispersión donde las X es la componente y la Y la varianza.
+
+``` {r echo=FALSE}
+plot(pca.europa, type="l", main="Dispersión Componentes y Varianzas", col=rainbow_hcl(13))
+```
+
+\
+\
+
+#### d. Analice la matriz de loading. ¿Qué información provee? ¿Qué variables están más correlacionadas con la primera componente? 
+
+La matriz de loadings provee la dirección del los vectores componentes.
+
+Muestran a que variable está ams asociada cada Componente Principal.
+
+``` {r echo=FALSE}
+loadings(pca.europa)
+```
+
+La variable *Agr* es la que está mas correlacionada positivamente con la primera componente (56%).
+Quiere decir que es fundamentalmente el procentaje de la población dedicada a la agricultura.
+
+La variable *SSP* es la que está mas correlacionada negativamente con la primera componente (-52%).
+
+\
+\
+
+#### e. Genere  un  gráfico  de  biplot  y  explique  brevemente  que  información  le  provee  el mismo. 
+
+``` {r echo=FALSE}
+par(mfrow=c(1,2))
+biplot(pca.europa)
+biplot(pca.europa, choices = c(3,4))
+```
+
+En las X provee los scores de la 1ra y 3ra componente principal. Las variables originales se representan mediante flechas, indican gráficamente la proporción de la varianza original explicada por las cuatro primeras componentes principales.
+La dirección de estas flechas indica los loadings relativos. Las escalas para los scores se encuentran abajo y a la izquierda. Las escalas para las variables están arriba y a la derecha.
+
+Todas las variables salvo *Con* y *Ene* tienen grán influencia en la primera componente principal, debido al tamaño de las flechas.
+
+La flecha más larga corresponde al *Agr* ya que tiene gran influencia (loading) como se indicó en el punto anterior.
+
+En cuanto a las componentes 3 y 4, las variables con mayor influencia son *Ene*, *Con*, *Tc*, *Fab* y *Fin*
+
+Los ejes más importantes corresponden a los sectores agrícola, manufacturero y de servicios.
+
+Se distinguen 3 grupos de países. Aquellos con alto porcentaje de la población dedicado a la agricultura (España, Portugal, Yugoslavia y Grecia).
+Países con alto porcentaje de la población dedicada al sector de servicios y Financiero (Dinamarca y Holanda)
+Países con alto porcentaje de la población dedicado al sector manufacturero (Alemania Oriental, Checoslovaquia y Hungría)
+
+\
+\
+
+#### f. En función de los análisis realizados en los puntos anteriores. ¿Cuántas componentes  principales  elegiría  para  explicar  el  comportamiento  del  dataset? Justifique esa cantidad.
+
+Para explicar el comportamiento del dataset utilizaría 4 componentes.
+
+La justificación es que, si las primeras 4 o 5 componentes explican el 80% de la varianza o superior, el problema puede ser tratado con componentes principales ya que se trata de una correlación lineal entre las variables.
+Si en la cantidad de componentes mencionada anteriormente, no se cuenta con el 80% de la varianza, sino que esta aumenta muy poco a medida se agregan nuevas componentes, debo considerar utilizar otro método, ya que no estaría utilizando el correcto.
+
+Es decir, utilizo 4 componentes porque explican el 84% de la varianza del dataset, la cual al ser mayor a 80% es suficiente para explicar el comportamiento del dataset.
+
+\
+\
+
+## Transformación de datos:
+### 6. Discretización
+#### a. Transforme  el  atributo  a  discreto,  definiendo  5  rangos  de  acuerdo  al  análisis  de frecuencia de los valores encontrados para el atributo.
+``` {r include=FALSE}
+encuesta_universitaria <- read_csv("/home/rstudio/data/encuesta_universitaria.csv")
+```
+``` {r echo=FALSE}
+encuesta_universitaria$`'Tiempo_Traslado'`[encuesta_universitaria$`'Tiempo_Traslado'`>3000] <- NA
+tiempo_traslado <- na.omit(encuesta_universitaria$`'Tiempo_Traslado'`)
+barplot(table(tiempo_traslado), main="Sin Discretizar", col=rainbow_hcl(13))
+```
+
+``` {r echo=FALSE}
+barplot(table(discretize(tiempo_traslado, "equalfreq", nbins = 5)), main="Discretizado por igual frecuencia", col=rainbow_hcl(13))
+```
+
+\
+\
+
+#### b. Transforme  el  atributo  a  discreto,  definiendo  5  rangos  de  acuerdo  al  método  de anchos iguales.
+Mirando el barplot graficado en el punto anterior el cual pertenece a la variable antes de discretizar, se puede comparar con el siguiente, discretizado por anchos iguales.
+
+``` {r echo=FALSE}
+barplot(table(discretize(tiempo_traslado, "equalwidth", nbins = 5)), main="Discretizado por igual ancho", col=rainbow_hcl(13))
+```
+
+\
+\
+
+#### c. Transforme  el  atributo  a  discreto,  definiendo  usted,  según  su  criterio,  5  rangos distintos con sus respectivas etiquetas.
+
+Los rangos definidos son:
+
+1. "**Muy poco**": hasta 15 min  
+2. "**Poco**": entre 15 y 35 min  
+3. "**Medio**": entre 35 y 60 min  
+4. "**Alto**": entre 60 y 90 min  
+5. "**Muy alto**": más de 90 min 
+
+``` {r echo=FALSE}
+tiempo_traslado[tiempo_traslado <= 15] <- 1
+tiempo_traslado[tiempo_traslado > 15 & tiempo_traslado <= 35] <- 2
+tiempo_traslado[tiempo_traslado > 35 & tiempo_traslado <= 60] <- 3
+tiempo_traslado[tiempo_traslado > 60 & tiempo_traslado <= 90] <- 4
+tiempo_traslado[tiempo_traslado > 90] <- 5
+
+barplot(table(tiempo_traslado), main="Discretizado con rangos propios", col=rainbow_hcl(13))
+```
+
+\
+\
+
+#### d. Analice  los  resultados  encontrados.  Compare  los  mismos  realizando  gráficos  de frecuencia  sobre  los  intervalos  resultantes  en  cada  caso.  ¿Qué  conclusiones  se pueden  obtener  en  términos  del  balanceo  de  las  mismas  de  acuerdo  a  la  técnica utilizada? 
+
+La discretización por igual frecuencia genera una cantidad de valores de cada rango similar, lo cual de manera rápida y visual no me provee demasiada información sobre los valores de los tiempos de traslado.
+
+En cuanto a la discretización por igual ancho, la distribución se asemeja a la de la variable original, la mayor cantidad de valores con una asimetría positiva. Parece correcta esta discretización, pasamos de una variable continua a una discreta, manteniendo las características de la variable original.
+
+La discretización mediante rangos definidos, tiene una similitud con la distribución normal, con una gran cantidad de valores concentrados en el centro, pero la variable original no seguía estas características.
+Pero me pareció interesante poder definir a criterio mio los rangos de valores por los cuales me resulta útil discretizar los datos, la desventaja de esto seguramente sea la escalabilidad, con un rango amplio de valores, es mejor optar por las técnicas anteriores.
+Además, es bastante subjetiva la definición de los intervalos, ya que para otras personas, un viaje de 60 o 90 minutos, podrían no resultarles un *tiempo_traslado* *Alto*.
+
+\
+\
+
+### 7. Normalización
+#### a. A partir del dataset encuesta_universitaria.csv, opere sobre el atributo tiempo_traslado de la siguiente manera: 
+``` {r include=FALSE}
+encuesta_universitaria <- read_csv("/home/rstudio/data/encuesta_universitaria.csv")
+encuesta_universitaria$`'Tiempo_Traslado'`[encuesta_universitaria$`'Tiempo_Traslado'`>3000] <- NA
+tiempo_traslado<-na.omit(encuesta_universitaria$`'Tiempo_Traslado'`)
+```
+##### i. Normalice el atributo utilizando la técnica de mínimo-máximo. 
+```{r echo=FALSE}
+minimo = min(tiempo_traslado)
+maximo = max(tiempo_traslado)
+rango = maximo - minimo
+# Normalización por min max
+tiempo_traslado_minmax = ((tiempo_traslado - minimo) / rango)
+head(tiempo_traslado_minmax, 10)
+```
+
+\
+
+##### ii. Ahora,  normalice  el  atributo  mediante  la  técnica  de  z-score  propuesta en el libro “Data Mining. Concepts & Techniques de Jiawei Han & otros”. 
+``` {r echo=FALSE}
+#valores_escalados <- scale(tiempo_traslado)
+#valores_zcore <- (tiempo_traslado-mean(tiempo_traslado)/sd(tiempo_traslado))
+
+media = mean(tiempo_traslado)
+desvio = sd(tiempo_traslado)
+tiempo_traslado_zscore = ((tiempo_traslado - media)/desvio)
+head(tiempo_traslado_zscore, 10)
+```
+
+\
+
+##### iii. Por último, utilice la técnica de escalado decimal para llevar adelante la tarea de normalización.
+```{r echo=FALSE}
+# Normalización por decimal-scaling
+max_val <- max(abs(tiempo_traslado))
+exp <- ceiling(log10(max_val))
+
+tiempo_traslado_decscal = tiempo_traslado / 10^exp
+head(tiempo_traslado_decscal, 10)
+```
+
+\
+\
+
+#### b. Analice  los  resultados  encontrados.  Compare  los  mismos  realizando  gráficos sobre los atributos resultantes en cada caso. 
+
+```{r echo=FALSE}
+hist(tiempo_traslado, main="Tiempo Traslado sin normalizar", cex=0.85, xlab = "Tiempo traslado", col=rainbow_hcl(13))
+hist(tiempo_traslado_minmax, main = "Tiempo Traslado normalizado por min-max", cex=0.8, xlab = "Tiempo traslado", col=rainbow_hcl(13))
+hist(tiempo_traslado_zscore, main = "Tiempo Traslado normalizado por z-score", cex=0.8, xlab = "Tiempo traslado", col=rainbow_hcl(13))
+hist(tiempo_traslado_decscal, main = "Tiempo Traslado normalizado por decimal scaling", cex=0.8, xlab = "Tiempo traslado", col=rainbow_hcl(13))
+```
+
+La técnica de normalización mantiene de forma apropiada la distribución original de la variable. Todos los histogramas presentan una distribucion similar, no normal, con asimetría positiva, es decir, mayor cantidad de valores bajos.
+
+Además, se pueden observar los outliers, en la parte derecha de todos los histogramas.
+
+La normalización mediante decimal-scaling es la que mantiene mejor el comportamiento de la distribución original, esto se debe a que estamos dividiendo a todos los valores de la distribución por una constante.
