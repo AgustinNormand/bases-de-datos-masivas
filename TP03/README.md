@@ -6,8 +6,9 @@
 ### a. b. y c.
 
 Imagen modelo conceptual y modelo ampliado
-![Modelo_Conceptual](https://i.ibb.co/xF5gVQ5/Modelo-Conceptual.png)
+![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_1/imagenes/ModeloConceptual.png)
 
+![modelo_conceptual_ampliado](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_1/imagenes/ModeloConceptualAmpliado.png)
 
 ## 2. Ahora,  analice  la  Base  de  Datos  de  Rendimiento_Académico  del  “TP01 Definición de Procesos ETL”: 
 ### a. Su diseño, ¿corresponde a alguno de los esquemas de DW estudiados en clase? ¿A cuál?
