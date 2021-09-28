@@ -39,6 +39,9 @@ El diseño corresponde al esquema de *Estrella* estudiado en clase. Ya que tiene
 ###### Modelo conceptual (Constelación)
 ![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptual(Constelacion).png)
 
+###### Modelo lógico (Copo de nieve)
+![modelo_logico](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloLogico.png)
+
 #### 3. Se cuenta con el siguiente Modelo Conceptual, el cual representa un esquema reducido de una Empresa que se dedica a la venta de artículos de librería por internet: 
 ![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/Diagrama_Libreria.png)
 
@@ -51,6 +54,12 @@ La información de entidades que se obtuvo del área de IT son:
 *DetalleVentas*:  codigo_cliente,  codigo_producto,  dia,  mes,  anio,  cant_vendida, total_monto. 
 
 Utilizando  una  herramienta  gráfica  de  diseño,  genere  el  Modelo  Conceptual Ampliado, Lógico y Físico del Data Warehouse.
+
+###### Modelo conceptual ampliado (Estrella)
+![modelo_conceptual_ampliado](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloConceptualAmpliado.png)
+
+###### Modelo lógico
+
 
 
 #### 4. Se  hace  notar  que  la  estructura  de  la  Base  de  Datos  del  Punto  1  del  “TP01 Definición de Procesos ETL”  corresponde  a  uno  de  los  posibles  esquemas  de DW. ¿A cuál? ¿Por qué? 
