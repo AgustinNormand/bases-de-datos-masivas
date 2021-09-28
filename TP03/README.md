@@ -59,7 +59,7 @@ Utilizando  una  herramienta  gráfica  de  diseño,  genere  el  Modelo  Concep
 ![modelo_conceptual_ampliado](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloConceptualAmpliado.png)
 
 ###### Modelo lógico
-
+![modelo_logico](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloLogico.png)
 
 
 #### 4. Se  hace  notar  que  la  estructura  de  la  Base  de  Datos  del  Punto  1  del  “TP01 Definición de Procesos ETL”  corresponde  a  uno  de  los  posibles  esquemas  de DW. ¿A cuál? ¿Por qué? 
@@ -72,4 +72,6 @@ Utilizando  una  herramienta  gráfica  de  diseño,  genere  el  Modelo  Concep
 
 Coresponde al esquema de *Copo de nieve*, y a que hay una tabla que se encuentra normalizada. Es decir, hay una dimension que se explica mediante otra dimension.
 
-La tabla de *Ciudades*, tiene una *Foreign Key* a la tabla de *Provincias*, esto hace que el esquema corresponda a *Copo de nieve*.
+Porque la tabla de *Ciudades*, tiene una *Foreign Key* a la tabla de *Provincias*, esto hace que el esquema corresponda a *Copo de nieve*.
+
+#### 5. Implemente los cubos de los esquemas de los enunciados 2) y 4) a partir de la herramienta Mondrian Schema Workbench.
