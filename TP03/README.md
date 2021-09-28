@@ -40,3 +40,27 @@ El diseño corresponde al esquema de *Estrella* estudiado en clase. Ya que tiene
 ![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptual(Constelacion).png)
 
 #### 3. Se cuenta con el siguiente Modelo Conceptual, el cual representa un esquema reducido de una Empresa que se dedica a la venta de artículos de librería por internet: 
+![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/Diagrama_Libreria.png)
+
+La información de entidades que se obtuvo del área de IT son: 
+
+*Clientes*: codigo_cliente, razon_social, CUIT, saldo_cuenta, condición.
+
+*Productos*:  codigo_producto,  descripción,  categoría,  marca,  especificaciones, precio_unitario. 
+
+*DetalleVentas*:  codigo_cliente,  codigo_producto,  dia,  mes,  anio,  cant_vendida, total_monto. 
+
+Utilizando  una  herramienta  gráfica  de  diseño,  genere  el  Modelo  Conceptual Ampliado, Lógico y Físico del Data Warehouse.
+
+
+#### 4. Se  hace  notar  que  la  estructura  de  la  Base  de  Datos  del  Punto  1  del  “TP01 Definición de Procesos ETL”  corresponde  a  uno  de  los  posibles  esquemas  de DW. ¿A cuál? ¿Por qué? 
+
+* Medios(id, nombre, id_especialidad, id_tipo_medio, dirección, id_ciudad), 
+* Especialidades(id, descripción), 
+* Tipos_medio(id, descripción), 
+* Ciudades(id, nombre, id_provincia). 
+* Provincias(id, nombre). 
+
+Coresponde al esquema de *Copo de nieve*, y a que hay una tabla que se encuentra normalizada. Es decir, hay una dimension que se explica mediante otra dimension.
+
+La tabla de *Ciudades*, tiene una *Foreign Key* a la tabla de *Provincias*, esto hace que el esquema corresponda a *Copo de nieve*.
