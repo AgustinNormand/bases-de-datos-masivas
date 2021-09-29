@@ -1,0 +1,64 @@
+<Schema name="schema_rendimiento_academico">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="sexo">
+    <Hierarchy name="default" visible="true" hasAll="true">
+      <Table name="sexo">
+      </Table>
+      <Level name="sexo" visible="true" table="sexo" column="id_sexo" nameColumn="sexo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="sede">
+    <Hierarchy name="default" visible="true" hasAll="true">
+      <Table name="sede">
+      </Table>
+      <Level name="sede" visible="true" table="sede" column="id_sede" nameColumn="sede" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="ciudad">
+    <Hierarchy name="default" visible="true" hasAll="true">
+      <Table name="ciudades">
+      </Table>
+      <Level name="ciudad" visible="true" column="id_ciudad" nameColumn="nombre_ciudad" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="cohorte">
+    <Hierarchy name="default" visible="true" hasAll="true">
+      <Table name="cohortes">
+      </Table>
+      <Level name="cohorte" visible="true" column="cohorte" nameColumn="id_cohortes" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="plan">
+    <Hierarchy name="default" visible="true" hasAll="true">
+      <Table name="planes">
+      </Table>
+      <Level name="plan" visible="true" column="id_plan" nameColumn="codigo_plan" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="rendimiento_academico" visible="true" cache="true" enabled="true">
+    <Table name="rendimiento_academico">
+    </Table>
+    <DimensionUsage source="sexo" name="sexo" visible="true" foreignKey="id_sexo" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="sede" name="sede" visible="true" foreignKey="id_sede" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="ciudad" name="ciudad" visible="true" foreignKey="id_ciudad" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="cohorte" name="cohorte" visible="true" foreignKey="id_cohorte" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="plan" name="plan" visible="true" foreignKey="id_plan" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="cantidad_cursadas" column="cantidad_cursadas" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="cantidad_aprobadas" column="cantidad_aprobadas" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="promedio" column="promedio" aggregator="avg" visible="true">
+    </Measure>
+    <Measure name="count" column="id_estudiante" aggregator="count" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
