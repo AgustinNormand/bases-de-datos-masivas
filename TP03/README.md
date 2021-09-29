@@ -70,8 +70,12 @@ Utilizando  una  herramienta  gráfica  de  diseño,  genere  el  Modelo  Concep
 * Ciudades(id, nombre, id_provincia). 
 * Provincias(id, nombre). 
 
-Coresponde al esquema de *Copo de nieve*, y a que hay una tabla que se encuentra normalizada. Es decir, hay una dimension que se explica mediante otra dimension.
+Corresponde al esquema de *Copo de nieve*, y a que hay una tabla que se encuentra normalizada. Es decir, hay una dimension que se explica mediante otra dimension.
 
 Porque la tabla de *Ciudades*, tiene una *Foreign Key* a la tabla de *Provincias*, esto hace que el esquema corresponda a *Copo de nieve*.
 
 #### 5. Implemente los cubos de los esquemas de los enunciados 2) y 4) a partir de la herramienta Mondrian Schema Workbench.
+
+En la carpeta *ejercicio_4*, con el nombre de *schema_rendimiento_academico.xml* se encuentra el cubo implementado, del esquema enunciado en el punto 2.
+
+![cubo_esquema_2](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_rendimiento_academico.png)
