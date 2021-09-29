@@ -78,4 +78,10 @@ Porque la tabla de *Ciudades*, tiene una *Foreign Key* a la tabla de *Provincias
 
 En la carpeta *ejercicio_4*, con el nombre de *schema_rendimiento_academico.xml* se encuentra el cubo implementado, del esquema enunciado en el punto 2.
 
+###### Cubo de Rendimiento Academico
 ![cubo_esquema_2](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_rendimiento_academico.png)
+
+Con respecto al siguiente item de este ejercicio, también en la carpeta *ejercicio_4*, con el nombre de *schema_medios.xml* se encuentra definido el cubo, del esquema enunciado en el punto 4.
+
+###### Cubo de Medios
+![cubo_esquema_4](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_medios.png)
