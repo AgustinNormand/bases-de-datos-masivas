@@ -61,6 +61,8 @@ Utilizando  una  herramienta  gráfica  de  diseño,  genere  el  Modelo  Concep
 ###### Modelo lógico
 ![modelo_logico](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloLogico.png)
 
+###### Modelo fisico (Postgresql)
+![modelo_fisico](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloFisico.png)
 
 #### 4. Se  hace  notar  que  la  estructura  de  la  Base  de  Datos  del  Punto  1  del  “TP01 Definición de Procesos ETL”  corresponde  a  uno  de  los  posibles  esquemas  de DW. ¿A cuál? ¿Por qué? 
 
@@ -76,12 +78,13 @@ Porque la tabla de *Ciudades*, tiene una *Foreign Key* a la tabla de *Provincias
 
 #### 5. Implemente los cubos de los esquemas de los enunciados 2) y 4) a partir de la herramienta Mondrian Schema Workbench.
 
+###### Cubo de Rendimiento Academico
 En la carpeta *ejercicio_4*, con el nombre de *schema_rendimiento_academico.xml* se encuentra el cubo implementado, del esquema enunciado en el punto 2.
 
-###### Cubo de Rendimiento Academico
 ![cubo_esquema_2](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_rendimiento_academico.png)
+
+###### Cubo de Medios
 
 Con respecto al siguiente item de este ejercicio, también en la carpeta *ejercicio_4*, con el nombre de *schema_medios.xml* se encuentra definido el cubo, del esquema enunciado en el punto 4.
 
-###### Cubo de Medios
 ![cubo_esquema_4](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_medios.png)
