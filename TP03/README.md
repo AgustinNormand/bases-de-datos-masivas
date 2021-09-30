@@ -88,3 +88,15 @@ En la carpeta *ejercicio_4*, con el nombre de *schema_rendimiento_academico.xml*
 Con respecto al siguiente item de este ejercicio, también en la carpeta *ejercicio_4*, con el nombre de *schema_medios.xml* se encuentra definido el cubo, del esquema enunciado en el punto 4.
 
 ![cubo_esquema_4](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_medios.png)
+
+###### Ejemplo de un gráfico con Saiku.
+
+Cruce de dimension *Provincia* con *Tipo_Medio*.
+
+![ejemplo_saiku](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/saiku.png)
+
+Donde se puede observar una gran cantidad de medios, del tipo *digital* y *revista* como tambien bastantes de *radio*, *television*, *periodico* y *agencia*.
+
+Que se puede confirmar con este otro gráfico.
+
+![ejemplo_2_saiku](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/misiones.png)
