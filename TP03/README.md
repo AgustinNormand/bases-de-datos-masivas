@@ -100,3 +100,5 @@ Donde se puede observar una gran cantidad de medios, del tipo *digital* y *revis
 Que se puede confirmar con este otro gráfico.
 
 ![ejemplo_2_saiku](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/misiones.png)
+
+En la carpeta *imagenes* agrego otras que me resultaron interesantes.
