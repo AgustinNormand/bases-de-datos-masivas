@@ -34,10 +34,10 @@ El diseño corresponde al esquema de *Estrella* estudiado en clase. Ya que tiene
 ##### c. Defina  un  modelo  lógico  alternativo  que  le  permita  migrar  a  otro  de los esquemas de DW estudiados en clase. 
 
 ###### Modelo conceptual (Copo de nieve)
-![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptual(Copo_de_nieve).png)
+![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptualCopo_de_nieve.png)
 
 ###### Modelo conceptual (Constelación)
-![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptual(Constelacion).png)
+![modelo_conceptual](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptualConstelacion.png)
 
 ###### Modelo lógico (Copo de nieve)
 ![modelo_logico](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloLogico.png)
