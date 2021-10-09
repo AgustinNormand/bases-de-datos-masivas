@@ -1,15 +1,9 @@
 <Schema name="schema_medios">
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="ciudad">
-    <Hierarchy name="default" visible="true" hasAll="true" primaryKey="id" primaryKeyTable="ciudades">
-      <Join leftKey="id_provincia" rightKey="id_provincia">
-        <Table name="provincias">
-        </Table>
-        <Table name="ciudades">
-        </Table>
-      </Join>
+    <Hierarchy name="default" visible="true" hasAll="true">
+      <Table name="ciudades">
+      </Table>
       <Level name="ciudad" visible="true" table="ciudades" column="id" nameColumn="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-      <Level name="provincia" visible="true" table="provincias" column="id_provincia" nameColumn="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -25,7 +19,7 @@
     <Hierarchy name="default" visible="true" hasAll="true">
       <Table name="provincias">
       </Table>
-      <Level name="provincia" visible="true" column="id_provincia" nameColumn="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="provincia" visible="true" column="id" nameColumn="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -45,6 +39,8 @@
     <DimensionUsage source="especialidad" name="especialidad" visible="true" foreignKey="id_especialidad" highCardinality="false">
     </DimensionUsage>
     <DimensionUsage source="tipo_medio" name="tipos_medio" visible="true" foreignKey="id_tipo_medio" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="provincia" name="provincia" visible="true" foreignKey="id_provincia">
     </DimensionUsage>
     <Measure name="cantidad" column="id" aggregator="count" visible="true">
     </Measure>

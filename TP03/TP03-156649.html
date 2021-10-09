@@ -1,0 +1,69 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="tp03-modelado-de-datos-y-arquitectura-de-data-warehouse">TP03 - Modelado de datos y arquitectura de Data Warehouse</h2>
+<h2 id="agust-n-normand">Agustín normand</h2>
+<h4 id="29-septiembre-2021">29 Septiembre 2021</h4>
+<h4 id="1-se-cuenta-con-el-siguiente-diagrama-entidad-relaci-n-que-representa-un-esquema-reducido-de-la-base-de-datos-transaccional-de-una-universidad-">1. Se  cuenta  con  el  siguiente  Diagrama  Entidad-Relación  que  representa  un esquema reducido de la Base de datos transaccional de una Universidad:</h4>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_1/DiagramaUniversidad.png" alt="diagrama_universidad"></p>
+<h5 id="utilizando-una-herramienta-gr-fica-de-dise-o-como-por-ejemplo-dia-genere-el-modelo-conceptual-y-modelo-conceptual-ampliado-del-dw-que-permita-contestar-las-siguientes-preguntas-">Utilizando una herramienta gráfica de diseño, como por ejemplo DIA, genere el  modelo  conceptual  y  modelo  conceptual  ampliado  del  DW  que  permita contestar las siguientes preguntas:</h5>
+<h5 id="a-cuantos-estudiantes-posee-una-carrera-c-con-a-o-de-ingreso-a-">a. ¿Cuantos estudiantes posee una Carrera C con año de ingreso A?</h5>
+<h5 id="b-cu-ntos-estudiantes-discriminados-por-sexo-posee-el-plan-de-estudios-p-">b. ¿Cuántos estudiantes discriminados por sexo posee el Plan de Estudios P?</h5>
+<h5 id="c-cu-ntos-estudiantes-en-la-condici-n-n-posee-la-carrera-c-por-cada-plan-de-estudios-en-una-sede-determinada-">c. ¿Cuántos  estudiantes en  la  condición  N posee la Carrera  C por  cada Plan de Estudios en una Sede determinada?</h5>
+<h6 id="modelo-conceptual">Modelo conceptual</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_1/imagenes/ModeloConceptual.png" alt="modelo_conceptual"></p>
+<h6 id="modelo-conceptual-ampliado">Modelo conceptual ampliado</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_1/imagenes/ModeloConceptualAmpliado.png" alt="modelo_conceptual_ampliado"></p>
+<h4 id="2-ahora-analice-la-base-de-datos-de-rendimiento_acad-mico-del-tp01-definici-n-de-procesos-etl-">2. Ahora,  analice  la  Base  de  Datos  de  Rendimiento_Académico  del  “TP01 Definición de Procesos ETL”:</h4>
+<h5 id="a-su-dise-o-corresponde-a-alguno-de-los-esquemas-de-dw-estudiados-en-clase-a-cu-l-">a. Su diseño, ¿corresponde a alguno de los esquemas de DW estudiados en clase? ¿A cuál?</h5>
+<p>El diseño corresponde al esquema de <em>Estrella</em> estudiado en clase. Ya que tiene una única tabla de hecho, y dimensiones no normalizadas que la describen. Es decir, dimensiones que no tienen relación con otras dimensiones.</p>
+<h5 id="b-realice-una-reingenier-a-y-define-el-modelo-conceptual-y-modelo-conceptual-ampliado-que-permita-ese-modelo-f-sico-">b. Realice una  reingeniería  y  define  el  Modelo  Conceptual  y  Modelo Conceptual ampliado que permita ese modelo físico.</h5>
+<h6 id="modelo-conceptual">Modelo conceptual</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptual.png" alt="modelo_conceptual"></p>
+<h6 id="modelo-conceptual-ampliado">Modelo conceptual ampliado</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptualAmpliado.png" alt="modelo_conceptual"></p>
+<h5 id="c-defina-un-modelo-l-gico-alternativo-que-le-permita-migrar-a-otro-de-los-esquemas-de-dw-estudiados-en-clase-">c. Defina  un  modelo  lógico  alternativo  que  le  permita  migrar  a  otro  de los esquemas de DW estudiados en clase.</h5>
+<h6 id="modelo-conceptual-copo-de-nieve-">Modelo conceptual (Copo de nieve)</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptualCopo_de_nieve.png" alt="modelo_conceptual"></p>
+<h6 id="modelo-conceptual-constelaci-n-">Modelo conceptual (Constelación)</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloConceptualConstelacion.png" alt="modelo_conceptual"></p>
+<h6 id="modelo-l-gico-copo-de-nieve-">Modelo lógico (Copo de nieve)</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_2/imagenes/ModeloLogico.png" alt="modelo_logico"></p>
+<h4 id="3-se-cuenta-con-el-siguiente-modelo-conceptual-el-cual-representa-un-esquema-reducido-de-una-empresa-que-se-dedica-a-la-venta-de-art-culos-de-librer-a-por-internet-">3. Se cuenta con el siguiente Modelo Conceptual, el cual representa un esquema reducido de una Empresa que se dedica a la venta de artículos de librería por internet:</h4>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/Diagrama_Libreria.png" alt="modelo_conceptual"></p>
+<p>La información de entidades que se obtuvo del área de IT son: </p>
+<p><em>Clientes</em>: codigo_cliente, razon_social, CUIT, saldo_cuenta, condición.</p>
+<p><em>Productos</em>:  codigo_producto,  descripción,  categoría,  marca,  especificaciones, precio_unitario. </p>
+<p><em>DetalleVentas</em>:  codigo_cliente,  codigo_producto,  dia,  mes,  anio,  cant_vendida, total_monto. </p>
+<p>Utilizando  una  herramienta  gráfica  de  diseño,  genere  el  Modelo  Conceptual Ampliado, Lógico y Físico del Data Warehouse.</p>
+<h6 id="modelo-conceptual-ampliado-estrella-">Modelo conceptual ampliado (Estrella)</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloConceptualAmpliado.png" alt="modelo_conceptual_ampliado"></p>
+<h6 id="modelo-l-gico">Modelo lógico</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloLogico.png" alt="modelo_logico"></p>
+<h6 id="modelo-fisico-postgresql-">Modelo fisico (Postgresql)</h6>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_3/imagenes/ModeloFisico.png" alt="modelo_fisico"></p>
+<h4 id="4-se-hace-notar-que-la-estructura-de-la-base-de-datos-del-punto-1-del-tp01-definici-n-de-procesos-etl-corresponde-a-uno-de-los-posibles-esquemas-de-dw-a-cu-l-por-qu-">4. Se  hace  notar  que  la  estructura  de  la  Base  de  Datos  del  Punto  1  del  “TP01 Definición de Procesos ETL”  corresponde  a  uno  de  los  posibles  esquemas  de DW. ¿A cuál? ¿Por qué?</h4>
+<ul>
+<li>Medios(id, nombre, id_especialidad, id_tipo_medio, dirección, id_ciudad), </li>
+<li>Especialidades(id, descripción), </li>
+<li>Tipos_medio(id, descripción), </li>
+<li>Ciudades(id, nombre, id_provincia). </li>
+<li>Provincias(id, nombre). </li>
+</ul>
+<p>Corresponde al esquema de <em>Copo de nieve</em>, y a que hay una tabla que se encuentra normalizada. Es decir, hay una dimension que se explica mediante otra dimension.</p>
+<p>Porque la tabla de <em>Ciudades</em>, tiene una <em>Foreign Key</em> a la tabla de <em>Provincias</em>, esto hace que el esquema corresponda a <em>Copo de nieve</em>.</p>
+<h4 id="5-implemente-los-cubos-de-los-esquemas-de-los-enunciados-2-y-4-a-partir-de-la-herramienta-mondrian-schema-workbench-">5. Implemente los cubos de los esquemas de los enunciados 2) y 4) a partir de la herramienta Mondrian Schema Workbench.</h4>
+<h6 id="cubo-de-rendimiento-academico">Cubo de Rendimiento Academico</h6>
+<p>En la carpeta <em>ejercicio_4</em>, con el nombre de <em>schema_rendimiento_academico.xml</em> se encuentra el cubo implementado, del esquema enunciado en el punto 2.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_rendimiento_academico.png" alt="cubo_esquema_2"></p>
+<h6 id="cubo-de-medios">Cubo de Medios</h6>
+<p>Con respecto al siguiente item de este ejercicio, también en la carpeta <em>ejercicio_4</em>, con el nombre de <em>schema_medios.xml</em> se encuentra definido el cubo, del esquema enunciado en el punto 4.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/schema_medios.png" alt="cubo_esquema_4"></p>
+<h6 id="ejemplo-de-un-gr-fico-con-saiku-">Ejemplo de un gráfico con Saiku.</h6>
+<p>Cruce de dimension <em>Provincia</em> con <em>Tipo_Medio</em>.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/saiku.png" alt="ejemplo_saiku"></p>
+<p>Donde se puede observar una gran cantidad de medios, del tipo <em>digital</em> y <em>revista</em> como tambien bastantes de <em>radio</em>, <em>television</em>, <em>periodico</em> y <em>agencia</em>.</p>
+<p>Que se puede confirmar con este otro gráfico.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP03/ejercicio_4/imagenes/misiones.png" alt="ejemplo_2_saiku"></p>
+<p>En la carpeta <em>imagenes</em> agrego otras que me resultaron interesantes.</p>
+</body></html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="kpi_medios_buenos_aires" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://db:5432/medios</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="kpi_especialidades" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://db:5432/medios</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="kpi_tipos_de_medios" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://db:5432/medios</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="kpi_ciudades" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://db:5432/medios</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="kpi_medios_provincias" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://db:5432/medios</Url>
+         <User>postgres</User>
+      </Connection>
+      <Connection id="select_especialidades" type="sql.jdbc">
+         <Driver>org.postgresql.Driver</Driver>
+         <Pass>postgres</Pass>
+         <Url>jdbc:postgresql://db:5432/medios</Url>
+         <User>postgres</User>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="kpi_medios_buenos_aires"
+               id="kpi_medios_buenos_aires"
+               type="sql">
+      <Name>kpi_medios_buenos_aires</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT count(*)
+FROM(select m.nombre
+     FROM MEDIOS m
+     INNER JOIN PROVINCIAS p on m.id_provincia=p.id
+       WHERE p.nombre = 'Buenos Aires'
+	  ) as medios_buenos_aires]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="kpi_especialidades" id="kpi_especialidades"
+               type="sql">
+      <Name>kpi_especialidades</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+  (select cast(count(*) as decimal)
+   from (select e.descripcion especialidad, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN especialidades e on m.id_especialidad=e.id
+         group by especialidad
+         order by especialidad
+        ) as especialidades
+   WHERE cantidad < 2) 
+/ 
+  (select cast(count(*) as decimal)
+   from (select e.descripcion especialidad, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN especialidades e on m.id_especialidad=e.id
+         group by especialidad
+         order by especialidad
+        ) as especialidades) 
+*100 as proporcion]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="kpi_tipos_de_medios" id="kpi_tipos_de_medios"
+               type="sql">
+      <Name>kpi_tipos_de_medios</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+  (select cast(count(*) as decimal)
+   from (select tm.descripcion tipo_de_medio, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN tipos_medio tm on m.id_tipo_medio=tm.id
+         group by tipo_de_medio
+         order by tipo_de_medio
+        ) as tipos_de_medio
+   WHERE cantidad < 2) 
+/ 
+  (select cast(count(*) as decimal)
+   from (select tm.descripcion tipo_de_medio, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN tipos_medio tm on m.id_tipo_medio=tm.id
+         group by tipo_de_medio
+         order by tipo_de_medio
+        ) as tipos_de_medio) 
+*100 as proporcion]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="kpi_ciudades" id="kpi_ciudades" type="sql">
+      <Name>kpi_ciudades</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+  (select cast(count(*) as decimal)
+   from (select c.nombre ciudad, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN CIUDADES c on m.id_ciudad=c.id
+         group by c.nombre
+         order by c.nombre
+        ) as medios_por_ciudades
+   WHERE medios_por_ciudades.cantidad < 2) 
+/ 
+  (select cast(count(*) as decimal)
+   from (select c.nombre ciudad, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN CIUDADES c on m.id_ciudad=c.id
+         group by c.nombre
+         order by c.nombre
+        ) as medios_por_ciudad) 
+*100 as proporcion]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="kpi_medios_provincias" id="kpi_medios_provincias"
+               type="sql">
+      <Name>kpi_medios_provincias</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT 
+  (select cast(count(*) as decimal)
+   from (select p.nombre provincia, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN PROVINCIAS p on m.id_provincia=p.id
+         group by p.nombre
+         order by p.nombre
+        ) as medios_por_provincias
+   WHERE medios_por_provincias.cantidad < 100) 
+/ 
+  (select cast(count(*) as decimal)
+   from (select p.nombre provincia, count(*) cantidad
+         FROM MEDIOS m
+         INNER JOIN PROVINCIAS p on m.id_provincia=p.id
+         group by p.nombre
+         order by p.nombre
+        ) as medios_por_provincias) 
+*100 as proporcion]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="select_especialidades" id="select_especialidades"
+               type="sql">
+      <Name>select_especialidades</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select e.descripcion, count(m.id)
+from especialidades e
+inner join medios m on e.id=m.id_especialidad
+group by 1
+order by 1;]]></Query>
+   </DataAccess>
+</CDADescriptor>
