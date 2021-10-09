@@ -128,6 +128,6 @@ Querys utilizadas en el path "ejercicio_3" con el nombre "querys.sql"
 O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_3/querys.sql)
 
 
-Archivos correspondientes al dashboard en el path "dashboard".
+Archivos correspondientes al dashboard en el path "ejercicio_3/dashboard".
 
 O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/tree/main/TP04/ejercicio_3/dashboard)
