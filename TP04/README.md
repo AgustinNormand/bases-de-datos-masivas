@@ -11,4 +11,16 @@ En  esta  actividad  se  avanza  sobre  el  análisis de  la  información  alma
 
 Archivo correspondiente en el path "ejercicio_1/ejercicio_a" con el nombre "reporte.pdf"
 
-[Enlace](https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_1/ejercicio_a/reporte.pdf)
+O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_1/ejercicio_a/reporte.pdf)
+
+##### b. Reporte con todos los medios gráficos de la provincia de Córdoba. 
+
+Archivo correspondiente en el path "ejercicio_1/ejercicio_b" con el nombre "reporte.pdf"
+
+O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_1/ejercicio_b/reporte.pdf)
+
+##### c. Reporte  con  los  datos  de  los  medios  que  comiencen  con  la  letra ‘M’.
+
+Archivo correspondiente en el path "ejercicio_1/ejercicio_c" con el nombre "reporte.pdf"
+
+O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_1/ejercicio_c/reporte.pdf)
