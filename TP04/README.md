@@ -82,4 +82,52 @@ Gráfico resultante
 
 Archivo correspondiente en el path "ejercicio_2/ejercicio_d" con el nombre "medios_buenos_aires.csv"
 
+O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_2/ejercicio_d/medios_buenos_aires.csv)
+
+
 #### 3.Elija  uno  de  los  cubos  trabajados  en  el  Trabajo  Práctico  sobre  Data Warehouse y defina cinco indicadores para el mismo. Luego genere, con la herramienta Pentaho Dashboards, el tablero de comando que permita monitorear esos indicadores. 
+
+Se utilizó el cubo de Medios.
+
+Simulamos que el objetivo de quien monitorea utilizando el dashboard, es que los medios se expandan, en relacion a la cantidad que hay en cada ciudad, la variedad que hay segun las diferentes especialidades o tipos de medios, etc.
+
+Los indicadores definidos fueron
+
+
+Ciudades con menos de 2 medios.
+
+![kpi_ciudades](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_ciudades.png)
+
+
+Especialidades con menos de 2 medios.
+
+![kpi_especialidades](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_especialidades.png)
+
+
+Provincias con menos de 100 medios.
+
+![kpi_provincias](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_provincias.png)
+
+
+Tipos de medio con menos de 2 medios.
+
+![kpi_tipos_de_medios](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_tipos_medio.png)
+
+
+Cantidad de medios en Buenos Aires.
+
+![kpi_buenos_aires](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/medios_buenos_aires.png)
+
+
+Cantidad de medios por especialdiad.
+
+![kpi_especialidad](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/medios_especialidad.png)
+
+Querys utilizadas en el path "ejercicio_3" con el nombre "querys.sql"
+
+O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_3/querys.sql)
+
+
+Archivos correspondientes al dashboard en el path "dashboard".
+
+O en el [repositorio](https://github.com/AgustinNormand/bases-de-datos-masivas/tree/main/TP04/ejercicio_3/dashboard)
