@@ -64,21 +64,22 @@ Finalmente, el arbol resultante queda de la siguiente manera:
 Los datos son el resultado de analisis quimicos de vinos cuyas uvas fueron cultivadas en la misma region de italia por 3 cultivadores diferentes.
 Se toman trece medidas diferentes para los dieferentes componentes que se encuentran en los 3 tipos de vino.
 
-Alcohol
-Ácido málico
-Ceniza
-Alcalinidad de la ceniza
-Magnesio
-Fenoles totales
-Flavonoides
-Fenoles no flavonoides
-Proantocianinas
-Intensidad del color
-Matiz
-OD280 / OD315 de vinos diluidos
-Prolina 
+* Alcohol
+* Ácido málico
+* Ceniza
+* Alcalinidad de la ceniza
+* Magnesio
+* Fenoles totales
+* Flavonoides
+* Fenoles no flavonoides
+* Proantocianinas
+* Intensidad del color
+* Matiz
+* OD280 / OD315 de vinos diluidos
+* Prolina 
 
-Primeros 5 valores del dataset
+
+Primeros 5 valores del dataset:
 
 ![primeros_valores](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_2/primeros_valores.png)
 
@@ -98,3 +99,39 @@ La exactitud del arbol es de 97.2%
 ![primer_arbol](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_2/primer_arbol.png)
 
 ##### c. Explore la solución dada y las posibles  configuraciones para obtener un nuevo árbol que clasifique “mejor”. Documente las conclusiones. 
+
+Para obtener un arbol que clasifique mejor podría aumentar los datos de entrenamiento a un 90%.
+
+El problema es que estaría realizando un *overfitting* o *sobreajuste* del modelo.
+
+Esto provoca muy buenos resultados con los datos de prueba, aprendiendo cada detalle de estos.
+Pero imposibilita detectar casos que el modelo nunca vió, es decir, datos nuevos.
+
+
+En realidad no hay que buscar que la exactitud del arbol llegue a un máximo, dado que esto nos conduce a realizar un *overfitting* del arbol.
+Se debe buscar un punto optimo. Entre buena performance en los datos de prueba y en los datos nuevos.
+
+Recortar la profundidad del arbol, es un buen camino para evitar el *overfitting*, imposibilitando que el arbol crezca en profundidad, aseguramos que se deban generalizar ciertos casos. Esto permite una buena performance con datos nuevos.
+El arbol pierde precision sobre el conjunto de pruebas, pero en datos nuevos se aumenta la precision.
+
+Algo a tener en cuenta es que si se reduce la profundidad del arbol a tan solo 2 niveles, la exactitud es de 94%.
+
+
+#### 3. Ahora, analice el archivo zoo.csv:
+##### a. Genere  el  árbol de  decisión  que  permita  inferir  el  tipo de  animal  en función  de  sus  características.  Explique  someramente  que  resultado se  obtiene  en  términos  del  árbol  y  en  términos  de  la  eficiencia  del mismo. 
+
+Dividiendo en 80-20 los datos de entrenamiento y test respectivamente y sin la utilizacion de parametros se obtiene un arbol de 6 niveles de profundidad con 90% de exactitud, en algunos casos de 95% y varias hojas de 1 solo ejemplo.
+
+Se trata de una situacion de *overfitting*
+
+##### • ¿Varía ese resultado si se elimina el atributo “animal”?  ¿Por qué? 
+
+No varía el resultado. Dado a que no es un atributo del arbol. Esto se debe a que posee una entropia muy alta, por lo tanto una ganancia de informacion muy baja. Es decir, no divide de manera clara, de que animal se trata.
+
+##### • Cuantos niveles posee el árbol generado? ¿Qué atributos debemos modificar si deseamos realizar una poda del mismo? Modifique esos atributos para que el árbol generado conste de 4 niveles. ¿Afecta la eficiencia de la clasificación esta modificación? 
+
+El arbol generado posee 6 niveles. Para realizar la poda del mismo se deben modificar los atributos *max_depth* y *min_samples_leaf*.
+
+Podando el arbol a 4 niveles de profundidad, se afecta la eficiencia de la clasificación negativamente, pasa a ser constantemente 90%, sin lograr casos de 95%. Este puede ser un ejemplo de *underfitting*.
+
+Restringiendo a minimamente 7 ejemplos para formar una hoja y una profundidad maxima de 5, se logra una exactitud de 95%, en la totalidad de las pruebas realizadas. Podría ser un ejemplo de un optimo.
