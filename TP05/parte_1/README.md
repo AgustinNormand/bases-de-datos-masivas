@@ -41,3 +41,17 @@ Siempre que el pronostico fue *Nublado* se comio *asado*.
 Por este motivo, hasta ahora el arbol queda de la siguiente manera:
 
 ![arbol_primer_iteracion](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/arbol_primer_iteracion.png)
+
+Como *Soleado* y *Lluvioso* no dividen de forma pura los casos, se realiza el mismo procedimiento mencionado anteriormente para determinar los siguientes nodos del arbol.
+
+![tablas_segundo_nivel_soleado](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/tablas_segundo_nivel_soleado.png)
+
+Para cuando el *Pronostico* era *Soleado* con la tabla anterior se determinó que el atributo optimo era la *Humedad* que divide de forma pura el resto de los casos.
+
+![tablas_segundo_nivel_lluvioso](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/tablas_segundo_nivel_lluvioso.png)
+
+Y en el caso de un *Pronostico* *Lluvioso*, con la tabla anterior se determinó que el atributo optimo era el *Viento*, que tambien divide de forma pura el resto de los casos.
+
+Finalmente, el arbol resultante queda de la siguiente manera:
+
+![arbol_resultante](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/arbol_resultante.png)
