@@ -80,8 +80,21 @@ Prolina
 
 Primeros 5 valores del dataset
 
+![primeros_valores](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_2/primeros_valores.png)
 
 
 ##### b. Genere el árbol de decisión que permita clasificar los diferentes tipos de vino utilizando un muestreo con proporciones de 80% para entrenamiento y 20% para testeo. 
+
+En el caso del dataset *wine* no es necesario dividir las features del target, ni transformar a continuos los valores. Al ser un *toy dataset* esto ya está hecho.
+
+Por lo tanto separamos en porciones de *entrenamiento* y *prueba*.
+
+```
+X_train, X_test, y_train, y_test = train_test_split(wine.data, wine.target, random_state=0, test_size=0.20)
+```
+
+La exactitud del arbol es de 97.2%
+
+![primer_arbol](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_2/primer_arbol.png)
 
 ##### c. Explore la solución dada y las posibles  configuraciones para obtener un nuevo árbol que clasifique “mejor”. Documente las conclusiones. 
