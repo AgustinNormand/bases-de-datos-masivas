@@ -1,0 +1,68 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="tp04-herramientas-para-en-an-lisis-de-informaci-n">TP04 - Herramientas para en Análisis de Información</h2>
+<h2 id="agust-n-normand">Agustín normand</h2>
+<h4 id="9-octubre-2021">9 Octubre 2021</h4>
+<h4 id="introducci-n-">Introducción:</h4>
+<p>En  esta  actividad  se  avanza  sobre  el  análisis de  la  información  almacenada en  Bases de Datos Masivas. Para ello, se utilizarán herramientas de la suite Pentaho (Reporting, SAIKU y Dashboards) con el objetivo de analizar la información generada en los Trabajos Prácticos sobre ETL y diseño de Data Warehouse. </p>
+<h4 id="1-a-partir-de-la-db-medios-genere-los-siguientes-reportes-con-la-herramienta-pentaho-reporting-">1. A partir de la DB Medios, genere los siguientes reportes con la herramienta Pentaho Reporting:</h4>
+<h5 id="a-reporte-con-todos-los-medios-gr-ficos-">a. Reporte con todos los medios gráficos.</h5>
+<p>Archivo correspondiente en el path &quot;ejercicio_1/ejercicio_a&quot; con el nombre &quot;reporte.pdf&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_1/ejercicio_a/reporte.pdf">repositorio</a></p>
+<p>Gráfico resultante </p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_1/ejercicio_a/grafico.png" alt="grafico_ejercicio_a"></p>
+<h5 id="b-reporte-con-todos-los-medios-gr-ficos-de-la-provincia-de-c-rdoba-">b. Reporte con todos los medios gráficos de la provincia de Córdoba.</h5>
+<p>Archivo correspondiente en el path &quot;ejercicio_1/ejercicio_b&quot; con el nombre &quot;reporte.pdf&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_1/ejercicio_b/reporte.pdf">repositorio</a></p>
+<p>Gráfico resultante </p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_1/ejercicio_b/grafico.png" alt="grafico_ejercicio_b"></p>
+<h5 id="c-reporte-con-los-datos-de-los-medios-que-comiencen-con-la-letra-m-">c. Reporte  con  los  datos  de  los  medios  que  comiencen  con  la  letra ‘M’.</h5>
+<p>Archivo correspondiente en el path &quot;ejercicio_1/ejercicio_c&quot; con el nombre &quot;reporte.pdf&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_1/ejercicio_c/reporte.pdf">repositorio</a></p>
+<p>Gráfico resultante </p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_1/ejercicio_c/grafico.png" alt="grafico_ejercicio_c"></p>
+<h4 id="2-ahora-inicie-saiku-y-a-partir-del-cubo-medios-genere-y-exporte-a-pdf-la-siguiente-informaci-n-">2. Ahora, inicie SAIKU y a partir del cubo Medios, genere y exporte a PDF la siguiente información:</h4>
+<p>Para realizar este ejercicio fué necesario modificar el esquema del cubo de Medios, pasando a un esquema de estrella y no de copo de nieve.</p>
+<p>Se eliminó la normalizacion entre Ciudades y Provincias, y se pasó la foreign key de Provincias a la tabla de Medios.</p>
+<p>Se modificaron las Transformaciones de Mondrian y se realizó nuevamente la migración de datos.</p>
+<p>Debido a que Saiku para habilitar el analisis del cubo, requería un esquema de estrella.</p>
+<h5 id="a-cantidad-de-medios-de-la-provincia-de-c-rdoba-separados-por-ciudad-">a. Cantidad  de  medios  de  la  provincia  de  Córdoba,  separados  por ciudad.</h5>
+<p>Archivo correspondiente en el path &quot;ejercicio_2/ejercicio_a&quot; con el nombre &quot;tabla.pdf&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_2/ejercicio_a/tabla.pdf">repositorio</a></p>
+<p>Gráfico resultante</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_2/ejercicio_a/grafico.png" alt="grafico_ejercicio_a"></p>
+<h5 id="b-cantidad-de-medios-por-especialidad-y-provincia-">b. Cantidad de medios por especialidad y provincia.</h5>
+<p>Archivo correspondiente en el path &quot;ejercicio_2/ejercicio_b&quot; con el nombre &quot;tabla.pdf&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_2/ejercicio_b/tabla.pdf">repositorio</a></p>
+<p>Gráfico resultante</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_2/ejercicio_b/grafico.png" alt="grafico_ejercicio_b"></p>
+<h5 id="c-ranking-de-las-10-provincias-con-mayor-cantidad-de-medios-">c. Ranking de las 10 provincias con mayor cantidad de medios.</h5>
+<p>Archivo correspondiente en el path &quot;ejercicio_2/ejercicio_c&quot; con el nombre &quot;tabla.pdf&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_2/ejercicio_c/tabla.pdf">repositorio</a></p>
+<p>Gráfico resultante</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_2/ejercicio_c/grafico.png" alt="grafico_ejercicio_c"></p>
+<h5 id="d-exportar-a-csv-los-datos-de-los-medios-gr-ficos-de-la-provincia-de-buenos-aires-">d. Exportar a .csv los datos de los medios gráficos de la provincia de Buenos Aires.</h5>
+<p>Archivo correspondiente en el path &quot;ejercicio_2/ejercicio_d&quot; con el nombre &quot;medios_buenos_aires.csv&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_2/ejercicio_d/medios_buenos_aires.csv">repositorio</a></p>
+<h4 id="3-elija-uno-de-los-cubos-trabajados-en-el-trabajo-pr-ctico-sobre-data-warehouse-y-defina-cinco-indicadores-para-el-mismo-luego-genere-con-la-herramienta-pentaho-dashboards-el-tablero-de-comando-que-permita-monitorear-esos-indicadores-">3.Elija  uno  de  los  cubos  trabajados  en  el  Trabajo  Práctico  sobre  Data Warehouse y defina cinco indicadores para el mismo. Luego genere, con la herramienta Pentaho Dashboards, el tablero de comando que permita monitorear esos indicadores.</h4>
+<p>Se utilizó el cubo de Medios.</p>
+<p>Simulamos que el objetivo de quien monitorea utilizando el dashboard, es que los medios se expandan, en relacion a la cantidad que hay en cada ciudad, la variedad que hay segun las diferentes especialidades o tipos de medios, etc.</p>
+<p>Los indicadores definidos fueron</p>
+<p>Ciudades con menos de 2 medios.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_ciudades.png" alt="kpi_ciudades"></p>
+<p>Especialidades con menos de 2 medios.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_especialidades.png" alt="kpi_especialidades"></p>
+<p>Provincias con menos de 100 medios.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_provincias.png" alt="kpi_provincias"></p>
+<p>Tipos de medio con menos de 2 medios.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/kpi_tipos_medio.png" alt="kpi_tipos_de_medios"></p>
+<p>Cantidad de medios en Buenos Aires.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/medios_buenos_aires.png" alt="kpi_buenos_aires"></p>
+<p>Cantidad de medios por especialdiad.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP04/ejercicio_3/imagenes/medios_especialidad.png" alt="kpi_especialidad"></p>
+<p>Querys utilizadas en el path &quot;ejercicio_3&quot; con el nombre &quot;querys.sql&quot;</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/blob/main/TP04/ejercicio_3/querys.sql">repositorio</a></p>
+<p>Archivos correspondientes al dashboard en el path &quot;ejercicio_3/dashboard&quot;.</p>
+<p>O en el <a href="https://github.com/AgustinNormand/bases-de-datos-masivas/tree/main/TP04/ejercicio_3/dashboard">repositorio</a></p>
+</body></html>
