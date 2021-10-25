@@ -135,3 +135,82 @@ El arbol generado posee 6 niveles. Para realizar la poda del mismo se deben modi
 Podando el arbol a 4 niveles de profundidad, se afecta la eficiencia de la clasificación negativamente, pasa a ser constantemente 90%, sin lograr casos de 95%. Este puede ser un ejemplo de *underfitting*.
 
 Restringiendo a minimamente 7 ejemplos para formar una hoja y una profundidad maxima de 5, se logra una exactitud de 95%, en la totalidad de las pruebas realizadas. Podría ser un ejemplo de un optimo.
+
+#### 4. Se provee la base de datos de los pasajeros del famoso barco que se hundiera en  su  viaje  inaugural  (archivo  titanic-en.csv)  con  los  siguientes  atributos  y valores posibles:  
+* Class {"1st","2nd","3rd","crew"} 
+* Age {"adult","child"} 
+* Sex {"male","female"} 
+* Survived {"yes","no"} 
+ 
+#### Genere  el  árbol  de  clasificación,  explore  la  solución  dada  y  las  posibles alternativas para obtener un nuevo árbol que clasifique “mejor”.
+
+Se separaron los datos en 80% para *training* y 20% para *test*.
+
+Promediando 1000 scores utilizando el criterio de *Entropia*, es decir *ganancia de informacion*, sin modificacion de los parametros, solamente modificando la proporcion de datos de *training* y *test* se lograron los siguientes resultados en la exactitud:
+
+* Training - Test
+* 50% - 50%: 78,7%
+* 60% - 40%: 79,1%
+* 70% - 30%: 78,3%
+* 80% - 20%: 77,3%
+* 90% - 10%: 78,7%
+
+Utilizando el criterio de *gini* se logran los mismos resultados anteriormente mencionados.
+
+Usando un *training set* de proporcion 0.06, *max_depth* de 3 y *min_samples_leaf* 30, se logró una exactitud de 82%
+
+#### 5. Un  Banco  de  Portugal  realizó  una  campaña  de  marketing  en  busca  de clientes de plazos fijos basada en llamados telefónicos. Se provee el dataset real  (bank-full.csv)  con  más  45000  instancias  y  el  detalle  (bank-names.txt) de  los  datos  registrados  de  cada  una  de  las  personas  contactadas  por  la entidad bancaria.
+
+Las campañas de marketing se basaron en llamadas telefonicas, a menudo, se requería mas de un contacto con el mismo cliente, para poder acceder si el producto estaría o no suscrito.
+
+Atributos: 
+* Edad
+* Trabajo
+* Estado civil
+* Nivel educativo
+* Incumplimiento de pagos
+* Préstamo vivienda
+* Préstamo personal
+* Medio de contacto
+* Último mes contacto
+* Último día contacto
+* Duración último contacto segundos
+* Cant. de contactos en la campaña
+* Días desde último contacto campaña previa
+* Cant. de contactos previos a campaña
+* Tasa variacion del empleo
+* Indice de precios al consumidor
+* Indice de confianza del consumidor
+* Tipo de euribor
+* Numero de empleados
+
+Variable de salida:
+*  El cliente se suscribio a un plazo?
+
+##### a. Realice  las  tareas  necesarias  para  poder  procesar  el  dataset  en Scikit-Learn. 
+
+* Se modificó el delimitador del archivo csv de "," a ";".
+* Se dividió el target del dataset original.
+* Se separaron los datos en 80% de entrenamiento y 20% para pruebas.
+* Se pasaron los atributos discretos a continuos.
+
+##### b. Luego,  genere  el  árbol  de  decisión,  y  optimice  los  resultados,  con  el objetivo  de  explicar  cuáles  son  las  características  más  importantes que  permiten  identificar  a  una  persona  que  accederá  o  no  al  plazo fijo. Documente los resultados. 
+
+Sin utilizar parametros, unicamente dividiendo el dataset en 80% datos de entrenamiento y 20% datos de pruebas, se obtiene un arbol de 40 niveles de profundidad y una exactitud de 87%.
+
+Modificando los hiperparametros, cree un arbol de 1 solo nivel que es el siguiente:
+
+![arbol_1nivel](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_5/arbol_1nivel.png)
+
+Realizando ese experimiento se puede observar que el atributo *Duration* que hace referencia a la duración último contacto segundos, tiene mucha influencia en determinar si el cliente accederá o no al plazo fijo.
+
+Por otro lado, me llamó la atención que el arbol tenga un 88% de exactitud. Incluso más que el arbol de 40 niveles de profundidad.
+
+Si miramos la matriz de confusión del arbol de 1 nivel:
+
+![matriz_confusion_1nivel](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_5/matriz_confusion_1nivel.png)
+
+Y la matriz de confusion del arbol de 40 niveles:
+![matriz_confusion_40niveles](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_5matriz_confusion_40niveles.png)
+
+Modificando los hiperparametros, logré un arbol mas reducido, cuya raiz es el nodo *Duración*, seguido de, en otros niveles, *Contacto*, *Campain*, *Month* y *Housing*, siendo estas las caracteristicas mas importantes que permiten identificar si una persona accederá o no al plazo fijo.
