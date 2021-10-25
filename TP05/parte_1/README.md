@@ -220,6 +220,7 @@ En otras palabras, si el arbol de decision contesta que *NO* siempre. El 88,2% d
 Si bien al principio creí haber encontrado un arbol muy simple, con una exactitud muy buena, puedo darme cuenta ahora que no es util un arbol de decision que no pueda predecir la totalidad de los valores posibles de la clase, por mucha exactitud que este tenga.
 
 Si vemos la matriz de confusion del arbol de 40 niveles:
+
 ![matriz_confusion_40niveles](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_1/imagenes/ejercicio_5/matriz_confusion_40niveles.png)
 
 Acierta 495 veces que los clientes obtendrán el plazo fijo. De todos los clientes que accedieron, el arbol predijo bien el 47%.
@@ -235,6 +236,6 @@ Cuya matriz de confusion es:
 
 Obtengo un arbol de exactitud del 88%, que predice correctamente el 30% de los casos positivos, y el 97% de los casos negativos.
 
-Podemos ver que esto lo logra unicamente utilizando el atributo de *Duracion*, que significa la duración último contacto segundos.
+Podemos ver que esto lo logra unicamente utilizando el atributo de *Duracion*.
 
 Agregando mas niveles al arbol, pude determinar que las características más importantes que permiten identificar a una persona que accederá o no al plazo fijo son *Duracion*, *Campaña*, *Mes* y por ultimo, *Contacto*.
