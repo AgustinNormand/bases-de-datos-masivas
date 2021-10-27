@@ -1,7 +1,7 @@
 ## TP05 - Minería de datos
 ## Parte 01 - Arboles de decisión (J48)
 ## Agustín normand
-#### 9 Octubre 2021
+#### 26 Octubre 2021
 
 #### Introducción:
 
