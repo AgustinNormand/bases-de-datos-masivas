@@ -31,4 +31,4 @@ Mientras tanto, Minkowski es la generalizacion de las dos mencionadas anteriorme
 En este caso el valor P es de 3.
 Si fuera de 1, se trataría de la distancia de *Manhattan*, si fuera de 2, sería la distancia *Euclideana*, y siendo 3, se trata aproximadamente, del siguiente gráfico:
 
-![minkowski](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/manhattan_consigna_1.png)
+![minkowski](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/minkowski_consigna_1.png)
