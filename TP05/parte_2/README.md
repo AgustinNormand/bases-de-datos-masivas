@@ -67,3 +67,8 @@ Calculando la distancia *Euclidiana* de cada uno de las observaciones, con respe
 Luego de la asignar de los puntos al cluster mas cercano y recalcular los centroides, el gráfico queda de la siguiente manera:
 
 ![segunda_iteracion](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/segunda_iteracion_consigna_3.png)
+
+
+Luego de calcular nuevamente la distancia *Euclidiana* a cada uno de los centroides, relizar la asignacion y recalcular los centroides, el grafico resultante es:
+
+![tercera_iteracion](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/tercera_iteracion_consigna_3.png)
