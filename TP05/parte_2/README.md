@@ -32,3 +32,13 @@ En este caso el valor P es de 3.
 Si fuera de 1, se trataría de la distancia de *Manhattan*, si fuera de 2, sería la distancia *Euclideana*, y siendo 3, se trata aproximadamente, del siguiente gráfico:
 
 ![minkowski](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/minkowski_consigna_1.png)
+
+Minkowski, es una generalizacion de las dos formulas anteriores mediante el uso del parámetro P, a mayor eleccion de este, la distancia se reduce.
+
+#### 2. A  continuación,  calcule  la  distancia  entre  las  diferentes  variables  de  tipo categóricas con respecto a la instancia {1, lluvioso, templado, alta, fuerte}: 
+
+![tabla](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/tabla_consigna_2.png)
+
+Aplicando las medidas correspondientes para variables categoricas, se logra la siguiente tabla:
+
+![tabla](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/respuesta_consigna_2.png)
