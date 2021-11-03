@@ -94,12 +94,25 @@ El mejor K va a estar donde la metrica de Elbow no ofrezca cambios. Aunque se de
 
 ![grafico_elbow](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico.png)
 
-Observando este gráfico, podemos considerar los puntos donde la pendiente se asemeje a 0 y elegirlos como la mejor opción.
+Observando este gráfico, podemos considerar los puntos donde la pendiente se asemeje a 0 y elegirlos como la mejor opción. 
+Ya que cuanto más pronunciada es la pendiente, mayor error pierde el agrupamiento con ese numero de clusters.
 
-Podría tratarse de K=3 o K=4, coincidiendo con el analisis realizado de forma empirica.
+Valores optimos podrían tratarse de K=3 o K=4, coincidiendo con el analisis realizado de forma empirica.
 
 ![grafico_elbow_extendido](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico_extendido.png)
 
+Si bien se puede observar que en realidad la variabilidad entre un K y otro, tiende a ser nula, en valores superiores a 20, quedan clusters muy ruidosos dificiles de interpretar.
+
+
+Gráfico de agrupamiento con K=2
+![2_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_2_cluster.png)
+
+Gráfico de agrupamiento con K=3
+![3_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_3_cluster.png)
+
+Gráfico de agrupamiento con K=4
+![4_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_4_cluster.png)
 
 
 ##### c. ¿Cuáles  son  las  características  más  distintivas  de  cada  uno  de  los cluters resultantes? 
+
