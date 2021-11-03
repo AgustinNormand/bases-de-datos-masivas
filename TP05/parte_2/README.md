@@ -78,7 +78,7 @@ Por ultimo, la tabla final con las distancias *Euclidianas* y los clusters corre
 
 ##### a. Utilice  el  algoritmo  k-medias  variando  la  cantidad  de  centroides  a efectos de agrupar los datos de la manera más eficiente. 
 
-En primer lugar se realizó una prueba empirica, y detecté que el valor de cantidad de centroides, que agrupaba los datos de manera mas eficiente se encontraba entre 1 y 4, ya que al aumentar por encima de 4, se creaban clusters que no me parecian correctos.
+En primer lugar se realizó una prueba empirica, y detecté que el valor de cantidad de centroides, que agrupaba los datos de manera mas eficiente se encontraba entre 2 y 4, ya que al aumentar por encima de 4, se creaban clusters que no me parecian correctos.
 
 A continuacion un gráfico con K=5:
 ![5_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_5_cluster.png)
@@ -86,5 +86,14 @@ A continuacion un gráfico con K=5:
 Se puede ver en la parte inferior dos clusters bastante juntos, poco marcados, podría tratarse de un exceso de clusters. Se utilizarán medidas para verificarlo.
 
 ##### b. ¿Cuál  es  la  cantidad  de  grupos  que  permite  un  mejor  agrupamiento de los datos? ¿Mediante cual métrica puede verificar esto? 
+
+Una de las medidas que se utilizan es la suma de cuadrados, es decir, la suma de las diferencias entre los elementos del cluster con respecto al centroide.
+
+Uno de los metodos para establecer cual es la cantidad de clusters que son optimos, es el metodo *Elbow*. El cual realiza muchos agrupamientos con diferentes valores de K y verificar donde la metrica de *suma de cuadrados* empieza a tener una variación muy baja.
+El mejor K va a estar donde la metrica de Elbow no ofrezca cambios. Aunque se debe contemplar que si tenemos una cantidad excesiva de clusters, no es util ya que son dificiles de interpretar, de darles sentido.
+
+![grafico_elbow](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico.png)
+
+
 
 ##### c. ¿Cuáles  son  las  características  más  distintivas  de  cada  uno  de  los cluters resultantes? 
