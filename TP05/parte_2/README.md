@@ -94,6 +94,12 @@ El mejor K va a estar donde la metrica de Elbow no ofrezca cambios. Aunque se de
 
 ![grafico_elbow](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico.png)
 
+Observando este gráfico, podemos considerar los puntos donde la pendiente se asemeje a 0 y elegirlos como la mejor opción.
+
+Podría tratarse de K=3 o K=4, coincidiendo con el analisis realizado de forma empirica.
+
+![grafico_elbow_extendido](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico_extendido.png)
+
 
 
 ##### c. ¿Cuáles  son  las  características  más  distintivas  de  cada  uno  de  los cluters resultantes? 
