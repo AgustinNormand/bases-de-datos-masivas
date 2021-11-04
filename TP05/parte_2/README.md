@@ -221,7 +221,39 @@ Un ultimo analisis, el scatter, podríamos sacar las siguientes conclusiones, (q
 
 ##### a. Escoja los features que a su entender permitan un mejor agrupamiento,  pre-procese  los  mismos  y  entrene  un  modelo  a  partir de K-Means. 
 
+Preprocesamiento:
+* Numerizar con LabelEnconder *estado_civil*, *carrera*, *sede* y *estado*
+* Eliminar los signos "-" de *promedio_1er_anio*.
+* Imputar 8 valores faltantes en *promedio_1er_anio*.
+* Eliminar *horas_trabajadas* superiores a 72hs
+* Realizar un *scale* de los valores.
 
+
+Analisis exploratorio:
+
+Los atributos mas variados del dataset son *horas_trabajadas* y *carrera*.
+* "Carrera" Varianza 135.72778315498857
+* Horas_Trabajadas Varianza 331.26768517702567
+
+Histogramas de cada uno de estos atributos
+
+![hist_carreras](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/hist_carreras.png)
+
+![hist_horas_trabajadas](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/hist_horas_trabajadas.png)
+
+Si realizamos un agrupamiento mediante estos dos atributos, con un K variando de 1 a 5, el menor SSE obtenido es de 7464.88
+
+Podría resultar aceptable un K = 3, determinado mediante el metodo de Elbow.
+
+![elbow_2attr](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/elbow_2attr.png)
+
+Resultando en el gráfico:
+
+![cluster_2attr](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/cluster_2attr.png)
+
+
+
+8 NA en *anios_en_unlu*
 
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
 
