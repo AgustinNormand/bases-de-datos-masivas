@@ -208,6 +208,14 @@ Las superposiciones en los scatter, denota que evidentemente hay otra u otras va
 
 Por lo tanto, las caracteristicas distintivas del cada uno de los clusters resultantes son *Area* y *Perimetro*, y en menor medida, *Ancho Kernel* y *Long Kernel*.
 
+Un ultimo analisis, si vemos el gráfico de los clusters, y el scatter, podríamos sacar las siguientes conclusiones
+
+* Los elementos del cluster 0 (verde), tienen el menor area, perimetro, longitud del grano y ancho del grano.
+
+* Los elementos del cluster 1 (azul), tienen un tamaño intermedio de area, perimetro, longitud del grano y ancho del grano.
+
+* Los elementos del cluster 2 (rojo), tienen el mayor area, perimetro, longitud del grano y ancho del grano.
+
 
 #### 5. Ahora, trabaje sobre el dataset abandono_cuantitativo.csv:
 
