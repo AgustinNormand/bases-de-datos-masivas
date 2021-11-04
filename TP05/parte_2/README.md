@@ -193,8 +193,10 @@ Long Ranura:
 Por ultimo si vemos el Scatterplot, con cada uno de los puntos con un color que representa a su cluster
 
 Rojo: Cluster 0
+
 Verde: Cluster 1
-Azul: Cluster 3
+
+Azul: Cluster 2
 
 ![scatter](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/scatter.png)
 
@@ -209,6 +211,8 @@ Por lo tanto, las caracteristicas distintivas del cada uno de los clusters resul
 #### 5. Ahora, trabaje sobre el dataset abandono_cuantitativo.csv:
 
 ##### a. Escoja los features que a su entender permitan un mejor agrupamiento,  pre-procese  los  mismos  y  entrene  un  modelo  a  partir de K-Means. 
+
+
 
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
 
