@@ -251,9 +251,9 @@ Resultando en el gráfico:
 
 ![cluster_2attr](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/cluster_2attr.png)
 
+Pero analizando los resultados en R, se realizaba un agrupamiento unicamente utilizando las *horas_trabajadas* debido a su gran varianza, sin utilizar la *carrera*.
 
-
-8 NA en *anios_en_unlu*
+???? A mi entender, para explicar el abandono universitario, es necesario: Estado Civil, Carrera, Horas Trabajadas, Edad_ingreso.
 
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
 
@@ -262,3 +262,26 @@ Resultando en el gráfico:
 ##### d. Ahora  aplique  algún  algoritmo  jerárquico  a  efectos  de  agrupar  los datos. ¿Cuál nivel se corresponde con el agrupamiento realizado por k-medias en el punto 6) a)? 
 
 ##### e. ¿El  agrupamiento  jerárquico  permite  encontrar  una  mejor  forma  de agrupar los datos? Si fuera así, ¿Cuál es ese agrupamiento? 
+
+
+#### 6. Algoritmos jerárquicos. Incorpore en Colab nuevamente el dataset del punto 5 y realice las siguientes actividades: 
+##### a. Realice el agrupamiento de los datos utilizando diferentes parámetros. 
+
+Agrupamiento utilizando *simple linkage*
+
+![simple_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/simple_linkage.png)
+
+Agrupamiento utilizando *average linkage*
+
+![average_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/average_linkage.png)
+
+Agrupamiento utilizando *complete linkage*
+
+![complete_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/complete_linkage.png)
+
+Agrupamiento utilizando *centroid linkage*
+
+![centroid_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/centroid_linkage.png)
+
+
+##### b. Grafique  el  resultado  y  escoja  cual  es  el  nivel  que  mejor  agrupa  los datos. 
