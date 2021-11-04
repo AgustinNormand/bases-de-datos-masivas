@@ -198,7 +198,7 @@ Por ultimo si vemos el Scatterplot, con cada uno de los puntos con un color que 
 
 ![referencias](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/referencias.png)
 
-![scatter](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/scatter.png)
+![scatter](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/scatter_plot.png)
 
 Si vemos el *area* y el *perimetro* se puede ver una correlacion entre estas variables, y que son significativas los clusters resultantes.
 Como también, se puede ver una correlación menor en *long_kernel* y *ancho_kernel*.
