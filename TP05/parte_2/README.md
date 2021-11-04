@@ -101,18 +101,105 @@ Valores optimos podrían tratarse de K=3 o K=4, coincidiendo con el analisis rea
 
 ![grafico_elbow_extendido](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico_extendido.png)
 
-Si bien se puede observar que en realidad la variabilidad entre un K y otro, tiende a ser nula, en valores superiores a 20, quedan clusters muy ruidosos dificiles de interpretar.
+Si bien se puede observar que en realidad la variabilidad entre un K y otro, tiende a ser baja, en valores superiores a 20, y muy baja en valores superiores a 40, quedan clusters muy ruidosos dificiles de interpretar.
 
 
 Gráfico de agrupamiento con K=2
+
 ![2_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_2_cluster.png)
 
 Gráfico de agrupamiento con K=3
+
 ![3_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_3_cluster.png)
 
 Gráfico de agrupamiento con K=4
+
 ![4_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_4_cluster.png)
 
 
 ##### c. ¿Cuáles  son  las  características  más  distintivas  de  cada  uno  de  los cluters resultantes? 
 
+El grupo examinado comprendió granos pertenecientes a tres variedades diferentes de trigo: Kama, Rosa y Canadian, de 70 elementos cada uno, seleccionados al azar para el experimento.
+Se detectó una visualizacion e alta calidad de la estructura interna del grano utilizando una técnica de rayos X suaves.
+Los estudio se llevaron a cabo utilizando granes de trigo cosechados combinados procedentes de campos experimentales.
+
+Los atributos son:
+Area
+Perimetro
+Compacidad 4*pi*A/P^2
+Longitud del grano
+Ancho del grano
+Coeficiente de asimetria
+Longitud de la ranura del grano
+Continuos con valores reales.
+
+Para realizar un analisis exploratorio, usamos R.
+
+Si calculamos la media el *area* agrupada por cada cluster
+
+![area_mean](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/area_mean.png)
+
+Obtenemos valores que a simple vista se ven bastante variados entre si, se encuentra bien marcada la diferencia de cada cluster.
+
+Para comprobar esto, si calculamos la varianza del *area* dentro de cada cluster
+
+![area_var](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/area_var.png)
+
+Obtenemos valores bajos, quiere decir que se está cumpliendo el objetivo de minimizar la varianza de los elementos del cluster, por lo tanto, vamos a comprobar si se está maximizando la varianza entre los diferentes clusters.
+
+![area_var_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/area_var_clusters.png)
+
+Efectivamente, los elementos de los diferentes clusters, son muy diferentes entre si.
+
+
+Realizando un analisis similar a este, determinamos que pasaba lo mismo con el *perimetro*
+
+Sin embargo, con *compact*, *long_kernel*, *ancho_kernel*, *coef_asimetrima*, *long_ranura* las medias agrupadas por cada cluster son valores muy similares, cuya varianza con respecto a los elementos del cluster es chica, pero con respecto a los diferentes clusters, tambien es chica. Por lo tanto, se trata de atributos que no aportan en definir el cluster.
+
+Se puede observar como las cajas del *boxplot* de *area* y *perimetro* no se superponen, incluso con una escala de 2.
+
+Area:
+
+![area_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/area_boxplot.png)
+
+Perimetro: 
+
+![perimetro_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/perimetro_boxplot.png)
+
+Y sin embargo, todos los demás, o se superponen, la gran mayoría, notablemente.
+
+Ancho Kernel:
+
+![ancho_kernel_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/ancho_kernel_boxplot.png)
+
+Coef Asimetria:
+
+![coef_asimetrima_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/coef_asimetrima_boxplot.png)
+
+Compact:
+
+![compact_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/compact_boxplot.png)
+
+Long Kernel:
+
+![long_kernel_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_kernel_boxplot.png)
+
+Long Ranura:
+
+![long_ranura_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_ranura_boxplot.png)
+
+
+Por lo tanto, las caracteristicas distintivas del cada uno de los clusters resultantes son *Area* y *Perimetro*.
+
+
+#### 5. Ahora, trabaje sobre el dataset abandono_cuantitativo.csv:
+
+##### a. Escoja los features que a su entender permitan un mejor agrupamiento,  pre-procese  los  mismos  y  entrene  un  modelo  a  partir de K-Means. 
+
+##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
+
+##### c. Encuentre  la  cantidad  de  grupos  que  logran  el  mejor  agrupamiento para  los  datos.  Justifique  la  elección  a  partir  de  métricas  y  gráficas de los conglomerados resultantes. 
+
+##### d. Ahora  aplique  algún  algoritmo  jerárquico  a  efectos  de  agrupar  los datos. ¿Cuál nivel se corresponde con el agrupamiento realizado por k-medias en el punto 6) a)? 
+
+##### e. ¿El  agrupamiento  jerárquico  permite  encontrar  una  mejor  forma  de agrupar los datos? Si fuera así, ¿Cuál es ese agrupamiento? 
