@@ -267,17 +267,33 @@ Pero analizando los resultados en R, se realizaba un agrupamiento unicamente uti
 #### 6. Algoritmos jerárquicos. Incorpore en Colab nuevamente el dataset del punto 5 y realice las siguientes actividades: 
 ##### a. Realice el agrupamiento de los datos utilizando diferentes parámetros. 
 
+Del punto anterior, el dataset se encuentra preprocesado de la siguiente manera:
+* Numerizar con LabelEnconder *estado_civil*, *carrera*, *sede* y *estado*
+* Eliminar los signos "-" de *promedio_1er_anio*.
+* Imputar 8 valores faltantes en *promedio_1er_anio*.
+* Eliminar *horas_trabajadas* superiores a 72hs
+* Realizar un *scale* de los valores.
+
+Se ajustaron los diferentes agrupamientos usando el parametro de Linkage o Distancia entre Clusters. Vemos la repercucion de este parametro en la forma que tiene el Dendrograma.
+
 Agrupamiento utilizando *simple linkage*
 
 ![simple_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/simple_linkage.png)
+
+Vemos que es un dendrograma desalineado, sesgado hacia la izquierda.
+
 
 Agrupamiento utilizando *average linkage*
 
 ![average_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/average_linkage.png)
 
+
+
 Agrupamiento utilizando *complete linkage*
 
 ![complete_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/complete_linkage.png)
+
+En este caso vemos un balance de las ramas, mas equilibrado que los anteriores.
 
 Agrupamiento utilizando *centroid linkage*
 
