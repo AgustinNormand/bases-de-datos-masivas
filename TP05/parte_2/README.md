@@ -156,7 +156,7 @@ Realizando un analisis similar a este, determinamos que pasaba lo mismo con el *
 
 Sin embargo, con *compact*, *long_kernel*, *ancho_kernel*, *coef_asimetrima*, *long_ranura* las medias agrupadas por cada cluster son valores muy similares, cuya varianza con respecto a los elementos del cluster es chica, pero con respecto a los diferentes clusters, tambien es chica. Por lo tanto, se trata de atributos que no aportan en definir el cluster.
 
-Se puede observar como las cajas del *boxplot* de *area* y *perimetro* no se superponen, incluso con una escala de 2.
+Se puede observar como las cajas del *boxplot* de *area* y *perimetro* no se superponen.
 
 Area:
 
@@ -166,11 +166,16 @@ Perimetro:
 
 ![perimetro_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/perimetro_boxplot.png)
 
+
 Y sin embargo, todos los demás, o se superponen, la gran mayoría, notablemente.
 
-Ancho Kernel:
+Ancho Kernel (Superposición baja, poca varianza escala 0.2):
 
 ![ancho_kernel_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/ancho_kernel_boxplot.png)
+
+Long Kernel:
+
+![long_kernel_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_kernel_boxplot.png)
 
 Coef Asimetria:
 
@@ -180,16 +185,21 @@ Compact:
 
 ![compact_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/compact_boxplot.png)
 
-Long Kernel:
-
-![long_kernel_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_kernel_boxplot.png)
-
 Long Ranura:
 
 ![long_ranura_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_ranura_boxplot.png)
 
 
-Por lo tanto, las caracteristicas distintivas del cada uno de los clusters resultantes son *Area* y *Perimetro*.
+Por ultimo si vemos el Scatterplot, con cada uno de los puntos con un color que representa a su cluster
+
+![scatter](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/scatter.png)
+
+Si vemos el *area* y el *perimetro* se puede ver una correlacion entre estas variables, y que son significativas los clusters resultantes.
+Como también, se puede ver una correlación menor en *long_kernel* y *ancho_kernel*.
+
+Las superposiciones en los scatter, denota que evidentemente hay otra u otras variables que hacen que tales observaciones pertenezcan a un cluster o a otro.
+
+Por lo tanto, las caracteristicas distintivas del cada uno de los clusters resultantes son *Area* y *Perimetro*, y en menor medida, *Ancho Kernel* y *Long Kernel*.
 
 
 #### 5. Ahora, trabaje sobre el dataset abandono_cuantitativo.csv:
