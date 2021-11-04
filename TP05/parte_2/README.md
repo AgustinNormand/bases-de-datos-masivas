@@ -274,7 +274,7 @@ Del punto anterior, el dataset se encuentra preprocesado de la siguiente manera:
 * Eliminar *horas_trabajadas* superiores a 72hs
 * Realizar un *scale* de los valores.
 
-Se ajustaron los diferentes agrupamientos usando el parametro de Linkage o Distancia entre Clusters. Vemos la repercucion de este parametro en la forma que tiene el Dendrograma.
+Se ajustaron los diferentes agrupamientos usando el parametro de Linkage o Distancia entre Clusters. Vemos la repercusión de este parametro en la forma que tiene el Dendrograma.
 
 Agrupamiento utilizando *simple linkage*
 
@@ -287,17 +287,23 @@ Agrupamiento utilizando *average linkage*
 
 ![average_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/average_linkage.png)
 
+Se ve un arbol equilibrado y balanceado pero compacto en la parte superior, evaluado respecto  a las distancias, tiene mucha distancia al principio y luego compacto, lo cual dificulta la separación en diferentes clusters.
 
 
 Agrupamiento utilizando *complete linkage*
 
 ![complete_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/complete_linkage.png)
 
-En este caso vemos un balance de las ramas, mas equilibrado que los anteriores.
+En este caso vemos un balance de las ramas, mas equilibrado que los anteriores. Brinda la posibilidad de ver de forma clara en que lugar realizar los cortes
+
 
 Agrupamiento utilizando *centroid linkage*
 
 ![centroid_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/centroid_linkage.png)
 
+En el caso de linkage mediante *centroid* obtenemos como en el caso de linkage *simple* un dendrograma desalineado, sesgado.
 
-##### b. Grafique  el  resultado  y  escoja  cual  es  el  nivel  que  mejor  agrupa  los datos. 
+
+##### b. Grafique  el  resultado  y  escoja  cual  es  el  nivel  que  mejor  agrupa  los datos.
+
+Utilizando el *complete linkage*, que resultó ser el mas apropiado
