@@ -159,6 +159,8 @@ Sin embargo, con *compact*, *long_kernel*, *ancho_kernel*, *coef_asimetrima*, *l
 
 Se puede observar como las cajas del *boxplot* de *area* y *perimetro* no se superponen.
 
+![referencias](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/referencias.png)
+
 Area:
 
 ![area_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/area_boxplot.png)
@@ -193,11 +195,8 @@ Long Ranura:
 
 Por ultimo si vemos el Scatterplot, con cada uno de los puntos con un color que representa a su cluster
 
-Rojo: Cluster 0
 
-Verde: Cluster 1
-
-Azul: Cluster 2
+![referencias](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/referencias.png)
 
 ![scatter](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/scatter.png)
 
