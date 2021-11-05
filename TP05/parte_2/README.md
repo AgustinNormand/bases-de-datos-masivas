@@ -254,6 +254,20 @@ Pero analizando los resultados en R, se realizaba un agrupamiento unicamente uti
 
 Dejando de lado el enfoque de analisis exploratorio, a mi entender, para explicar el abandono universitario, es necesario: Estado Civil, Carrera, Horas Trabajadas, Edad_ingreso y Estado.
 
+Vemos que con 2 componentes principales se puede cubrir el 89% de la varianza
+
+![PCA](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/PCA.png)
+
+De estas componentes, la primera se basa en *edad_ingreso* y *horas_trabajadas*
+
+Y la segunda en *estado*
+
+![auto_vectores](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/auto_vectores.png)
+
+Grafico PCA
+
+![grafico_pca](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/grafico_pca.png)
+
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
 
 Estado Civil:
