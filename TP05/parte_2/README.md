@@ -215,6 +215,12 @@ Un ultimo analisis, el scatter, podríamos sacar las siguientes conclusiones, (q
 
 * Los elementos del cluster 2 (rojo), se distingue por tener un tamaño intermedio de area, perimetro, longitud del grano y ancho del grano.
 
+Componentes Principales
+
+![pca](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/pca.png)
+
+![autovectores](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/autovectores.png)
+
 
 
 #### 5. Ahora, trabaje sobre el dataset abandono_cuantitativo.csv:
