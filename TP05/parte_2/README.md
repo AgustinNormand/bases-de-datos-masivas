@@ -266,7 +266,7 @@ Y la segunda en *estado*
 
 Grafico PCA
 
-![grafico_pca](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/grafico_pca.png)
+![grafico_pca](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/grafico_PCA.png)
 
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
 
