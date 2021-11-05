@@ -1,7 +1,7 @@
 ## TP05 - Minería de datos
 ## Parte 02 - Clustering (K-Medias y algoritmos jerárquicos)
 ## Agustín normand
-#### 1 Noviembre 2021
+#### 5 Noviembre 2021
 
 #### Introducción:
 
@@ -80,7 +80,7 @@ Por último, la tabla final con las distancias *Euclidianas* y los clusters corr
 
 En primer lugar se realizó una prueba empírica, y detecté que el valor de cantidad de centroides, que agrupaba los datos de manera más eficiente se encontraba entre 2 y 4, ya que al aumentar por encima de 4, se creaban clusters que no me parecían correctos.
 
-A continuación un gráfico con K=5:
+**A continuación un gráfico con K=5:**
 
 ![5_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_5_cluster.png)
 
@@ -105,15 +105,15 @@ Valores óptimos podrían tratarse de K=3 o K=4, coincidiendo con el análisis r
 Si bien se puede observar que en realidad la variabilidad entre un K y otro, tiende a ser baja, en valores superiores a 20, y muy baja en valores superiores a 40, quedan clusters muy ruidosos difíciles de interpretar.
 
 
-Gráfico de agrupamiento con K=2
+**Gráfico de agrupamiento con K=2**
 
 ![2_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_2_cluster.png)
 
-Gráfico de agrupamiento con K=3
+**Gráfico de agrupamiento con K=3**
 
 ![3_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_3_cluster.png)
 
-Gráfico de agrupamiento con K=4
+**Gráfico de agrupamiento con K=4**
 
 ![4_clusters](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_4_cluster.png)
 
@@ -161,34 +161,34 @@ Se puede observar como las cajas del *boxplot* de *área* y *perímetro* no se s
 
 ![referencias](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/referencias.png)
 
-Área:
+**Área:**
 
 ![area_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/area_boxplot.png)
 
-Perímetro:
+**Perímetro:**
 
 ![perimetro_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/perimetro_boxplot.png)
 
 
 Y sin embargo, todos los demás, o se superponen, la gran mayoría, notablemente.
 
-Ancho Kernel (Superposición baja, poca varianza escala 0.2):
+**Ancho Kernel** (Superposición muy baja, poca varianza escala 0.2):
 
 ![ancho_kernel_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/ancho_kernel_boxplot.png)
 
-Long Kernel:
+**Long Kernel:** (Superposición baja, poca varianza escala 0.5):
 
 ![long_kernel_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_kernel_boxplot.png)
 
-Coef Asimetría:
+**Coef Asimetría:**
 
 ![coef_asimetrima_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/coef_asimetrima_boxplot.png)
 
-Compact:
+**Compact:**
 
 ![compact_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/compact_boxplot.png)
 
-Long Ranura:
+**Long Ranura:**
 
 ![long_ranura_boxplot](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_ranura_boxplot.png)
 
@@ -215,7 +215,7 @@ Un último análisis, el scatter, podríamos sacar las siguientes conclusiones, 
 
 * Los elementos del cluster 2 (rojo), se distinguen por tener un tamaño intermedio de área, perímetro, longitud del grano y ancho del grano.
 
-Componentes Principales
+**Componentes Principales**
 
 ![pca](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/pca.png)
 
@@ -242,7 +242,7 @@ Los atributos más variados del dataset son *horas_trabajadas* y *carrera*.
 * "Carrera" Varianza 135.72778315498857
 * Horas_Trabajadas Varianza 331.26768517702567
 
-Histogramas de cada uno de estos atributos
+**Histogramas de cada uno de estos atributos**
 
 ![hist_carreras](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/hist_carreras.png)
 
@@ -272,20 +272,20 @@ Y la segunda con *estado*
 
 ![auto_vectores](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/auto_vectores.png)
 
-Gráfico PCA
+**Gráfico PCA**
 
 ![grafico_pca](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/grafico_PCA.png)
 
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo.
 
-Estado Civil:
+**Estado Civil:**
 
 * El cluster 0 está formado por mayormente (1096) casados.
 * El cluster 1 está formado por mayormente (3577) solteros.
 * El cluster 2 está formado por mayormente (7856) solteros.
 * El cluster 3 está formado por mayormente (3209) solteros.
 
-Carrera:
+**Carrera:**
 
 Cluster 0
 * (326)LICENCIATURA EN TRABAJO SOCIAL
@@ -310,7 +310,7 @@ Cluster 3
 * (452) LICENCIATURA EN TRABAJO SOCIAL
 * (375) PROFESORADO EN EDUCACIÓN FÍSICA
 
-Horas Trabajadas:
+**Horas Trabajadas:**
 
 Cluster 0
 * Media: 23.56horas
@@ -329,7 +329,7 @@ Cluster 3
 * Mediana: 0
 
 
-Edad Ingreso:
+**Edad Ingreso:**
 
 Cluster 0
 * Media: 38
@@ -344,7 +344,7 @@ Cluster 3
 * Media: 20
 
 
-Estado:
+**Estado:**
 
 Cluster 0
 * (68) INHABILITADO
@@ -401,28 +401,28 @@ Del punto anterior, el dataset se encuentra preprocesado de la siguiente manera:
 
 Se ajustaron los diferentes agrupamientos usando el parámetro de Linkage o Distancia entre Clusters. Vemos la repercusión de este parámetro en la forma que tiene el Dendrograma.
 
-Agrupamiento utilizando *simple linkage*
+**Agrupamiento utilizando *simple linkage***
 
 ![simple_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/simple_linkage.png)
 
 Vemos que es un dendrograma desalineado, sesgado hacia la izquierda.
 
 
-Agrupamiento utilizando *average linkage*
+**Agrupamiento utilizando *average linkage***
 
 ![average_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/average_linkage.png)
 
 Se ve un árbol equilibrado y balanceado pero compacto en la parte superior, evaluado respecto  a las distancias, tiene mucha distancia al principio y luego compacto, lo cual dificulta la separación en diferentes clusters.
 
 
-Agrupamiento utilizando *complete linkage*
+**Agrupamiento utilizando *complete linkage***
 
 ![complete_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/complete_linkage.png)
 
 En este caso vemos un balance de las ramas, más equilibrado que los anteriores. Brinda la posibilidad de ver de forma clara en qué lugar realizar los cortes
 
 
-Agrupamiento utilizando *centroid linkage*
+**Agrupamiento utilizando *centroid linkage***
 
 ![centroid_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/centroid_linkage.png)
 
