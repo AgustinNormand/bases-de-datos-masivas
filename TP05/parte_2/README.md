@@ -257,12 +257,14 @@ Dejando de lado el enfoque de analisis exploratorio, a mi entender, para explica
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
 
 Estado Civil:
-El cluster 0 esta formado por mayormente (1096) casados.
-El cluster 1 esta formado por mayormente (3577) solteros.
-El cluster 2 esta formado por mayormente (7856) solteros.
-El cluster 3 esta formado por mayormente (3209) solteros.
+
+* El cluster 0 esta formado por mayormente (1096) casados.
+* El cluster 1 esta formado por mayormente (3577) solteros.
+* El cluster 2 esta formado por mayormente (7856) solteros.
+* El cluster 3 esta formado por mayormente (3209) solteros.
 
 Carrera:
+
 Cluster 0
 * (326)LICENCIATURA EN TRABAJO SOCIAL
 
@@ -287,6 +289,7 @@ Cluster 3
 * (375) PROFESORADO EN EDUCACION FISICA
 
 Horas Trabajadas:
+
 Cluster 0
 * Media: 23.56horas
 * Mediana: 40
@@ -305,6 +308,7 @@ Cluster 3
 
 
 Edad Ingreso:
+
 Cluster 0
 * Media: 38
 
@@ -319,6 +323,7 @@ Cluster 3
 
 
 Estado:
+
 Cluster 0
 * (68) INHABILITADO
 * (422) LIBRE
