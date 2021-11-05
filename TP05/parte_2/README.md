@@ -228,7 +228,6 @@ Preprocesamiento:
 * Eliminar *horas_trabajadas* superiores a 72hs
 * Realizar un *scale* de los valores.
 
-
 Analisis exploratorio:
 
 Los atributos mas variados del dataset son *horas_trabajadas* y *carrera*.
@@ -253,15 +252,110 @@ Resultando en el gráfico:
 
 Pero analizando los resultados en R, se realizaba un agrupamiento unicamente utilizando las *horas_trabajadas* debido a su gran varianza, sin utilizar la *carrera*.
 
-???? A mi entender, para explicar el abandono universitario, es necesario: Estado Civil, Carrera, Horas Trabajadas, Edad_ingreso.
+Dejando de lado el enfoque de analisis exploratorio, a mi entender, para explicar el abandono universitario, es necesario: Estado Civil, Carrera, Horas Trabajadas, Edad_ingreso y Estado.
 
 ##### b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo. 
 
+Estado Civil:
+El cluster 0 esta formado por mayormente (1096) casados.
+El cluster 1 esta formado por mayormente (3577) solteros.
+El cluster 2 esta formado por mayormente (7856) solteros.
+El cluster 3 esta formado por mayormente (3209) solteros.
+
+Carrera:
+Cluster 0
+* (326)LICENCIATURA EN TRABAJO SOCIAL
+
+Cluster 1
+* (793)LICENCIATURA EN ADMINISTRACION  
+* (591)CONTADOR PUBLICO
+* (586)LICENCIATURA EN TRABAJO SOCIAL  
+* (366)PROFESORADO EN EDUCACION FISICA
+
+Cluster 2 
+* (2513)CONTADOR PUBLICO
+* (287)INGENIERIA AGRONOMICA
+* (309)INGENIERIA EN ALIMENTOS
+* (419)INGENIERIA INDUSTRIAL
+* (155)LIC. EN CIENCIAS BIOLOGICAS
+* (749)LIC. EN COMERCIO INTERNACIONAL
+
+Cluster 3 
+* (622) CONTADOR PUBLICO
+* (578) LICENCIATURA EN ADMINISTRACION  
+* (452) LICENCIATURA EN TRABAJO SOCIAL
+* (375) PROFESORADO EN EDUCACION FISICA
+
+Horas Trabajadas:
+Cluster 0
+* Media: 23.56horas
+* Mediana: 40
+
+Cluster 1 
+* Media: 39.94horas
+* Mediana: 24
+
+Cluster 2 
+* Media: 2.8horas
+* Mediana: 0
+
+Cluster 3
+* Media: 5.88horas
+* Mediana: 0
+
+
+Edad Ingreso:
+Cluster 0
+* Media: 38
+
+Cluster 1
+* Media: 25
+
+Cluster 2
+* Media: 19
+
+Cluster 3
+* Media: 20
+
+
+Estado:
+Cluster 0
+* (68) INHABILITADO
+* (422) LIBRE
+* (271) INHABILITADO
+* (539) REGULAR
+
+Cluster 1
+* (169) INHABILITADO
+* (1024) LIBRE
+* (1010) INHABILITADO
+* (1584) REGULAR
+
+Cluster 2
+* (2229) INHABILITADO
+* (5734) REGULAR
+
+Cluster 3
+* (1112) INHABILITADO
+* (2172) LIBRE
+
+El algoritmo encontró un grupo de estudiantes de 20 años en promedio, de las carreras CONTADOR PUBLICO, LICENCIATURA EN ADMINISTRACION, LICENCIATURA EN TRABAJO SOCIAL y PROFESORADO EN EDUCACION FISICA, que son mayormente Solteros y trabajan en promedio 5 horas, que quedan en estado INHABILITADO o LIBRE.
+
 ##### c. Encuentre  la  cantidad  de  grupos  que  logran  el  mejor  agrupamiento para  los  datos.  Justifique  la  elección  a  partir  de  métricas  y  gráficas de los conglomerados resultantes. 
 
-##### d. Ahora  aplique  algún  algoritmo  jerárquico  a  efectos  de  agrupar  los datos. ¿Cuál nivel se corresponde con el agrupamiento realizado por k-medias en el punto 6) a)? 
+Viendo el gráfico de Elbow, se optó por un K=4, ya que equilibraba, una cantidad de clusters manejables, con una pendiente que comenzaba a tender a 0.
+
+![elbow](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/elbow.png)
+
+##### d. Ahora  aplique  algún  algoritmo  jerárquico  a  efectos  de  agrupar  los datos. ¿Cuál nivel se corresponde con el agrupamiento realizado por k-medias en el punto 5) a)? 
+
+Utilizando un algoritmo jerarquico con un linkage completo, utilizando un nivel de 2, se logran 4 clusters, lo cual corresponde con el agrupamiento realizado por k-medias en el punto 5)a).
+
+![complete_linkage](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/complete_linkage.png)
 
 ##### e. ¿El  agrupamiento  jerárquico  permite  encontrar  una  mejor  forma  de agrupar los datos? Si fuera así, ¿Cuál es ese agrupamiento? 
+
+Permite una forma se ve mas robusta, que se aborda de manera mas simple, que es mediante el uso de un linkage completo, el cual se abordará en el siguiente punto.
 
 
 #### 6. Algoritmos jerárquicos. Incorpore en Colab nuevamente el dataset del punto 5 y realice las siguientes actividades: 
@@ -306,4 +400,4 @@ En el caso de linkage mediante *centroid* obtenemos como en el caso de linkage *
 
 ##### b. Grafique  el  resultado  y  escoja  cual  es  el  nivel  que  mejor  agrupa  los datos.
 
-Utilizando el *complete linkage*, que resultó ser el mas apropiado
+Utilizando el *complete linkage*, que resultó ser el mas apropiado, el nivel que agrupa mejor los datos es 2. Que resulta en 4 clusters. Verde, Rojo, Celeste y Violeta.
