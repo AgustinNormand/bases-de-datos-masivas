@@ -348,7 +348,7 @@ El algoritmo encontró un grupo de estudiantes de 20 años en promedio, de las c
 
 ##### c. Encuentre  la  cantidad  de  grupos  que  logran  el  mejor  agrupamiento para  los  datos.  Justifique  la  elección  a  partir  de  métricas  y  gráficas de los conglomerados resultantes. 
 
-Viendo el gráfico de Elbow, se optó por un K=4, ya que equilibraba, una cantidad de clusters manejables, con una pendiente que comenzaba a tender a 0.
+Viendo el gráfico de Elbow, se optó por un K=4, ya que equilibraba, una cantidad de clusters manejables, con una pendiente que comenzaba a estabilizarse levemente.
 
 ![elbow](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/elbow.png)
 
@@ -361,6 +361,10 @@ Utilizando un algoritmo jerarquico con un linkage completo, utilizando un nivel 
 ##### e. ¿El  agrupamiento  jerárquico  permite  encontrar  una  mejor  forma  de agrupar los datos? Si fuera así, ¿Cuál es ese agrupamiento? 
 
 Permite una forma se ve mas robusta, que se aborda de manera mas simple, que es mediante el uso de un linkage completo, el cual se abordará en el siguiente punto.
+
+Cabe destacar que se utilizó todo el dataset, preprocesado, y el algoritmo encontró grupos bien marcados, equilibrados.
+
+En caso de k-medias, al utilizar todo el dataset, el algoritmo tenía un SSE muy alto, encontraba grupos superpuestos, ruidosos.
 
 
 #### 6. Algoritmos jerárquicos. Incorpore en Colab nuevamente el dataset del punto 5 y realice las siguientes actividades: 
