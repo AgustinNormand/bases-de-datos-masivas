@@ -223,7 +223,11 @@ Un último análisis, el scatter, podríamos sacar las siguientes conclusiones, 
 
 ![autovectores](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/autovectores.png)
 
+Primera componente: Area, Perimetro, Ancho Kernel y Longitud Kernel.
 
+Segunda componente: Compact y Coef Asimetria.
+
+Coincide con el analisis previo.
 
 #### 5. Ahora, trabaje sobre el dataset abandono_cuantitativo.csv:
 
