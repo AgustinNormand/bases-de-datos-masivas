@@ -258,9 +258,9 @@ Vemos que con 2 componentes principales se puede cubrir el 89% de la varianza
 
 ![PCA](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/PCA.png)
 
-De estas componentes, la primera se basa en *edad_ingreso* y *horas_trabajadas*
+De estas componentes, la primera corresponde con las features *edad_ingreso* y *horas_trabajadas*
 
-Y la segunda en *estado*
+Y la segunda con *estado*
 
 ![auto_vectores](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/auto_vectores.png)
 
