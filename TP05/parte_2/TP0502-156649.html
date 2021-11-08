@@ -1,0 +1,321 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="tp05-miner-a-de-datos">TP05 - Minería de datos</h2>
+<h2 id="parte-02-clustering-k-medias-y-algoritmos-jer-rquicos-">Parte 02 - Clustering (K-Medias y algoritmos jerárquicos)</h2>
+<h2 id="agust-n-normand">Agustín normand</h2>
+<h4 id="8-noviembre-2021">8 Noviembre 2021</h4>
+<h4 id="introducci-n-">Introducción:</h4>
+<p>En  este  trabajo  se  abordarán  los  algoritmos  de  agrupamiento  o  clustering  y  las medidas de distancia asociadas a efectos de determinar la similitud de los datos.
+En  primer  lugar,  se  trabajará  con  algunas  de  las  medidas  de  distancia  clásicas  para variables numéricas como la euclídea, Manhattan y la distancia de Minkowski y otras medidas relacionadas a calcular distancias en variables binarias y categóricas.
+Luego,  se  utilizará  el  lenguaje  Python  con  el  paquete  Scikit-Learn  con  el  objetivo  de resolver problemas de  la  disciplina,  los  cuales son  una combinación de ejercicios  clásicos de minería de datos complementados con ejercicios propuestos por el equipo docente.</p>
+<h4 id="1-medidas-de-distancia-calcule-la-distancia-entre-los-siguientes-puntos-y-el-centroide-2-4-utilizando-las-medidas-eucl-dea-manhattan-y-minkowski-con-p-3-">1. Medidas  de  distancia.  Calcule  la  distancia  entre  los  siguientes  puntos  y  el centroide  (2,  4)  utilizando  las  medidas:  euclídea,  Manhattan  y  Minkowski (con p = 3):</h4>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/tabla_consigna_1.png" alt="tabla"></p>
+<p>¿Encuentra diferencias relativas entre las diferentes métricas utilizadas y el resultado  obtenido?  Explique  el  comportamiento  de  cada  una  utilizando gráficas.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/medidas_consigna_1.png" alt="medidas"></p>
+<p>Como se puede observar, los resultados varían, pero sin embargo, la distancia mínima y máxima, siguen siendo las mismas.
+La diferencia en los resultados se explica porque la distancia <em>Euclídea</em> mide en línea recta la distancia, de la siguiente manera:</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/euclidea_consigna_1.png" alt="euclidea"></p>
+<p>Sin embargo, cuando utilizo distancia de <em>Manhattan</em>, tomo la distancia en líneas verticales u horizontales, resultando en:</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/manhattan_consigna_1.png" alt="manhattan"></p>
+<p>Mientras tanto, Minkowski es la generalización de las dos mencionadas anteriormente.
+En este caso el valor P es de 3.
+Si fuera de 1, se trataría de la distancia de <em>Manhattan</em>, si fuera de 2, sería la distancia <em>Euclidiana</em>, y siendo 3, reduce más que la <em>Euclidiana</em> las distancias. Es decir, a mayor elección del parámetro P, la distancia se reduce.</p>
+<h4 id="2-a-continuaci-n-calcule-la-distancia-entre-las-diferentes-variables-de-tipo-categ-ricas-con-respecto-a-la-instancia-1-lluvioso-templado-alta-fuerte-">2. A  continuación,  calcule  la  distancia  entre  las  diferentes  variables  de  tipo categóricas con respecto a la instancia {1, lluvioso, templado, alta, fuerte}:</h4>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/tabla_consigna_2.png" alt="tabla"></p>
+<h4 id="-cu-les-son-las-instancias-m-s-cercanas-a-la-instancia-1-">¿Cuáles son las instancias más cercanas a la instancia #1?</h4>
+<p>Aplicando las medidas correspondientes para variables categóricas, se logra la siguiente tabla:</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/respuesta_consigna_2.png" alt="tabla"></p>
+<p>La instancia más cercana a la #1 es la #10. Ya que los valores son los mismos.
+Seguido de la instancia numero #8, que coincide en 3 de los 4 valores.
+Luego las numero #2, #4, #6, #7, coinciden en 2 de 4 valores.
+Por otro lado, la correspondiente a #3 coincide en un único valor.
+Y por último, las instancias #5 y #9, no coinciden en ningún valor.</p>
+<h4 id="3-ahora-y-a-partir-de-los-datos-de-la-siguiente-tabla-agrupe-los-datos-de-acuerdo-al-algoritmo-k-medias-utilizando-la-medida-eucl-dea-y-con-los-puntos-a1-a2-y-a7-como-centroides-iniciales-">3. Ahora,  y  a  partir  de  los  datos  de  la  siguiente  tabla,  agrupe  los  datos  de acuerdo  al  algoritmo  k-medias  utilizando  la  medida  euclídea  y  con  los puntos A1, A2 y A7 como centroides iniciales.</h4>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/tabla_consigna_3.png" alt="tabla"></p>
+<p>Luego de asignar de manera aleatoria cada observación a uno de los K clusters, obtengo el siguiente gráfico.
+(Los centroides de cada cluster están distinguidos con un punto gris)</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/paso_1_consigna_3.png" alt="paso_1"></p>
+<p>Calculando la distancia <em>Euclidiana</em> de cada uno de las observaciones, con respecto a los centroides, resaltados en <em>negrita</em>, se encuentran las menores distancias.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/distancia_centroides_consigna_3.png" alt="distancia"></p>
+<p>Luego de la asignar de los puntos al cluster más cercano y recalcular los centroides, el gráfico queda de la siguiente manera:</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/segunda_iteracion_consigna_3.png" alt="segunda_iteracion"></p>
+<p>Luego de calcular nuevamente la distancia <em>Euclidiana</em> a cada uno de los centroides, realizar la asignación y recalcular los centroides, el gráfico resultante es:</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/tercera_iteracion_consigna_3.png" alt="tercera_iteracion"></p>
+<p>Por último, la tabla final con las distancias <em>Euclidianas</em> y los clusters correspondientes a cada observación:</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/tabla_final_consigna_3.png" alt="tabla_final"></p>
+<h4 id="4-k-means-se-provee-un-dataset1-sobre-las-caracter-sticas-internas-del-n-cleo-de-tres-clases-de-trigo-diferentes-cargue-el-dataset-en-una-de-las-herramientas-de-miner-a-de-datos-provistas-y-resuelva-">4. K-means. Se provee un dataset1 sobre las características internas del núcleo de tres clases de trigo diferentes. Cargue el dataset en una de las herramientas de minería de datos provistas y resuelva:</h4>
+<h5 id="a-utilice-el-algoritmo-k-medias-variando-la-cantidad-de-centroides-a-efectos-de-agrupar-los-datos-de-la-manera-m-s-eficiente-">a. Utilice  el  algoritmo  k-medias  variando  la  cantidad  de  centroides  a efectos de agrupar los datos de la manera más eficiente.</h5>
+<p>En primer lugar se realizó una prueba empírica, y detecté que el valor de cantidad de centroides, que agrupaba los datos de manera más eficiente se encontraba entre 2 y 4, ya que al aumentar por encima de 4, se creaban clusters que no me parecían correctos.</p>
+<p><strong>A continuación un gráfico con K=5:</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_5_cluster.png" alt="5_clusters"></p>
+<p>Se puede ver en la parte inferior dos clusters bastante juntos, poco marcados, podría tratarse de un exceso de clusters. Se utilizarán medidas para verificarlo.</p>
+<h5 id="b-cu-l-es-la-cantidad-de-grupos-que-permite-un-mejor-agrupamiento-de-los-datos-mediante-cu-l-m-trica-puede-verificar-esto-">b. ¿Cuál  es  la  cantidad  de  grupos  que  permite  un  mejor  agrupamiento de los datos? ¿Mediante cuál métrica puede verificar esto?</h5>
+<p>Una de las medidas que se utilizan es la suma de cuadrados, es decir, la suma de las diferencias entre los elementos del cluster con respecto al centroide.</p>
+<p>Uno de los métodos para establecer cuál es la cantidad de clusters que son óptimos, es el método <em>Elbow</em>. El cual realiza muchos agrupamientos con diferentes valores de K y verificar donde la métrica de <em>suma de cuadrados</em> empieza a tener una variación muy baja.
+El mejor K va a estar donde la métrica de Elbow no ofrezca cambios. Aunque se debe contemplar que si tenemos una cantidad excesiva de clusters, no es útil ya que son difíciles de interpretar, de darles sentido.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico.png" alt="grafico_elbow"></p>
+<p>Observando este gráfico, podemos considerar los puntos donde la pendiente se asemeja a 0 y elegirlos como la mejor opción.
+Ya que cuanto más pronunciada es la pendiente, mayor error pierde el agrupamiento con ese número de clusters.</p>
+<p>Valores óptimos podrían tratarse de K=3 o K=4, coincidiendo con el análisis realizado de forma empírica.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_b_grafico_extendido.png" alt="grafico_elbow_extendido"></p>
+<p>Si bien se puede observar que en realidad la variabilidad entre un K y otro, tiende a ser baja, en valores superiores a 20, y muy baja en valores superiores a 40, quedan clusters muy ruidosos difíciles de interpretar.</p>
+<p><strong>Gráfico de agrupamiento con K=2</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_2_cluster.png" alt="2_clusters"></p>
+<p><strong>Gráfico de agrupamiento con K=3</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_3_cluster.png" alt="3_clusters"></p>
+<p><strong>Gráfico de agrupamiento con K=4</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/consigna_a_4_cluster.png" alt="4_clusters"></p>
+<h5 id="c-cu-les-son-las-caracter-sticas-m-s-distintivas-de-cada-uno-de-los-clusters-resultantes-">c. ¿Cuáles  son  las  características  más  distintivas  de  cada  uno  de  los clusters resultantes?</h5>
+<p>El grupo examinado comprendió granos pertenecientes a tres variedades diferentes de trigo: Kama, Rosa y Canadian, de 70 elementos cada uno, seleccionados al azar para el experimento.
+Se detectó una visualización de alta calidad de la estructura interna del grano utilizando una técnica de rayos X suaves.
+Los estudios se llevaron a cabo utilizando granos de trigo cosechados combinados procedentes de campos experimentales.</p>
+<p>Los atributos son:
+Área
+Perímetro
+Compacidad 4<em>pi</em>A/P^2
+Longitud del grano
+Ancho del grano
+Coeficiente de asimetría
+Longitud de la ranura del grano
+Continuos con valores reales.</p>
+<p>Para realizar un análisis exploratorio, usamos R.</p>
+<p>Si calculamos la media el <em>área</em> agrupada por cada cluster</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/area_mean.png" alt="area_mean"></p>
+<p>Obtenemos valores que a simple vista se ven bastante variados entre sí, se encuentra bien marcada la diferencia de cada cluster.</p>
+<p>Para comprobar esto, si calculamos la varianza del <em>área</em> dentro de cada cluster</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/area_var.png" alt="area_var"></p>
+<p>Obtenemos valores bajos, quiere decir que se está cumpliendo el objetivo de minimizar la varianza de los elementos del cluster, por lo tanto, vamos a comprobar si se está maximizando la varianza entre los diferentes clusters.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/area_var_clusters.png" alt="area_var_clusters"></p>
+<p>Efectivamente, los elementos de los diferentes clusters, son muy diferentes entre sí.</p>
+<p>Realizando un análisis similar a este, determinamos que pasaba lo mismo con el <em>perímetro</em></p>
+<p>Sin embargo, con <em>compact</em>, <em>long_kernel</em>, <em>ancho_kernel</em>, <em>coef_asimetrima</em>, <em>long_ranura</em> las medias agrupadas por cada cluster son valores muy similares, cuya varianza con respecto a los elementos del cluster es chica, pero con respecto a los diferentes clusters, también es chica. Por lo tanto, se trata de atributos que no aportan en definir el cluster.</p>
+<p>Se puede observar como las cajas del <em>boxplot</em> de <em>área</em> y <em>perímetro</em> no se superponen.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/referencias.png" alt="referencias"></p>
+<p><strong>Área:</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/area_boxplot.png" alt="area_boxplot"></p>
+<p><strong>Perímetro:</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/perimetro_boxplot.png" alt="perimetro_boxplot"></p>
+<p>Y sin embargo, todos los demás, o se superponen, la gran mayoría, notablemente.</p>
+<p><strong>Ancho Kernel</strong> (Superposición muy baja, poca varianza escala 0.2):</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/ancho_kernel_boxplot.png" alt="ancho_kernel_boxplot"></p>
+<p><strong>Long Kernel:</strong> (Superposición baja, poca varianza escala 0.5):</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_kernel_boxplot.png" alt="long_kernel_boxplot"></p>
+<p><strong>Coef Asimetría:</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/coef_asimetrima_boxplot.png" alt="coef_asimetrima_boxplot"></p>
+<p><strong>Compact:</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/compact_boxplot.png" alt="compact_boxplot"></p>
+<p><strong>Long Ranura:</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/boxplot/long_ranura_boxplot.png" alt="long_ranura_boxplot"></p>
+<p>Por último si vemos el Scatterplot, con cada uno de los puntos con un color que representa a su cluster</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/referencias.png" alt="referencias"></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/scatter_plot.png" alt="scatter"></p>
+<p>Si vemos el <em>área</em> y el <em>perímetro</em> se puede ver una correlación entre estas variables, y que son significativas los clusters resultantes.
+Como también, se puede ver una correlación menor en <em>long_kernel</em> y <em>ancho_kernel</em>.</p>
+<p>Las superposiciones en los scatter, denota que evidentemente hay otra u otras variables que hacen que tales observaciones pertenezcan a un cluster o a otro.</p>
+<p>Por lo tanto, las características distintivas del cada uno de los clusters resultantes son <em>Área</em> y <em>Perímetro</em>, y en menor medida, <em>Ancho Kernel</em> y <em>Long Kernel</em>.</p>
+<p>Un último análisis, el scatter, podríamos sacar las siguientes conclusiones, (que también fueron obtenidas de forma analitica)</p>
+<ul>
+<li><p>Los elementos del cluster 0 (verde), se distinguen por tener el mayor área, perímetro, longitud del grano y ancho del grano.</p>
+</li>
+<li><p>Los elementos del cluster 1 (azul), se distinguen por tener el menor área, perímetro, longitud del grano y ancho del grano.</p>
+</li>
+<li><p>Los elementos del cluster 2 (rojo), se distinguen por tener un tamaño intermedio de área, perímetro, longitud del grano y ancho del grano.</p>
+</li>
+</ul>
+<p><strong>Componentes Principales</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/pca.png" alt="pca"></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/atributos.png" alt="atributos"></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna4/autovectores.png" alt="autovectores"></p>
+<p>Primera componente: Area, Perimetro, Ancho Kernel y Longitud Kernel.</p>
+<p>Segunda componente: Compact y Coef Asimetria.</p>
+<p>Coincide con el analisis previo.</p>
+<h4 id="5-ahora-trabaje-sobre-el-dataset-abandono_cuantitativo-csv-">5. Ahora, trabaje sobre el dataset abandono_cuantitativo.csv:</h4>
+<h5 id="a-escoja-los-features-que-a-su-entender-permitan-un-mejor-agrupamiento-pre-procese-los-mismos-y-entrene-un-modelo-a-partir-de-k-means-">a. Escoja los features que a su entender permitan un mejor agrupamiento,  pre-procese  los  mismos  y  entrene  un  modelo  a  partir de K-Means.</h5>
+<p>Preprocesamiento:</p>
+<ul>
+<li>Numerizar con LabelEnconder <em>estado_civil</em>, <em>carrera</em>, <em>sede</em> y <em>estado</em></li>
+<li>Eliminar los signos &quot;-&quot; de <em>promedio_1er_anio</em>.</li>
+<li>Imputar 8 valores faltantes en <em>promedio_1er_anio</em>.</li>
+<li>Eliminar <em>horas_trabajadas</em> superiores a 72 hs</li>
+<li>Realizar un <em>scale</em> de los valores.</li>
+</ul>
+<p>Análisis exploratorio:</p>
+<p>Los atributos más variados del dataset son <em>horas_trabajadas</em> y <em>carrera</em>.</p>
+<ul>
+<li>&quot;Carrera&quot; Varianza 135.72778315498857</li>
+<li>Horas_Trabajadas Varianza 331.26768517702567</li>
+</ul>
+<p><strong>Histogramas de cada uno de estos atributos</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/hist_carreras.png" alt="hist_carreras"></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/hist_horas_trabajadas.png" alt="hist_horas_trabajadas"></p>
+<p>Si realizamos un agrupamiento mediante estos dos atributos, con un K variando de 1 a 5, el menor SSE obtenido es de 7464.88</p>
+<p>Podría resultar aceptable un K = 3, determinado mediante el método de Elbow.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/elbow_2attr.png" alt="elbow_2attr"></p>
+<p>Resultando en el gráfico:</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/cluster_2attr.png" alt="cluster_2attr"></p>
+<p>Pero analizando los resultados en R, se realizaba un agrupamiento únicamente utilizando las <em>horas_trabajadas</em> debido a su gran varianza, sin utilizar la <em>carrera</em>.</p>
+<p>Dejando de lado el enfoque de análisis exploratorio, a mi entender, para explicar el abandono universitario, es necesario: Estado Civil, Carrera, Horas Trabajadas, Edad_ingreso y Estado.</p>
+<p>Vemos que con 2 componentes principales se puede cubrir el 89% de la varianza</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/PCA.png" alt="PCA"></p>
+<p>De estas componentes, la primera corresponde con las features <em>edad_ingreso</em> y <em>horas_trabajadas</em></p>
+<p>Y la segunda con <em>estado</em></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/auto_vectores.png" alt="auto_vectores"></p>
+<p><strong>Gráfico PCA</strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/grafico_PCA.png" alt="grafico_pca"></p>
+<h5 id="b-analice-y-describa-las-caracter-sticas-m-s-salientes-de-cada-uno-de-los-grupos-encontrados-por-el-algoritmo-">b. Analice  y  describa  las  características  más  salientes  de  cada  uno  de los grupos encontrados por el algoritmo.</h5>
+<p><strong>Estado Civil:</strong></p>
+<ul>
+<li>El cluster 0 está formado por mayormente (1096) casados.</li>
+<li>El cluster 1 está formado por mayormente (3577) solteros.</li>
+<li>El cluster 2 está formado por mayormente (7856) solteros.</li>
+<li>El cluster 3 está formado por mayormente (3209) solteros.</li>
+</ul>
+<p><strong>Carrera:</strong></p>
+<p>Cluster 0</p>
+<ul>
+<li>(326)LICENCIATURA EN TRABAJO SOCIAL</li>
+</ul>
+<p>Cluster 1</p>
+<ul>
+<li>(793)LICENCIATURA EN ADMINISTRACIÓN  </li>
+<li>(591)CONTADOR PÚBLICO</li>
+<li>(586)LICENCIATURA EN TRABAJO SOCIAL  </li>
+<li>(366)PROFESORADO EN EDUCACIÓN FÍSICA</li>
+</ul>
+<p>Cluster 2</p>
+<ul>
+<li>(2513)CONTADOR PÚBLICO</li>
+<li>(287)INGENIERÍA AGRONÓMICA</li>
+<li>(309)INGENIERÍA EN ALIMENTOS</li>
+<li>(419)INGENIERÍA INDUSTRIAL</li>
+<li>(155)LIC. EN CIENCIAS BIOLÓGICAS</li>
+<li>(749)LIC. EN COMERCIO INTERNACIONAL</li>
+</ul>
+<p>Cluster 3</p>
+<ul>
+<li>(622) CONTADOR PÚBLICO</li>
+<li>(578) LICENCIATURA EN ADMINISTRACIÓN  </li>
+<li>(452) LICENCIATURA EN TRABAJO SOCIAL</li>
+<li>(375) PROFESORADO EN EDUCACIÓN FÍSICA</li>
+</ul>
+<p><strong>Horas Trabajadas:</strong></p>
+<p>Cluster 0</p>
+<ul>
+<li>Media: 23.56horas</li>
+<li>Mediana: 40</li>
+</ul>
+<p>Cluster 1</p>
+<ul>
+<li>Media: 39.94horas</li>
+<li>Mediana: 24</li>
+</ul>
+<p>Cluster 2</p>
+<ul>
+<li>Media: 2.8horas</li>
+<li>Mediana: 0</li>
+</ul>
+<p>Cluster 3</p>
+<ul>
+<li>Media: 5.88horas</li>
+<li>Mediana: 0</li>
+</ul>
+<p><strong>Edad Ingreso:</strong></p>
+<p>Cluster 0</p>
+<ul>
+<li>Media: 38</li>
+</ul>
+<p>Cluster 1</p>
+<ul>
+<li>Media: 25</li>
+</ul>
+<p>Cluster 2</p>
+<ul>
+<li>Media: 19</li>
+</ul>
+<p>Cluster 3</p>
+<ul>
+<li>Media: 20</li>
+</ul>
+<p><strong>Estado:</strong></p>
+<p>Cluster 0</p>
+<ul>
+<li>(68) INHABILITADO</li>
+<li>(422) LIBRE</li>
+<li>(271) INHABILITADO</li>
+<li>(539) REGULAR</li>
+</ul>
+<p>Cluster 1</p>
+<ul>
+<li>(169) INHABILITADO</li>
+<li>(1024) LIBRE</li>
+<li>(1010) INHABILITADO</li>
+<li>(1584) REGULAR</li>
+</ul>
+<p>Cluster 2</p>
+<ul>
+<li>(2229) INHABILITADO</li>
+<li>(5734) REGULAR</li>
+</ul>
+<p>Cluster 3</p>
+<ul>
+<li>(1112) INHABILITADO</li>
+<li>(2172) LIBRE</li>
+</ul>
+<p>El algoritmo encontró un grupo de estudiantes de 20 años en promedio, de las carreras CONTADOR PÚBLICO, LICENCIATURA EN ADMINISTRACIÓN, LICENCIATURA EN TRABAJO SOCIAL y PROFESORADO EN EDUCACIÓN FÍSICA, que son mayormente Solteros y trabajan en promedio 5 horas, que quedan en estado INHABILITADO o LIBRE.</p>
+<h5 id="c-encuentre-la-cantidad-de-grupos-que-logran-el-mejor-agrupamiento-para-los-datos-justifique-la-elecci-n-a-partir-de-m-tricas-y-gr-ficas-de-los-conglomerados-resultantes-">c. Encuentre  la  cantidad  de  grupos  que  logran  el  mejor  agrupamiento para  los  datos.  Justifique  la  elección  a  partir  de  métricas  y  gráficas de los conglomerados resultantes.</h5>
+<p>Viendo el gráfico de Elbow, se optó por un K=4, ya que equilibraba, una cantidad de clusters manejables, con una pendiente que comenzaba a estabilizarse levemente.</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna5/elbow.png" alt="elbow"></p>
+<h5 id="d-ahora-aplique-alg-n-algoritmo-jer-rquico-a-efectos-de-agrupar-los-datos-cu-l-nivel-se-corresponde-con-el-agrupamiento-realizado-por-k-medias-en-el-punto-5-a-">d. Ahora  aplique  algún  algoritmo  jerárquico  a  efectos  de  agrupar  los datos. ¿Cuál nivel se corresponde con el agrupamiento realizado por k-medias en el punto 5) a)?</h5>
+<p>Utilizando un algoritmo jerárquico con un linkage completo, utilizando un nivel de 2, se logran 4 clusters, lo cual corresponde con el agrupamiento realizado por k-medias en el punto 5)a).</p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/complete_linkage.png" alt="complete_linkage"></p>
+<h5 id="e-el-agrupamiento-jer-rquico-permite-encontrar-una-mejor-forma-de-agrupar-los-datos-si-fuera-as-cu-l-es-ese-agrupamiento-">e. ¿El  agrupamiento  jerárquico  permite  encontrar  una  mejor  forma  de agrupar los datos? Si fuera así, ¿Cuál es ese agrupamiento?</h5>
+<p>Permite una forma se ve mas robusta, que se aborda de manera más simple, que es mediante el uso de un linkage completo, el cual se abordará en el siguiente punto.</p>
+<p>Cabe destacar que se utilizó todo el dataset, preprocesado, y el algoritmo encontró grupos bien marcados, equilibrados.</p>
+<p>En caso de k-medias, al utilizar todo el dataset, el algoritmo tenía un SSE muy alto, encontraba grupos superpuestos, ruidosos.</p>
+<h4 id="6-algoritmos-jer-rquicos-incorpore-en-colab-nuevamente-el-dataset-del-punto-5-y-realice-las-siguientes-actividades-">6. Algoritmos jerárquicos. Incorpore en Colab nuevamente el dataset del punto 5 y realice las siguientes actividades:</h4>
+<h5 id="a-realice-el-agrupamiento-de-los-datos-utilizando-diferentes-par-metros-">a. Realice el agrupamiento de los datos utilizando diferentes parámetros.</h5>
+<p>Del punto anterior, el dataset se encuentra preprocesado de la siguiente manera:</p>
+<ul>
+<li>Numerizar con LabelEnconder <em>estado_civil</em>, <em>carrera</em>, <em>sede</em> y <em>estado</em></li>
+<li>Eliminar los signos &quot;-&quot; de <em>promedio_1er_anio</em>.</li>
+<li>Imputar 8 valores faltantes en <em>promedio_1er_anio</em>.</li>
+<li>Eliminar <em>horas_trabajadas</em> superiores a 72 hs</li>
+<li>Realizar un <em>scale</em> de los valores.</li>
+</ul>
+<p>Se ajustaron los diferentes agrupamientos usando el parámetro de Linkage o Distancia entre Clusters. Vemos la repercusión de este parámetro en la forma que tiene el Dendrograma.</p>
+<p><strong>Agrupamiento utilizando <em>simple linkage</em></strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/simple_linkage.png" alt="simple_linkage"></p>
+<p>Vemos que es un dendrograma desalineado, sesgado hacia la izquierda.</p>
+<p><strong>Agrupamiento utilizando <em>average linkage</em></strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/average_linkage.png" alt="average_linkage"></p>
+<p>Se ve un árbol equilibrado y balanceado pero compacto en la parte superior, evaluado respecto  a las distancias, tiene mucha distancia al principio y luego compacto, lo cual dificulta la separación en diferentes clusters.</p>
+<p><strong>Agrupamiento utilizando <em>complete linkage</em></strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/complete_linkage.png" alt="complete_linkage"></p>
+<p>En este caso vemos un balance de las ramas, más equilibrado que los anteriores. Brinda la posibilidad de ver de forma clara en qué lugar realizar los cortes</p>
+<p><strong>Agrupamiento utilizando <em>centroid linkage</em></strong></p>
+<p><img src="https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_2/imagenes/consigna6/centroid_linkage.png" alt="centroid_linkage"></p>
+<p>En el caso de linkage mediante <em>centroid</em> obtenemos como en el caso de linkage <em>simple</em> un dendrograma desalineado, sesgado.</p>
+<h5 id="b-grafique-el-resultado-y-escoja-cual-es-el-nivel-que-mejor-agrupa-los-datos-">b. Grafique  el  resultado  y  escoja  cual  es  el  nivel  que  mejor  agrupa  los datos.</h5>
+<p>Utilizando el <em>complete linkage</em>, que resultó ser el más apropiado, el nivel que agrupa mejor los datos es 2. Que resulta en 4 clusters. Verde, Rojo, Celeste y Violeta.</p>
+<h5 id="preguntas-que-surgieron">Preguntas que surgieron</h5>
+<ul>
+<li>Si tengo que determinar mediante analisis exploratorio cuales son las mejores features para entrenar un modelo de clustering, como hago?
+Mirar si hay variables que anuncian alguna estructura de agrupamiento, haciendo scatter plots y de manera univariada, utilizar histogramas, para ver casos multimodales que den idea de grupos diferentes.
+Ver las varianzas esta bien, pero la información mas interesante esta en los gráficos.</li>
+</ul>
+<p>Primer paso, podría ser, agrupar las numericas que vemos que en los scatters tienen algun comportamiento.</p>
+<ul>
+<li><p>Las lineas de puntos horizontales y verticales de los clusters de abandono-universitario, se debe a las variables categoricas? </p>
+</li>
+<li><p>Tiene sentido mezclar variables discretas y continuas, sabiendo que la distancia utilizada es euclidiana?
+No hay forma de mezclar tipos de variables, porque las medidas de distancia trabajan con datos homogéneos. No puedo calcular la distancia euclidiana de una etiqueta.</p>
+</li>
+<li><p>Si numerizo las variables categoricas, ahi si puedo trabajar con la distancia euclidiana?</p>
+</li>
+<li><p>Como se si el agrupamiento es bueno? Como interpreto resultados?
+Elbow y coeficiente de silueta.
+Para interpretar los resultados, Boxplots, todas las herramientas que trabajamos hasta el momento.</p>
+</li>
+</ul>
+</body></html>

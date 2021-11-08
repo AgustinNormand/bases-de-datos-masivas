@@ -1,7 +1,7 @@
 ## TP05 - Minería de datos
 ## Parte 02 - Clustering (K-Medias y algoritmos jerárquicos)
 ## Agustín normand
-#### 5 Noviembre 2021
+#### 8 Noviembre 2021
 
 #### Introducción:
 
