@@ -433,3 +433,25 @@ En el caso de linkage mediante *centroid* obtenemos como en el caso de linkage *
 
 Utilizando el *complete linkage*, que resultó ser el más apropiado, el nivel que agrupa mejor los datos es 2. Que resulta en 4 clusters. Verde, Rojo, Celeste y Violeta.
 
+
+
+##### Preguntas que surgieron
+
+* Si tengo que determinar mediante analisis exploratorio cuales son las mejores features para entrenar un modelo de clustering, como hago?
+Mirar si hay variables que anuncian alguna estructura de agrupamiento, haciendo scatter plots y de manera univariada, utilizar histogramas, para ver casos multimodales que den idea de grupos diferentes.
+Ver las varianzas esta bien, pero la información mas interesante esta en los gráficos.
+
+Primer paso, podría ser, agrupar las numericas que vemos que en los scatters tienen algun comportamiento.
+
+* Las lineas de puntos horizontales y verticales de los clusters de abandono-universitario, se debe a las variables categoricas? 
+
+* Tiene sentido mezclar variables discretas y continuas, sabiendo que la distancia utilizada es euclidiana?
+No hay forma de mezclar tipos de variables, porque las medidas de distancia trabajan con datos homogéneos. No puedo calcular la distancia euclidiana de una etiqueta.
+
+* Si numerizo las variables categoricas, ahi si puedo trabajar con la distancia euclidiana?
+
+* Como se si el agrupamiento es bueno? Como interpreto resultados?
+Elbow y coeficiente de silueta.
+Para interpretar los resultados, Boxplots, todas las herramientas que trabajamos hasta el momento.
+
+
