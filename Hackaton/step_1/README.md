@@ -62,13 +62,13 @@ Del total de faltantes de Bed.Grade,
 
 Se obtuvieron los atributos con menor varianza y de estos se obtuvo la moda.
 
-Hospital_type_code                   0.000000e+00 A
-Ward_Facility_Code                   1.190476e-02 F
-Hospital_region_code                 1.190476e-02 X
-Department                           1.422834e-01 gynecology
-City_Code_Hospital                   1.530407e-01 6
-Ward_Type                            2.489960e-01 R
-Type.of.Admission                    2.517212e-01 Trauma
+* Hospital_type_code                   0.000000e+00 A
+* Ward_Facility_Code                   1.190476e-02 F
+* Hospital_region_code                 1.190476e-02 X
+* Department                           1.422834e-01 gynecology
+* City_Code_Hospital                   1.530407e-01 6
+* Ward_Type                            2.489960e-01 R
+* Type.of.Admission                    2.517212e-01 Trauma
 
 Se determinó que en los registros con estas caracteristicas, predomina el valor de Bed.Grade 3. Por lo tanto, se imputó este valor.
 
@@ -78,77 +78,77 @@ Se determinó que en los registros con estas caracteristicas, predomina el valor
 Se numerizaron los atributos de tipo categoricos. El *mapping* fue:
 
 Hospital_type_code (Codigo de tipo de hospital)
-a -> 0
-b -> 1
-c -> 2
-d -> 3
-e -> 4
-f -> 5
-g -> 6
+* a -> 0
+* b -> 1
+* c -> 2
+* d -> 3
+* e -> 4
+* f -> 5
+* g -> 6
 
 Hospital_region_code (Codigo de tipo de region del hospital)
-X -> 0
-Y -> 1
-Z -> 2
+* X -> 0
+* Y -> 1
+* Z -> 2
 
 Department (Departamento)
-TB & Chest disease -> 0
-anesthesia -> 1
-gynecology -> 2
-radiotherapy -> 3
-surgery -> 4
+* TB & Chest disease -> 0
+* anesthesia -> 1
+* gynecology -> 2
+* radiotherapy -> 3
+* surgery -> 4
 
 
 Ward_Type (Tipo de sala)
-P -> 0
-Q -> 1
-R -> 2
-S -> 3
-T -> 4
-U -> 5
+* P -> 0
+* Q -> 1
+* R -> 2
+* S -> 3
+* T -> 4
+* U -> 5
 
 Ward_Facility_Code (Codigo de facilidades de la sala)
-A -> 0
-B -> 1
-C -> 2
-D -> 3
-E -> 4
-F -> 5
+* A -> 0
+* B -> 1
+* C -> 2
+* D -> 3
+* E -> 4
+* F -> 5
 
 Type.of.Admission (Tipo de admisión)
-Emergency -> 0
-Trauma -> 1
-Urgent -> 2
+* Emergency -> 0
+* Trauma -> 1
+* Urgent -> 2
 
 Severity.of.Illness (Severidad de la enfermedad)
-Extreme -> 0
-Minor -> 1
-Moderate -> 2
+* Extreme -> 0
+* Minor -> 1
+* Moderate -> 2
 
 Age (Edad)
-0-10 -> 0
-11-20 -> 1
-21-30 -> 2
-31-40 -> 3
-41-50 -> 4
-51-60 -> 5
-61-70 -> 6
-71-80 -> 7
-81-90 -> 8
-91-100 -> 9
+* 0-10 -> 0
+* 11-20 -> 1
+* 21-30 -> 2
+* 31-40 -> 3
+* 41-50 -> 4
+* 51-60 -> 5
+* 61-70 -> 6
+* 71-80 -> 7
+* 81-90 -> 8
+* 91-100 -> 9
 
 Stay (Estadía)
-0-10 -> 0
-11-20 -> 1
-21-30 -> 2
-31-40 -> 3
-41-50 -> 4
-51-60 -> 5
-61-70 -> 6
-71-80 -> 7
-81-90 -> 8
-91-100 -> 9
-More than 100 Days -> 10
+* 0-10 -> 0
+* 11-20 -> 1
+* 21-30 -> 2
+* 31-40 -> 3
+* 41-50 -> 4
+* 51-60 -> 5
+* 61-70 -> 6
+* 71-80 -> 7
+* 81-90 -> 8
+* 91-100 -> 9
+* More than 100 Days -> 10
 
 
 #### Componentes Principales
@@ -168,6 +168,9 @@ No, son 228433 valores univocos.
 
 En este caso, si no incorporo las etiquetas, voy a tener muy poca información. Entonces, por mas que no tenga mucho sentido, las uso?
 
+Capaz tiene sentido que si el tipo se queda mucho tiempo, que tenga mas visitantes.
+La matriz de correlacion, confirma que no hay que hacer reduccion de dimensionaliad por atributos fuertemente correlacionados.
+
 #### Outliers
 
 Available rooms. 5. Sin outliers. 981 afuera
@@ -179,3 +182,22 @@ Visitors With Patient. 6. Sin outliers. 7009 Afuera
 Admission_Deposit. 2640. Sin Outliers. 226733
 
 Age. 6. Sin outliers. 919
+
+
+#### Datasets de salida
+
+Obtenerlos y explicacion de cada uno
+
+* Dataset original eliminado registros con nulos. (1)
+
+* Imputacion de datos casero. (2)
+* Imputacion Hot Deck. (3)
+
+* Remover todos outliers (Variables Continuas) (4)
+* Sin remover outliers (Variables Continuas) (5)
+
+
+#### Elección y aplicación de la técnica de aprendizaje automático
+
+Arboles de decision, porque tenemos en el el dataset una variable objetivo. Por lo tanto, optamos por un modelo supervisado.
+En tal caso se podría usar clustering, para complementar o comparar resultados.
