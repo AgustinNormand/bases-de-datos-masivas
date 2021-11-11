@@ -45,8 +45,118 @@ Faltantes del dataset:
 Total: 3382
 84 faltantes en Bed.Grade
 3298 faltantes en City_Code_Patient
-
 Proporcion de faltantes: 1.480489%
+
+##### Faltantes de City_Code_Patient:
+Del total de faltantes (3298), los que pertenecen a un mismo *patientid* son (1463).
+Los que solo aparecen una vez, son (617), mientras que los que aparecen mas que una vez, son (846)
+De estos 846, es decir, las filas contenian un *patientid*, cargado anteriormente en el dataset, osea, que no era univoco. Y verifiqué que en ninguno de los casos enteriores que aparecía el *patientid* tenga cargado el atributo *City_Code_Patient*, pero ninguno lo tenía cargado.
+
+Se imputaron los 3298 valores faltantes de *City_Code_Patient* con el valor en *City_Code_Hospital*.
+
+##### Faltantes de Bed.Grade:
+Del total de faltantes de Bed.Grade, 
+* 3 pertenecen al hospital con *Hospital_Code* 7
+* 1 pertenece al hospital con *Hospital_Code* 19
+* 81 pertenecen al hospital con *Hospital_Code* 6
+
+Se obtuvieron los atributos con menor varianza y de estos se obtuvo la moda.
+
+Hospital_type_code                   0.000000e+00 A
+Ward_Facility_Code                   1.190476e-02 F
+Hospital_region_code                 1.190476e-02 X
+Department                           1.422834e-01 gynecology
+City_Code_Hospital                   1.530407e-01 6
+Ward_Type                            2.489960e-01 R
+Type.of.Admission                    2.517212e-01 Trauma
+
+Se determinó que en los registros con estas caracteristicas, predomina el valor de Bed.Grade 3. Por lo tanto, se imputó este valor.
+
+
+#### Numerized
+
+Se numerizaron los atributos de tipo categoricos. El *mapping* fue:
+
+Hospital_type_code (Codigo de tipo de hospital)
+a -> 0
+b -> 1
+c -> 2
+d -> 3
+e -> 4
+f -> 5
+g -> 6
+
+Hospital_region_code (Codigo de tipo de region del hospital)
+X -> 0
+Y -> 1
+Z -> 2
+
+Department (Departamento)
+TB & Chest disease -> 0
+anesthesia -> 1
+gynecology -> 2
+radiotherapy -> 3
+surgery -> 4
+
+
+Ward_Type (Tipo de sala)
+P -> 0
+Q -> 1
+R -> 2
+S -> 3
+T -> 4
+U -> 5
+
+Ward_Facility_Code (Codigo de facilidades de la sala)
+A -> 0
+B -> 1
+C -> 2
+D -> 3
+E -> 4
+F -> 5
+
+Type.of.Admission (Tipo de admisión)
+Emergency -> 0
+Trauma -> 1
+Urgent -> 2
+
+Severity.of.Illness (Severidad de la enfermedad)
+Extreme -> 0
+Minor -> 1
+Moderate -> 2
+
+Age (Edad)
+0-10 -> 0
+11-20 -> 1
+21-30 -> 2
+31-40 -> 3
+41-50 -> 4
+51-60 -> 5
+61-70 -> 6
+71-80 -> 7
+81-90 -> 8
+91-100 -> 9
+
+Stay (Estadía)
+0-10 -> 0
+11-20 -> 1
+21-30 -> 2
+31-40 -> 3
+41-50 -> 4
+51-60 -> 5
+61-70 -> 6
+71-80 -> 7
+81-90 -> 8
+91-100 -> 9
+More than 100 Days -> 10
+
+
+#### Componentes Principales
+Se necesitan 13 componentes principales para explicar el 80% de la varianza de dataset.
+
+#### Correlación
+
+Correlacion entre Ward_Type y Severity.of.illness con un cutoff de 0.5 ?? En la matriz de correlación no se ve esto
 
 Preguntas:
 
@@ -55,3 +165,17 @@ Considero que no. Porque los datos de test, hay que hacer como si no los conocie
 
 Se repite *case_id*? 
 No, son 228433 valores univocos.
+
+En este caso, si no incorporo las etiquetas, voy a tener muy poca información. Entonces, por mas que no tenga mucho sentido, las uso?
+
+#### Outliers
+
+Available rooms. 5. Sin outliers. 981 afuera
+
+City Code Patient. 13. Sin outliers. 129306 afuera
+
+Visitors With Patient. 6. Sin outliers. 7009 Afuera
+
+Admission_Deposit. 2640. Sin Outliers. 226733
+
+Age. 6. Sin outliers. 919
