@@ -49,8 +49,8 @@ Proporcion de faltantes: 1.480489%
 
 ##### Faltantes de City_Code_Patient:
 Del total de faltantes (3298), los que pertenecen a un mismo *patientid* son (1463).
-Los que solo aparecen una vez, son (617), mientras que los que aparecen mas que una vez, son (846)
-De estos 846, es decir, las filas contenian un *patientid*, cargado anteriormente en el dataset, osea, que no era univoco. Y verifiqué que en ninguno de los casos enteriores que aparecía el *patientid* tenga cargado el atributo *City_Code_Patient*, pero ninguno lo tenía cargado.
+Los que solo aparecen una vez, es decir, tienen un *patientid* univoco en los registros del dataset son (616), mientras que los que aparecen mas que una vez, son (847)
+De estos 847, es decir, las filas contenian un *patientid*, cargado anteriormente en el dataset. Verifiqué que en ninguno de los casos anteriores que aparecía el *patientid* tenga cargado el atributo *City_Code_Patient* y efectivamente, ninguno lo contenía.
 
 Se imputaron los 3298 valores faltantes de *City_Code_Patient* con el valor en *City_Code_Hospital*.
 
@@ -173,15 +173,10 @@ La matriz de correlacion, confirma que no hay que hacer reduccion de dimensional
 
 #### Outliers
 
-Available rooms. 5. Sin outliers. 981 afuera
-
-City Code Patient. 13. Sin outliers. 129306 afuera
-
-Visitors With Patient. 6. Sin outliers. 7009 Afuera
-
-Admission_Deposit. 2640. Sin Outliers. 226733
-
-Age. 6. Sin outliers. 919
+Available.Extra.Rooms.in.Hospital      987
+City_Code_Patient                    17644
+Visitors.with.Patient                 7009
+Admission_Deposit                     8723
 
 
 #### Datasets de salida
@@ -201,3 +196,8 @@ Obtenerlos y explicacion de cada uno
 
 Arboles de decision, porque tenemos en el el dataset una variable objetivo. Por lo tanto, optamos por un modelo supervisado.
 En tal caso se podría usar clustering, para complementar o comparar resultados.
+
+
+
+
+Raiz del arbol Visitors With Patient
