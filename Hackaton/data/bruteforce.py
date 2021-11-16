@@ -4,7 +4,10 @@ from sklearn import tree
 from sklearn.model_selection import train_test_split
 from sklearn import metrics 
 from sklearn import preprocessing
-
+from imblearn.over_sampling import SMOTE
+from sklearn.datasets import make_classification
+from imblearn.under_sampling import RandomUnderSampler
+from imblearn.pipeline import Pipeline
 #import graphviz
 
 import numpy as np
@@ -66,6 +69,14 @@ if __name__=='__main__':
     target_names = le.classes_
     target = data.Stay
 
+    print("asd")
+    
+    over = SMOTE()
+    under = RandomUnderSampler()
+    steps = [('o', over), ('u', under)]
+    pipeline = Pipeline(steps=steps)
+    X, y = pipeline.fit_resample(features, target)
+    print(target)
     max_accuracy = 0
 
     while True:
@@ -76,14 +87,14 @@ if __name__=='__main__':
         min_samples_leaf = get_min_samples_leaf()
         min_samples_split = get_min_samples_split()
         min_weight_fraction_leaf = get_min_weight_fraction_leaf()
-        class_weight = get_class_weight()
+        #class_weight = get_class_weight()
         random_features = get_features()
         max_features = get_max_features()
         features = get_data(random_features)
 
-        X_train, X_test, y_train, y_test = train_test_split(features, target, random_state=0, test_size=train_size)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0, test_size=train_size)
 
-        arbol_parametrizado = tree.DecisionTreeClassifier(criterion=criterion, max_depth=max_depth, min_samples_leaf=min_samples_leaf, splitter = splitter, min_weight_fraction_leaf=min_weight_fraction_leaf, class_weight=class_weight, max_features=max_features)
+        arbol_parametrizado = tree.DecisionTreeClassifier(criterion=criterion, max_depth=max_depth, min_samples_leaf=min_samples_leaf, splitter = splitter, min_weight_fraction_leaf=min_weight_fraction_leaf, max_features=max_features)
         arbol_parametrizado = arbol_parametrizado.fit(X_train,y_train)
         y_pred = arbol_parametrizado.predict(X_test)
 
