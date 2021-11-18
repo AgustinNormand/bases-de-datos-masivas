@@ -23,8 +23,11 @@ Cantidad de ocurrencias de cada itemset del dataset:
 **Support Count (σ)**
 ![support_count](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/support_count.png)
 
-Fraccion de transacciones que contienen a cada itemset del dataset:
+
+Fraccion de transacciones que contienen a un determinado itemset, evaluado para todos los itemset del dataset.
 
 **Support (s)**
 ![support](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/support.png)
+
+#### b. Arme  todas  las  reglas  resultantes  considerando  que  se  solicita  un soporte mínimo de 0,3. 
 
