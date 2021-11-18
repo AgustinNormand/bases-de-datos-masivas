@@ -27,6 +27,7 @@ Cantidad de ocurrencias de cada itemset del dataset:
 Fraccion de transacciones que contienen a un determinado itemset, evaluado para todos los itemset del dataset.
 
 **Support (s)**
+
 ![support](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/support.png)
 
 #### b. Arme  todas  las  reglas  resultantes  considerando  que  se  solicita  un soporte mínimo de 0,3. 
@@ -34,14 +35,17 @@ Fraccion de transacciones que contienen a un determinado itemset, evaluado para 
 Itemset frecuentes con umbral de minsup == 0.3
 
 **Frecuent Itemsets**
+
 ![frecuent_itemsets](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/frecuent_itemsets.png)
 
 **Todas las reglas resultantes**
+
 ![all_rules](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/all_rules.png)
 
 Reglas resultantes considerando soporte minimo de 0.3
 
 **Reglas con umbral 0.3**
+
 ![rules_minsup_03](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/rules_minsup_03.png)
 
 #### c. ¿Cuál es el soporte de A? ¿Cómo es el soporte de AB, AC y ABC  con respecto al de A? ¿Por qué?
@@ -55,6 +59,7 @@ Y estos dos items, el B y el C, tienen soporte 0,05 y 0,06 respectivamente, por 
 #### d. ¿Cuáles son las reglas de asociación resultantes si establecemos una confianza mínima de 0,7?
 
 La única regla de asociación resultante si establecemos una confianza mínima de 0,7 es A -> C.
+
 ![confident_rule](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/confident_rule.png)
 
 ### 2. Apriori. Incorpore  en  una  herramienta  de  data  mining  el  dataset  sobre  la cesta de compras y responda: 
@@ -103,6 +108,7 @@ inspect(head(sort(reglas, by="lift", decreasing = TRUE),10))
 ```
 
 **Top 10 reglas**
+
 ![best_rules](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/best_rules.png)
 
 #### d. ¿Qué nota al ejecutar el algoritmo con el dataset actual? ¿Cuál es la complejidad computacional del mismo? ¿Cómo puede resolverse? 
@@ -139,9 +145,52 @@ Resultando en el gráfico:
 
 ![scatter_rules](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/scatter_rules.png)
 
+Este gráfico contiene en el eje de las abscisas el soporte de la regla, y en el eje de las ordenadas la confianza.
+Luego, la tonalidad de rojo de cada punto, esta asociada con el *lift* de la regla.
+Por lo tanto, se trata de un gráfico de 3 dimensiones.
+
+Por lo tanto, se puede ver que el soporte de las reglas es bajo, viendo la tonalidad de rojo de la mayoría de los puntos, podemos decir que el soporte promedio que tienen las reglas es de 0,2.
+Lo cual tiene sentido ya que definimos un soporte minimo de 0,1.
+
+En cuanto al *lift*, con respecto al eje de las abscisas se puede ver que todas las reglas con un *lift* superior a 2.5, tienen un soporte menor que 0.05
+Y la grán mayoría de reglas con lift mayor a 2.5, tienen un soporte menor a 0.025.
+
+En cuanto al eje de las ordenadas, se puede ver que la mayor concentración de *lift* superiores a 2.5, tienen un valor de *confianza* que se encuentra entre 0.15 y 4.
+
+Por ultimo, en cuanto a la confianza, se puede observar que toma valores entre 0.05 y 0.6 mayormente, con una concentración mas notoria en la seccion inferior del intervalo.
+
+Las reglas correspondientes al sector superior izquierdo del gráfico, son las que mostramos en el top 10 de reglas, en puntos anteriores.
+
 #### g. Utilizando el mismo punto de vista, ¿Cuáles son los ítems marcan la presencia de cerveza? ¿Encuentra una relación lógica en estas asociaciones?
+
+Ejecutando el siguiente código para encontrar las reglas que contienen *cerveza* como consecuente:
+
+``` r
+reglas_beer <- apriori(Groceries, parameter = list(support=0.01, confidence=0.01, target = "rules"), appearance = list(rhs="bottled beer"))
+inspect(head(sort(reglas_beer, by="lift", decreasing = TRUE),10))
+```
+
+Obtenemos
+
+![beer_rules](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/beer_rules.png)
+
+De las cuales, las únicas con un valor de *lift* aceptable es:
+{Agua Embotellada} => {Cerveza Embotellada}
+{Soda} => {Cerveza Embotellada}
+
+La cual tiene una relación lógica, todas son bebidas, solo una de ellas con alcohol y las otras 2 no, se trata de una compra común.
+
 #### h. ¿Qué  parámetros  ajustaría  a  efectos  de  modificar  la  cantidad  de cantidad  de  reglas  de  asociación  generadas?  ¿Qué  efecto  generan esos parámetros? Ejemplifique en función del dataset actual. 
-#### i. Documente todas las actividades desarrolladas y exprese sus conclusiones en cada caso. 
+
+Para aumentar la cantidad de reglas de asociación generadas, ajustaría el parámetro de umbral de soporte.
+De esta manera, pasandolo de 0.01 a 0.0001
+Obtenemos 10 reglas, muy novedosas.
+
+{Pollo congelado, Bolsas} => {Cerveza}
+{Whisky, Chocolate} => {Cerveza}
+{Papas Fritas, Vino} => {Cerveza}
+{Mermelada, Vino} => {Cerveza}
+{Vino, Platos} => {Cerveza}
 
 ### 3. Incorpore el dataset del  Banco de Portugal utilizado en el TP de árboles de decisión y realice las siguientes operaciones: 
 #### a. Aplique  las  transformaciones  necesarias  a  efectos de poder  correr  el algoritmo apriori sobre el dataset. 
