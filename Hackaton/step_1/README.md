@@ -192,6 +192,9 @@ Obtenerlos y explicacion de cada uno
 * Sin remover outliers (Variables Continuas) (5)
 
 
+* Train Imputed (2)
+
+
 #### Elección y aplicación de la técnica de aprendizaje automático
 
 Arboles de decision, porque tenemos en el el dataset una variable objetivo. Por lo tanto, optamos por un modelo supervisado.
@@ -200,4 +203,4 @@ En tal caso se podría usar clustering, para complementar o comparar resultados.
 
 
 
-Raiz del arbol Visitors With Patient
+Raiz del arbol Visitors With Patient y addmision deposit.
