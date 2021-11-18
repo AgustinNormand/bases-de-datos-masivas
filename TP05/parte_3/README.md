@@ -36,10 +36,15 @@ Itemset frecuentes con umbral de minsup == 0.3
 **Frecuent Itemsets**
 ![frecuent_itemsets](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/frecuent_itemsets.png)
 
-Todas las reglas resultantes
+**Todas las reglas resultantes**
 ![all_rules](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/all_rules.png)
 
 Reglas resultantes considerando soporte minimo de 0.3
-Todas las reglas resultantes
+
+**Reglas con umbral 0.3**
 ![rules_minsup_03](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/rules_minsup_03.png)
+
+#### c. ¿Cuál es el soporte de A? ¿Cómo es el soporte de AB, AC y ABC  con respecto al de A? ¿Por qué?
+
+El soporte de A es 
 
