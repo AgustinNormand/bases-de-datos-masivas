@@ -31,3 +31,15 @@ Fraccion de transacciones que contienen a un determinado itemset, evaluado para 
 
 #### b. Arme  todas  las  reglas  resultantes  considerando  que  se  solicita  un soporte mínimo de 0,3. 
 
+Itemset frecuentes con umbral de minsup == 0.3
+
+**Frecuent Itemsets**
+![frecuent_itemsets](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/frecuent_itemsets.png)
+
+Todas las reglas resultantes
+![all_rules](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/all_rules.png)
+
+Reglas resultantes considerando soporte minimo de 0.3
+Todas las reglas resultantes
+![rules_minsup_03](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/rules_minsup_03.png)
+
