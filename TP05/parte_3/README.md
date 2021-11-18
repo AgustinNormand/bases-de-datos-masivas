@@ -18,3 +18,6 @@ En función de la tabla anterior, realice las siguientes operaciones:
 
 ##### a. Calcule el soporte para todos los ítemsets del dataset. 
 
+Cantidad de ocurrencias de cada itemset del dataset:
+
+![support_count](https://raw.githubusercontent.com/AgustinNormand/bases-de-datos-masivas/main/TP05/parte_3/imagenes/support_count.png)
